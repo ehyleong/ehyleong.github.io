@@ -1,0 +1,164 @@
+@import 'leongkit.scss';
+
+// Global Styles
+
+html {	  
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	background: $charcoal;
+	flex-direction: column;
+}
+
+h1, h2, h3, ul {
+	font-family: "NaNJaune-MidiMedium";
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: 1.4em;
+}
+
+h3{
+	font-size: 2em;
+}
+
+li {
+	font-size: 1em;
+}
+
+p {
+	font-family: "NaNHolo-Regular";
+	font-size: 1.4em;
+	line-height: 1.6em;
+}
+
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	font-family: "NaNJaune-MidiBold";
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $charcoal;
+}
+
+.button {
+	background: $charcoal;
+	text-align: center;
+	vertical-align: center;
+	padding: 1em 0.5em;
+	margin-left: 1em;
+
+	a {
+		color: $beige;
+	}
+}
+
+// Sections
+
+nav {
+	background: $beige;
+	padding-top: 50px;
+
+	.logo {
+		display: flex;
+		@media only screen and (max-width: 400px) {
+		justify-content: center;
+		align-items: center;
+		}
+	}
+
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		
+		a{
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+}
+
+header {
+	background: $beige;
+	height: 50vh; 
+
+	h1 {
+		color: $charcoal;
+		padding-top: $spacer/2;
+	}
+}
+
+.hero-image {
+	margin-top: -200px;
+
+		@media only screen and (max-width: 800px) {
+			
+			img {
+				height: 20%;
+			}
+		}
+}
+
+section {
+	padding-top: $spacer/2;
+	color: $beige;
+
+	h1 {
+		padding-bottom: 20px;
+	}
+
+	p {
+		padding-bottom: 20px;
+	}
+}
+
+.about {
+	padding-top: $spacer;
+}
+
+.work {
+
+	padding-top: $spacer;
+
+	h1 {
+		padding-bottom: $spacer/2;
+	}
+	.project{
+		height: 400px;
+		padding: .5em;
+		background: $beige;
+	}
+}
+
+footer {
+	padding-top: $spacer;
+	padding-bottom: $spacer;
+	color: $beige;
+	
+	h1 {
+		padding-bottom: 20px;
+	}
+}
+
+// Debug
+
+.debug {
+	background: blue;
+}
+
+.debug2 {
+	background: red;
+}
