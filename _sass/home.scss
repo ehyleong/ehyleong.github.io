@@ -1,4 +1,4 @@
-@import 'leongkit.scss';
+@import 'variables.scss';
 @import 'variables/main.scss';
 
 // Global Styles
@@ -26,7 +26,7 @@ body {
 
 // Text Styles 
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4 {
 	font-family: "NaNJaune-MidiMedium";
 	padding-bottom: 30px;
 }
@@ -72,8 +72,8 @@ h4 {
 	line-height: 1em;
 	text-transform: uppercase;
 	letter-spacing:3px;
-	padding-top: 30px;
-	color: $teal;
+	padding-top: 20px;
+	color: $orange;
 
 }
 
@@ -86,7 +86,7 @@ li, p {
 
 
 span {
-	color: $teal;
+	color: $orange;
 
 }
 
@@ -95,7 +95,7 @@ a {
 	transition: all 150ms ease-in-out;
 
 	&:hover {
-		color: $teal;
+		color: $orange;
 	}
 }
 
@@ -107,7 +107,7 @@ a {
 	margin-left: 1em;
 
 	&:hover {
-		background: $teal;
+		background: $orange;
 	}
 
 	a {
@@ -159,8 +159,6 @@ nav {
 				display: inline-block;
 				font-family: "NaNJaune-MidiBold";
 				font-size: 0.8em;
-				text-transform: uppercase;
-				letter-spacing: 1px;
 				color: $charcoal;
 				overflow: hidden;
 				position: relative;
@@ -177,14 +175,14 @@ nav {
 					left: 0;
 					width: 100%;
 					height: 3px;
-					background-color: $teal;
+					background-color: $orange;
 					opacity: 0;
 					transform: translate3d(-100%, 0, 0);
 					transition: opacity 300ms, transform 300ms;
 				}
 
 				&:hover {
-					color: $teal;
+					color: $orange;
 
 					&:after {
 						transform: translate3d(0, 0, 0);
@@ -260,20 +258,34 @@ footer {
 	padding-bottom: $spacer;
 	color: $beige;
 
+	div:nth-child(2){
+		display: flex;
+		align-items: center;
+		}
+
 	a {
-		color: $beige;
+		color: $orange;
 
 		&:hover {
-			color: $blurple;
+			color: $beige;
 		}
 	}
 	
 	h4 {
-		color: $blurple;
+		color: $orange;
 	}
+
 	li {
 		display: inline;
 		margin-right: 0.65em;
+
+		a {
+			color: $beige;	
+
+			&:hover {
+				color: $orange;
+			}
+		}
 
 		@media only screen and (max-width: 40rem) {
 			display:block;
