@@ -31,10 +31,33 @@
           } // End if
         });
       });
-</script>
+    </script>
+    <script src="/js/jquery.animateTyping.js"></script>
   </head>
   <body>
    <!-- {% include navigation.html %} -->
     {{ content }}
+
+  <script src="https://unpkg.com/typeit@8.1.0/dist/index.umd.js"></script>
+  <script>
+
+
+    new TypeIt("#myElement", {
+        speed: 150,
+        deleteSpeed: 70, 
+        loop: true,
+      })
+
+    .type("interfaces.")   
+    .pause(2000)
+    .delete()
+    .type("illustrations.")
+    .pause(2500)
+    .delete()
+    .type("brands.")
+    .pause(2000)
+    .go();
+
+  </script>
   </body>
 </html>
