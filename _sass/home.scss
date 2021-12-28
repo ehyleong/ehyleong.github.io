@@ -41,8 +41,7 @@ h1 {
 	}
 
 	@media only screen and (max-width: 600px) {
-		font-size: 3.5em;
-		line-height: 0.9em;
+		font-size: 3em;
 	}
 }
 
@@ -90,6 +89,7 @@ li, p {
 span {
 	color: $teal;
 	line-height: 0.9em;
+
 }
 
 a {
