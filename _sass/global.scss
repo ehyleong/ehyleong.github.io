@@ -82,6 +82,7 @@ li, p {
 	font-size: 1.4em;
 	line-height: 1.4em;
 	display: inline-block;
+	padding-right: 1em;
 }
 
 
@@ -149,7 +150,8 @@ nav {
 		align-items: center;
 
 		li {			
-			padding-left: 1em;
+			padding-left: 1.2em;
+			padding-right: 0;
 
 			&:nth-child(1){
 				padding-left: 0;
@@ -196,10 +198,13 @@ nav {
 
 header {
 	background: $beige;
-	height: 500px; 
 	padding-top: $spacer/2;
+}
 
-	@media only screen and (max-width: 64rem) {
+
+.home-hero {
+	height: 500px; 
+		@media only screen and (max-width: 64rem) {
 		padding-top: $spacer/4;
 		height: 400px;
 	}
@@ -220,6 +225,7 @@ header {
 		}
 	}
 }
+
 
 .hero-image {
 	margin-top: -150px;
@@ -261,7 +267,7 @@ section {
 	}
 
 	.project1 {
-			background-image: url(/img/projects/Project1.png);
+			background-image: url(/img/thumbnails/project1.png);
 			background-size: cover;
 			transition: all 150ms ease-in-out;
 
@@ -293,8 +299,6 @@ footer {
 	}
 
 	li {
-		display: inline;
-		margin-right: 0.65em;
 
 		a {
 			color: $beige;	
@@ -311,12 +315,22 @@ footer {
 	}
 }
 
+// Spacers
+
 .spacer {
 	padding-top: $spacer;
 
 	@media only screen and (max-width: 40rem) {
 		padding-top: $spacer/2;
 	}
+}
+
+.half-spacer{
+	padding-top: $spacer/2;
+}
+
+.bottom-spacer{
+	padding-bottom: $spacer;
 }
 
 .img-spacer {
@@ -326,7 +340,7 @@ footer {
 }
 
 .text-spacer {
-	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 // Debug
