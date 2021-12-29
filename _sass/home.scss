@@ -52,19 +52,27 @@
 		padding: 1em;
 		background: $beige;
 		border-radius: 2px;
+		border: 1px solid #394242;
+		transition: all 150ms ease-in-out;
 
 		@media only screen and (max-width: 40rem) {
 			height: 350px;
 		}
+
+		&:hover{
+			opacity: 0.5;
+			border: 5px solid $teal;
+
+		}
 	}
 
 	.project1 {
-			background-image: url(/img/thumbnails/project1.png);
+			background-image: url(/img/thumbnails/spies.jpg);
 			background-size: cover;
-			transition: all 150ms ease-in-out;
-
-			&:hover{
-				opacity: 0.5;
-			}
 		}
+
+	.project2 {
+		background-image: url(/img/thumbnails/project1.png);
+		background-size: cover;
+	}	
 }

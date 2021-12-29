@@ -88,7 +88,6 @@ li, p {
 
 span {
 	color: $teal;
-
 }
 
 a {
@@ -128,6 +127,7 @@ nav {
 
 	.logo {
 		display: flex;
+
 		img {
 			height: 48px;
 			width: auto;
@@ -202,11 +202,13 @@ header {
 }
 
 
-
 section {
 	color: $beige;
 }
 
+article {
+	background: $beige;
+}
 
 footer {
 	padding-bottom: $spacer;
