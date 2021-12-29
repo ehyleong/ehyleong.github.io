@@ -35,13 +35,12 @@
     <script src="/js/jquery.animateTyping.js"></script>
   </head>
   <body>
-   <!-- {% include navigation.html %} -->
+    
     {{ content }}
+    {% include footer.html %}
 
   <script src="https://unpkg.com/typeit@8.1.0/dist/index.umd.js"></script>
   <script>
-
-
     new TypeIt("#myElement", {
         speed: 100,
         deleteSpeed: 50, 

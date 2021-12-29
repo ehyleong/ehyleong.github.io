@@ -247,11 +247,28 @@ section {
 	h1 {
 		padding-bottom: $spacer/2;
 	}
+
 	.project{
-		height: 400px;
-		padding: .5em;
+		height: 450px;
+		width: auto;
+		padding: 1em;
 		background: $beige;
+		border-radius: 2px;
+
+		@media only screen and (max-width: 40rem) {
+			height: 350px;
+		}
 	}
+
+	.project1 {
+			background-image: url(/img/projects/Project1.png);
+			background-size: cover;
+			transition: all 150ms ease-in-out;
+
+			&:hover{
+				opacity: 0.5;
+			}
+		}
 }
 
 footer {
