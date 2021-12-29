@@ -67,12 +67,15 @@
 	}
 
 	.project1 {
-			background-image: url(/img/thumbnails/spies.jpg);
-			background-size: cover;
-		}
+		background-image: url(/img/thumbnails/spies.jpg);
+		background-size: cover;
+		background-position: center;
+	}
 
 	.project2 {
-		background-image: url(/img/thumbnails/project1.png);
+		background-image: url(/img/thumbnails/keypad.jpg);
 		background-size: cover;
+		background-position: center;
+
 	}	
 }
