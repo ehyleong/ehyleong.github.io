@@ -28,12 +28,13 @@ twitter_username: ehyleong
 github_username:  ehyleong
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-loading-lazy
 
+collections:
+  - projects
 
 # Exclude from processing.
 # The following items will not be processed, by default.

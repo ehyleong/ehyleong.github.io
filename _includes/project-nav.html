@@ -1,12 +1,8 @@
 <article class="bottom-spacer">
   <div class="wrap row">
     <div class="col-md-6">
-      {% if page.previous %} 
-            <a rel="prev" href="{{ page.previous.url }}">&larr; Older</a>
-        {% endif %}
-        {% if page.next %} 
-            <a rel="next" href="{{ page.next.url }}">Newer &rarr;</a>
-        {% endif %}
+            <a rel="prev" href="{{ page.previous }}">Older</a>
+            <a rel="next" href="{{ page.next.url }}">Newer</a>
     </div>
   </div>
 </article>
