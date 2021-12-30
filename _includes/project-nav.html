@@ -1,8 +1,50 @@
+{% capture the_collection %}{{ page.collection }}{% endcapture %}
+
+{% if page.collection %}
+  {% assign document = site[the_collection] %}
+{% endif %}
+
+{% for links in document %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
 <article class="bottom-spacer">
-  <div class="wrap row">
-    <div class="col-md-6">
-            <a rel="prev" href="{{ page.previous }}">Older</a>
-            <a rel="next" href="{{ page.next.url }}">Newer</a>
-    </div>
+  <div class="wrap row">      
+
+    {% if prevurl %}
+      <div class="col-md-6 col-xs-12">
+      <h4><img src="/img/arrow-prev.svg" style="display: inline; margin-right: 8px;">Previous</h4>
+      <h3><a href="{{ prevurl }}">{{ prevtitle l}}</a><h3>
+      </div>
+    {% endif %}
+
+    {% if nexturl %}
+      <div class="{% if page.index == 0%}col-md-offset-6 col-md-6 col-xs-12{% else %}col-md-6 col-xs-12{% endif %}">
+      <h4>Next<img src="/img/arrow-next.svg" style="display: inline; margin-left: 8px;"></h4>
+      <h3><a href="{{ nexturl }}">{{ nexttitle }}</a></h3>
+      </div>
+    {% endif %}
+
   </div>
 </article>
+
+<script>
+/* post pagination keyboard shortcuts */
+document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '{{ prevurl }}'; } // left arrow key
+  if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
+};
+</script>
+
+
