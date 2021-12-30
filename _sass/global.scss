@@ -26,7 +26,7 @@ body {
 
 // Text Styles 
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, small {
 	font-family: "NaNJaune-MidiMedium";
 	padding-bottom: 25px;
 }
@@ -77,12 +77,16 @@ h4 {
 
 }
 
-li, p {
+li, p, small {
 	font-family: "NaNHolo-Regular";
 	font-size: 1.4em;
 	line-height: 1.4em;
 	display: inline-block;
 	padding-right: 1em;
+}
+
+small {
+	font-size: 1.2em;
 }
 
 
@@ -266,6 +270,11 @@ footer {
 	padding-bottom: $spacer;
 }
 
+.bottom-half-spacer{
+
+	padding-bottom: $spacer/2;
+}
+
 .img-spacer {
 	padding-right: 20px;
 	height: 0.8em;
@@ -274,6 +283,20 @@ footer {
 
 .text-spacer {
 	padding-top: 30px;
+}
+
+.bottom-text-spacer{
+	padding-bottom: 30px;
+}
+
+// Divs
+
+.div {
+	border-top: 2px solid $charcoal;
+}
+
+.bottom-div {
+	border-bottom: 2px solid $charcoal;
 }
 
 // Debug

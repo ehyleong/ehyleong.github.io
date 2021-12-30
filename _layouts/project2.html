@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
+  </head>
+  <body>
+    {% include navigation.html %}
+
+<header class="bottom-spacer">
+  <div class="row wrap">
+    <div class="col-md-6 col-xs-12">
+      <h1>{{ page.project }}</h1>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <h4>{{ page.client }}</h4>
+      <h3>{{ page.tasks }}</h3>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="{{ page.website }}">View on Instagram</a></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="row wrap">
+    <div class="col-md-6 col-xs-12">
+      <h3>{{ page.intro }}</h3>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <p>{{ page.byline }}</p>
+    </div>
+  </div>
+</article>
+    {{ content }}
+    {% include project-nav.html %}
+    {% include footer.html %}
+  </body>
+</html>

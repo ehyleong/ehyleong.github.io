@@ -12,7 +12,7 @@
     {% include navigation.html %}
 
   <header>
-      <div class="row wrap bottom-half-spacer">
+      <div class="row wrap bottom-spacer">
         <div class="col-md-6 col-xs-12">
           <h1>{{ page.project }}</h1>
         </div>
@@ -21,27 +21,21 @@
           <p>{{ page.byline }}</p>
         </div>
       </div>
-      <div class="row wrap">
-        <div class="col-md-3 col-xs-12">
-          <h4>Client</h4>
-          <small>{{ page.client }}</small>
-        </div>
-        <div class="col-md-3 col-xs-12">
-          <h4>Role</h4>
-          <small>{{ page.role }}</small>
-        </div>
-        <div class="col-md-3 col-xs-12">
-        <h4>Deliverables</h4>
-            <small>{{ page.deliverables }}</small>
-        </div>
-        <div class="col-md-3 col-xs-12">
-        <h4>Links</h4>
-            <small><a href="{{ page.website }}">{{ page.link }}</a></small>
-        </div>
-      </div>
   </header>
 
     {{ content }}
+<article class="bottom-spacer">
+  <div class="row wrap">
+  <div class="col-md-6 col-xs-12">
+    <h4>Client</h4>
+    <p>{{ page.client }}</p>
+  </div>
+  <div class="col-md-6 col-xs-12">
+    <h4>Roles</h4>
+    <p>{{ page.tasks }}</p>
+  </div>
+</div>  
+</article>
     {% include project-nav.html %}
     {% include footer.html %}
   </body>
