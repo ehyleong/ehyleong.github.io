@@ -34,7 +34,6 @@ plugins:
   - jekyll-paginate
   - jekyll-loading-lazy
 
-  paginator: 2
 
 # Exclude from processing.
 # The following items will not be processed, by default.
