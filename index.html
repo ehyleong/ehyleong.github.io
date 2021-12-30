@@ -1,6 +1,6 @@
 ---
+layout: page
 title: Home
-layout: home
 ---
 
 <nav>
@@ -20,7 +20,7 @@ layout: home
   <div class="row wrap">
     <div class="col-xs-12">
       <h1>Hi, I'm Erica. <br>I design
-        <span id="myElement"></span>
+        <span id="typewriter"></span>
       </h1>
       <p class="icon">Currently making cool things <a href="https://steamclock.com">@Steamclock.</a></p>
     </div>
@@ -32,20 +32,18 @@ layout: home
 </div>
 
 <section class="wrap">
-
   <div class="work row spacer" id="work">
     <div class="col-lg-12 col-xs-12">
       <h2><img src="/img/icon-work.svg" class="img-spacer">Work</h2>
     </div>
     <div class="row">
-      <div class="col-md-6 col-xs-12"><a href="/work/two-spies.html"><div class="project project1"></div></a></div>
-      <div class="col-md-6 col-xs-12"><a href="/work/figma-keypads.html"><div class="project project2"></div></a></div>
-      <div class="col-md-6 col-xs-12"><a href="/work/project1.html"><div class="project project3"></div></a></div>
+      <div class="col-md-6 col-xs-12"><a href="{% link work/two-spies.html %}"><div class="project project1"></div></a></div>
+      <div class="col-md-6 col-xs-12"><a href="{% link work/figma-keypads.html %}"><div class="project project2"></div></a></div>
+      <div class="col-md-6 col-xs-12"><a href="/work/bench.html"><div class="project project3"></div></a></div>
       <div class="col-md-6 col-xs-12"><a href="/work/project1.html"><div class="project project4"></div></a></div>
-
     </div>
   </div>
 
-    {% include about.html %}
+  {% include about.html %}
 
 </section>

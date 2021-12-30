@@ -18,3 +18,28 @@
     </div>
   </div>
 </footer>
+
+<script src="https://unpkg.com/typeit@8.1.0/dist/index.umd.js"></script>
+<script>
+  new TypeIt("#typewriter", {
+      speed: 100,
+      deleteSpeed: 50, 
+      loop: true,
+    })
+
+  .type("interfaces.")   
+  .pause(2200)
+  .delete()
+  .type("illustrations.")
+  .pause(2500)
+  .delete()
+  .type("brands.")
+  .pause(2200)
+  .delete()
+  .type("websites.")
+  .pause(2200)
+  .go();
+
+</script>
+</body>
+</html>
