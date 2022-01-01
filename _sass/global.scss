@@ -7,13 +7,11 @@ html {
 	scroll-behavior: smooth;
 	font-size: 16px;
 
-	@media only screen and (max-width: 600px) {
-		font-size: 13px;
+	@media only screen and (max-width: 40rem) {
+		font-size: 14px;
 	}
 
 }
-
-
 
 body {
 	display: flex;
@@ -35,16 +33,21 @@ body {
 
 h1, h2, h3, h4, p, small {
 	font-family: "NaNJaune-MidiMedium";
-	padding-bottom: 25px;
+	margin-bottom: 1.5rem;
+
 }
 
 h1 {
 	font-size: 4.5rem;
 	line-height: 1em;
+
+	@media only screen and (max-width: 40rem) {
+		font-size: 3.5rem;
+	}
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 3.2rem;
 	line-height: 1.4em;
 }
 
@@ -55,11 +58,10 @@ h3 {
 
 h4 {
 	font-family: "NaNJaune-MidiBold";
-	font-size: 0.9rem;
-	line-height: 1rem;
+	font-size: .8rem;
+	line-height: 1em;
 	text-transform: uppercase;
 	letter-spacing:3px;
-	padding-top: 20px;
 	color: $teal;
 
 }
@@ -69,13 +71,12 @@ li, p, small {
 	font-size: 1.4rem;
 	line-height: 1.4em;
 	display: inline-block;
-	padding-right: 1em;
+	padding-right: 1rem;
 }
 
 small {
 	font-size: 1.2rem;
 }
-
 
 span {
 	color: $teal;
@@ -248,15 +249,27 @@ footer {
 
 .half-spacer{
 	padding-top: $spacer/2;
+
+	@media only screen and (max-width: 40rem) {
+		padding-bottom: $spacer/4;
+	}
 }
 
 .bottom-spacer{
 	padding-bottom: $spacer;
+
+	@media only screen and (max-width: 40rem) {
+		padding-bottom: $spacer/2;
+	}
 }
 
 .bottom-half-spacer{
-
 	padding-bottom: $spacer/2;
+
+	@media only screen and (max-width: 40rem) {
+		padding-bottom: $spacer/4;
+	}
+
 }
 
 .img-spacer {
@@ -265,12 +278,12 @@ footer {
 	width: auto;
 }
 
-.text-spacer {
-	padding-top: 30px;
+.top-text-spacer {
+	padding-top: 1.5rem;
 }
 
 .bottom-text-spacer{
-	padding-bottom: 30px;
+	padding-bottom: 1.5rem;
 }
 
 // Divs
