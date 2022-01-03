@@ -1,0 +1,20 @@
+<section class="thumbnails">
+    <div class="row spacer" id="work">
+      <div class="col-lg-6 col-md-5 col-xs-12">
+      <h2><img src="/img/icon-about.svg" class="img-spacer">Work</h2>
+    </div>
+
+    <div class="row thumbnail-grid">
+    {% for project in site.data.projects %}
+    {% assign count = forloop.length %}
+    <div class="thumbnail" onclick="" aria-label="{{ project[1].name }}">
+        <img src="{{ project[1].img }}" alt="{{ project[1].name | strip_html }}" class="thumbnail-image">        
+        <div class="thumbnail-overlay">
+          <h3>{{ project[1].name }}</h3>
+          <p><small>{{ project[1].text }}</small></p>
+        </div>
+    </div>
+  {% endfor %}
+  </div>
+
+</section>

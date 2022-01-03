@@ -1,12 +1,6 @@
 ---
 ---
 
-@import 'reset';
-@import 'global';
-@import 'home';
-@import 'project';
-@import "variables/main.scss";
-@import "mixins/main.scss";
-@import "grid";
-@import "visibility"; // Visibility last for precedence
-
+@import '_abstracts/index.scss';
+@import '_grid/index.scss';
+@import 'main';

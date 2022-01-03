@@ -1,12 +1,25 @@
-bench:
-  name: Bench
-  url: /work/bench
+two-spies:
+  name: Two Spies
+  url: /workl/two-spies
+  text: Illustration, Iconography
+  img: ../img/thumbnails/thumbnail-test1.jpg
 
 figma-keypads:
   name: Figma Keypads
   url: /work/figma-keypads
+  text: Illustration, Iconography
+  img: ../img/thumbnails/thumbnail-test2.jpg
 
-two-spies:
-  name: Two Spies
-  url: /workl/two-spies
-  
+bench:
+  name: Bench
+  url: /work/bench
+  text: Illustration, Iconography
+  img: ../img/thumbnails/thumbnail-test3.jpg
+
+something:
+  name: Something
+  url: /work/something
+  text: Illustration, Iconography
+  img: ../img/thumbnails/thumbnail-test3.jpg
+
+

@@ -1,36 +1,43 @@
 ---
-layout: home
+layout: page
 title: Home
 permalink: /
+byline: Currently making cool things
+current_work: Steamclock
+current_work_url: https://steamclock.com
+
 ---
 
-<nav>
-  <div class="wrap row">
-      <div class="col-lg col-xs logo">
-        <img src="/img/Logo@2x.png"/>
-      </div>
-      <ul class="col-lg col-xs">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% include navigation.html %}
 
 <header class="home-hero">
-  <div class="row wrap">
+  <div class="wrap row">
     <div class="col-xs-12">
-      <h1>Hi, I'm Erica. <br>I design
-        <span id="typewriter"></span>
-      </h1>
-      <p class="icon">Currently making cool things <a href="https://steamclock.com">@Steamclock.</a></p>
+      <h1>Hi, I'm Erica. <br>I design <span id="typewriter"></span></h1>
+      <p class="icon">{{ page.byline }} <a href="{{ page.current_work_url }}">@{{ page.current_work }}</a></p>
     </div>
   </div>
 </header>
 
-<div class="home-hero-image wrap">
+<div class="wrap home-hero-image">
   <img src="/img/Hero.png"/>
 </div>
 
-{% include work-grid.html %}
-{% include about.html %}
+<main class="wrap row">
+  {% include thumbnails.html %}
+  <section>
+    <div class="about row spacer" id="about">
+      <div class="col-lg-6 col-md-5 col-xs-12">
+        <h2><img src="/img/icon-about.svg" class="img-spacer">About</h2>
+      </div>
+      <div class="col-lg-6 col-md-7 col-xs-12">
+        <h4 class="top-text-spacer">Who I Am</h4>
+        <h3 class="bottom-text-spacer">Hello, my name is Erica Leong. I'm a visual designer based in Vancouver, Canada.</h3>
+        <h4>What I Do</h4>
+        <p class="bottom-text-spacer">I specialize in all sorts of things – illustration, interfaces, branding, web. I enjoy creative problem solving, learning new skills, and finding unique, delightful solutions for clients of all sizes.
+        </p>
+        <a href="{% link about.html %}" class="btn">More Details</span>
+      </div>
+    </div>
+  </section>
+</main>

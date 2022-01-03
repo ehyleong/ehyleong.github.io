@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "NaNHolo-Regular";
+  src: url("/fonts/NaNHolo-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NaNJaune-MidiRegular";
+  src: url("/fonts/NaNJaune-MidiRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NaNJaune-MidiMedium";
+  src: url("/fonts/NaNJaune-MidiMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NaNJaune-MidiBold";
+  src: url("/fonts/NaNJaune-MidiBold.woff2") format("woff2");
+}
+
+
+h1, h2, h3, h4, p, small {
+  font-family: "NaNJaune-MidiMedium";
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 4vw, 4.75rem);
+  line-height: 1em;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  line-height: 1.2em;
+}
+
+h3 {  
+  font-size: clamp(1.75rem, 2vw, 2rem);
+  line-height: 1.2em;
+}
+
+h4 {
+  font-family: "NaNJaune-MidiBold";
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing:3px;
+  color: $teal;
+}
+
+li, p, small {
+  font-family: "NaNHolo-Regular";
+  font-size: clamp(1.25rem, 2vw, 1.4rem);
+  line-height: 1.4em;
+}
+
+li {
+  padding-right: 1rem;
+  display: inline-block;
+}
+
+small {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+span {
+  color: $teal;
+}
+
+a {
+  color: $charcoal;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    color: $teal;
+  }
+}

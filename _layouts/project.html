@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/style.css">
+    <style>      
+      header h4 {
+        margin-bottom: 1rem;
+      }</style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
   </head>
   <body>
     {% include navigation.html %}
-
   <header>
       <div class="row wrap bottom-half-spacer">
         <div class="col-md-6 col-xs-12">
@@ -23,24 +26,20 @@
       </div>
       <div class="row wrap">
         <div class="col-md-3 col-xs-12">
-          <h4>Client</h4>
-          <small>{{ page.client }}</small>
+          <h4>{% if page.client == 'Personal' %} Project {% else %} Client {% endif %}</h4>
+          <p>{{ page.client }}</p>
         </div>
+
         <div class="col-md-3 col-xs-12">
-          <h4>Role</h4>
-          <small>{{ page.role }}</small>
+          <h4>Link</h4>
+          <p><a href="{{ page.href }}">{{ page.link }}</a></p>
         </div>
-        <div class="col-md-3 col-xs-12">
-        <h4>Deliverables</h4>
-            <small>{{ page.deliverables }}</small>
-        </div>
-        <div class="col-md-3 col-xs-12">
-        <h4>Links</h4>
-            <small><a href="{{ page.website }}">{{ page.link }}</a></small>
+        <div class="col-md-6 col-xs-12">
+        <h4>Work</h4>
+          <p>{{ page.role }}</p>
         </div>
       </div>
   </header>
-
     {{ content }}
     {% include project-nav.html %}
     {% include footer.html %}
