@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-git_source(:github) { |ehyleong/ehyleong.github.io| "https://github.com/ehyleong/ehyleong.github.io" }
+#git_source(:github) { |ehyleong/ehyleong.github.io| "https://github.com/ehyleong/ehyleong.github.io" }
 
 # gem "rails"
 # gem "jekyll"
