@@ -27,6 +27,8 @@ url: "https://ericaleong.com" # the base hostname & protocol for your site, e.g.
 twitter_username: ehyleong
 github_username:  ehyleong
 
+github: [metadata]
+
 # Build settings
 plugins:
   - jekyll-feed
@@ -36,6 +38,7 @@ plugins:
 collections:
   work:
     output: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
