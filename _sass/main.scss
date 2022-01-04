@@ -112,10 +112,11 @@ nav {
 // 2.2 Home
 
 header.home-hero {
-	min-height: 30rem; 
 
-		@include for-size(phone-only) {    
-			min-height: 21rem;
+	min-height: 29rem;
+	
+	@media only screen and (max-width: 90rem) {
+		min-height: 22rem; 
 	}
 
 	h1 {
@@ -218,7 +219,7 @@ section.thumbnails {
 // 2.4 About
 
 header.about-hero {
-	min-height: 31rem; 
+	min-height: 30rem; 
 	background: $beige;
 
 	h1 {
