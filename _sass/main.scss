@@ -22,6 +22,10 @@ html {
 header {
 	background: $beige;
 	padding-top: $spacer/2;
+
+	@include for-size(phone-only) {    
+		padding-top: $spacer/4;
+	}
 }
 
 body {
@@ -111,7 +115,6 @@ header.home-hero {
 	min-height: 25rem; 
 
 		@include for-size(phone-only) {    
-			padding-top: $spacer/4;
 			min-height: 21rem;
 	}
 
