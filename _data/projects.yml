@@ -1,16 +1,16 @@
-two-spies:
-  name: Two Spies
-  url: work/two-spies
-  client: Steamclock Software
-  role: Branding, UI/UX, Website, Marketing
-  img: ../img/thumbnails/spies.png
-
 figma-keypads:
   name: Figma Keypads
   url: work/figma-keypads
   client: Personal
   role: Illustration
   img: ../img/thumbnails/keypads.jpg
+
+two-spies:
+  name: Two Spies
+  url: work/two-spies
+  client: Steamclock Software
+  role: Branding, UI/UX, Website, Marketing
+  img: ../img/thumbnails/spies.png
 
 bench:
   name: Bench Illustrations
