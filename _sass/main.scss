@@ -112,7 +112,7 @@ nav {
 // 2.2 Home
 
 header.home-hero {
-	min-height: 25rem; 
+	min-height: 30rem; 
 
 		@include for-size(phone-only) {    
 			min-height: 21rem;
