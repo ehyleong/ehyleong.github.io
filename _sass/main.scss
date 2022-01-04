@@ -1,13 +1,32 @@
-// Global Styles
+/* Table of Contents
+
+1. Global Styles
+2. Layout
+-- 2.1 Nav
+-- 2.2 Home
+-- 2.3 Work 
+-- 2.4 About
+-- 2.5 Projects
+-- 2.6 Footer
+3. Components
+
+*/
+
+// 1. Global Styles
 
 html {	  
 	scroll-behavior: smooth;
 	font-size: 16px;
 }
 
+header {
+	background: $beige;
+	padding-top: $spacer/2;
+}
+
 body {
 	display: flex;
-	background: $charcoal;
+	background: $beige;
 	flex-direction: column;
 }
 
@@ -20,20 +39,9 @@ img {
 	width: min(75rem, 95%);
 }
 
-.btn {
-	font-family: "NaNJaune-MidiBold";
-	border-radius: 2px;
-	border: 1px solid $beige;
-	color: $beige;
-	padding: 1em 1.5em;
+// 2. Layout 
 
-	&:hover {
-		background: $beige;
-		color: $charcoal;
-	}
-}
-
-// Nav
+// 2.1 Nav
 
 nav {
 	background: $beige;
@@ -53,70 +61,222 @@ nav {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+	}
 
-		li {			
-			padding-left: 1.2em;
-			padding-right: 0;
+	li {			
+		padding-left: 1.2em;
+		padding-right: 0;
 
-			&:nth-child(1){
-				padding-left: 0;
+		&:nth-child(1){
+			padding-left: 0;
+		}
+
+		a {
+			display: inline-block;
+			font-family: "NaNJaune-MidiBold";
+			font-size: 0.8em;
+			color: $charcoal;
+			overflow: hidden;
+			position: relative;
+			line-height: 2em;
+
+			&:after {
+				position: absolute;
+				content: '';
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $teal;
+				opacity: 0;
+				transform: translate3d(-100%, 0, 0);
+				transition: opacity 300ms, transform 300ms;
 			}
 
-			a {
-				display: inline-block;
-				font-family: "NaNJaune-MidiBold";
-				font-size: 0.8em;
-				color: $charcoal;
-				overflow: hidden;
-				position: relative;
-				line-height: 2em;
-
+			&:hover {
+				color: $teal;
 
 				&:after {
-					position: absolute;
-					content: '';
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					height: 3px;
-					background-color: $teal;
-					opacity: 0;
-					transform: translate3d(-100%, 0, 0);
-					transition: opacity 300ms, transform 300ms;
+					transform: translate3d(0, 0, 0);
+					opacity: 1;
 				}
+			}
+		}	
+	}
+}
 
-				&:hover {
-					color: $teal;
+// 2.2 Home
 
-					&:after {
-						transform: translate3d(0, 0, 0);
-						opacity: 1;
-					}
-				}
-			}		
+header.home-hero {
+	min-height: 25rem; 
+
+		@include for-size(phone-only) {    
+			padding-top: $spacer/4;
+			min-height: 21rem;
+	}
+
+	h1 {
+		color: $charcoal;
+	}
+
+	.icon {
+		&:before {
+			display:inline-block;
+			content: '';
+			background-image: url('/img/hand-point-right.svg');
+			background-size: cover;
+			height: 1.0rem;
+			width: 1.3rem;
+			margin-right: 7px;
 		}
 	}
 }
 
-// Sections
+/* .home-hero-image {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -7em;
+	padding: 0 1rem;
 
-header {
+	@include for-size(phone-only) {    
+		margin-top: -4em;
+	}
+}*/
+
+
+// 2.3 Work
+
+section.thumbnails {
+
+	.thumbnail-grid {
+		padding: 0 1rem; 
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: auto auto;
+
+		@include for-size (phone-only){
+			grid-template-columns: auto;
+		}
+	}
+
+	.thumbnail {
+		transition: all 150ms ease-in-out;
+		position: relative;
+
+		.thumbnail-image {
+			display: block;
+			width: 100%;
+			border-radius: 8px;
+		}
+
+		.thumbnail-overlay {
+			padding: 1rem;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(28, 35, 35, 0.95);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			opacity: 0;
+			transition: all 200ms ease-in-out;
+			border-radius: 8px;
+			backdrop-filter: blur(10px);
+			 -webkit-backdrop-filter: blur(10px);
+
+			& > * {
+				margin: 0.7rem;
+				color: $beige;
+				transform: translateY(20px);
+				transition: transform 200ms ease-in-out;
+			}
+
+			&:hover {
+				opacity: 1;
+
+				&:hover > * {
+					transform: translateY(0px);
+				}
+			}
+		}
+
+		.thumbnail-div {
+			width: 2.5rem;
+		}
+
+	}
+
+}
+
+// 2.4 About
+
+header.about-hero {
+	min-height: 31rem; 
 	background: $beige;
-	padding-top: $spacer/2;
+
+	h1 {
+		color: $charcoal;
+	}
+
 }
 
+section.about {
+	h4 {
+		padding-top: 0rem;
 
-section {
-	color: $beige;
+		@include for-size (tablet-landscape-up){
+			padding-top: 1rem;
+		}
+	}
 }
 
-article {
-	background: $beige;
+// 2.5 Projects
+
+.project-nav {
+
+	.arrow-prev {
+		&:before {
+			display: inline-block;
+			content: '';
+			background-size: cover;
+			background-image: url('/img/arrow-prev.svg');
+			height: 10px;
+			width: 18px;
+			margin-right: 10px;
+		}
+	}
+
+	.arrow-next {
+		&:after {
+			display: inline-block;
+			content: '';
+			background-size: cover;
+			background-image: url('/img/arrow-next.svg');
+			height: 10px;
+			width: 18px;
+			margin-left: 10px;
+		}
+
+	}
 }
 
-// Footer
+.next-project {
+
+	text-align: right;
+
+	@include for-size(phone-only) { 
+		text-align: left;
+	}
+}
+
+// 2.6 Footer
 
 footer {
+	background: $charcoal;
 	padding-bottom: $spacer;
 	color: $beige;
 
@@ -154,211 +314,17 @@ footer {
 	}
 }
 
-// Spacers
+// 3. Components 
 
-.spacer {
-	padding-top: $spacer;
+.button {
+	font-family: "NaNJaune-MidiBold";
+	border-radius: 4px;
+	border: 2px solid $beige;
+	color: $beige;
+	padding: 1em 1.5em;
 
-	@include for-size(phone-only) { 
-		padding-top: $spacer/2;
-	}
-}
-
-.half-spacer{
-	padding-top: $spacer/2;
-
-	@include for-size(phone-only) { 
-		padding-bottom: $spacer/4;
-	}
-}
-
-.bottom-spacer{
-	padding-bottom: $spacer;
-
-	@include for-size(phone-only) { 
-		padding-bottom: $spacer/2;
-	}
-}
-
-.bottom-half-spacer{
-	padding-bottom: $spacer/2;
-
-	@include for-size(phone-only) { 
-		padding-bottom: $spacer/4;
-	}
-
-}
-
-.img-spacer {
-	padding-right: 20px;
-	height: 0.8em;
-	width: auto;
-}
-
-.top-text-spacer {
-	padding-top: 1rem;
-}
-
-.bottom-text-spacer{
-	padding-bottom: 1rem;
-}
-
-// Divs
-
-.div {
-	border-top: 2px solid $charcoal;
-}
-
-.bottom-div {
-	border-bottom: 2px solid $charcoal;
-}
-
-// Debug
-
-.debug {
-	background: blue;
-}
-
-.debug2 {
-	background: red;
-}
-
-
-.grid {
-	display: grid;
-	gap: 1rem;
-}
-
-
-// Home
-
-header.home-hero {
-	height: 31rem; 
-
-		@include for-size(phone-only) {    
-			padding-top: $spacer/4;
-			height: 25rem;
-	}
-
-	h1 {
+	&:hover {
+		background: $beige;
 		color: $charcoal;
-	}
-
-	.icon {
-		&:before {
-			display:inline-block;
-			content: '';
-			background-image: url('/img/hand-point-right.svg');
-			background-size: cover;
-			height: 1.0rem;
-			width: 1.3rem;
-			margin-right: 7px;
-		}
-	}
-}
-
-
-.home-hero-image {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -9em;
-	padding: 0 1rem;
-
-	@include for-size(phone-only) {    
-		margin-top: -4em;
-	}
-}
-
-// Work
-
-section.thumbnails {
-
-	.thumbnail-grid {
-		padding: 0 1rem; 
-		display: grid;
-		gap: 2rem;
-		grid-template-columns: auto auto;
-
-		@include for-size (phone-only){
-			grid-template-columns: auto;
-		}
-	}
-
-	.thumbnail {
-		transition: all 150ms ease-in-out;
-		position: relative;
-
-		.thumbnail-image {
-			display: block;
-			width: 100%;
-		}
-
-		.thumbnail-overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.8);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			opacity: 0;
-			transition: all 150ms ease-in-out;
-
-			&:hover {
-				opacity: 1;
-			}
-
-			h3 {
-				margin: 0;
-			}
-
-			p {
-				margin-top: 1rem;
-			}
-		}
-
-	}
-
-}
-
-// Projects
-
-.project-nav {
-
-	.arrow-prev {
-		&:before {
-			display: inline-block;
-			content: '';
-			background-size: cover;
-			background-image: url('/img/arrow-prev.svg');
-			height: 10px;
-			width: 18px;
-			margin-right: 10px;
-		}
-	}
-
-	.arrow-next {
-		&:after {
-			display: inline-block;
-			content: '';
-			background-size: cover;
-			background-image: url('/img/arrow-next.svg');
-			height: 10px;
-			width: 18px;
-			margin-left: 10px;
-		}
-
-	}
-}
-
-.next-project {
-
-	text-align: right;
-
-	@include for-size(phone-only) { 
-		text-align: left;
 	}
 }

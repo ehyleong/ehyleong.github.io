@@ -1,12 +1,18 @@
+// Margin
 $spacer: 6.25rem;
 
+// Colours
 $charcoal: #1C2323;
 $beige: #F2F0EA;
-$teal: #4C9292;
+$teal: #2F9B9B;
 
 //$yellow: #CCA030;
 //$blurple: #7949FF;
 //$orange: #E57157;
+
+
+// Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
+
 
 @mixin for-size($size) {
   @if $size == phone-only {
@@ -21,3 +27,74 @@ $teal: #4C9292;
     @media (min-width: 120rem) { @content; }
   }
 }
+
+// Spacers
+
+.spacer {
+  padding-top: $spacer;
+
+  @include for-size(phone-only) { 
+    padding-top: $spacer/2;
+  }
+}
+
+.half-spacer{
+  padding-top: $spacer/2;
+
+  @include for-size(phone-only) { 
+    padding-bottom: $spacer/4;
+  }
+}
+
+.bottom-spacer{
+  padding-bottom: $spacer;
+
+  @include for-size(phone-only) { 
+    padding-bottom: $spacer/2;
+  }
+}
+
+.bottom-half-spacer{
+  padding-bottom: $spacer/2;
+
+  @include for-size(phone-only) { 
+    padding-bottom: $spacer/4;
+  }
+
+}
+
+.section-icon-spacer {
+  padding-right: 20px;
+  height: 0.8em;
+  width: auto;
+}
+
+.top-text-spacer {
+  padding-top: 1rem;
+}
+
+.bottom-text-spacer{
+  padding-bottom: 1rem;
+}
+
+
+// Divs
+
+.div {
+  border-top: 2px solid $charcoal;
+}
+
+.bottom-div {
+  border-bottom: 2px solid $charcoal;
+}
+
+// Debug
+
+.debug {
+  background: blue;
+}
+
+.debug2 {
+  background: red;
+}
+

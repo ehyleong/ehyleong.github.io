@@ -1,3 +1,5 @@
+// Typography
+
 @font-face {
   font-family: "NaNHolo-Regular";
   src: url("/fonts/NaNHolo-Regular.woff2") format("woff2");
@@ -42,7 +44,7 @@ h3 {
 h4 {
   font-family: "NaNJaune-MidiBold";
   font-size: clamp(0.7rem, 2vw, 0.8rem);
-  line-height: 1em;
+  line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
   color: $teal;
