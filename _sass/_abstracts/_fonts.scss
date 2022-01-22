@@ -32,6 +32,7 @@ h1 {
 }
 
 h2 {
+  font-family: "NaNJaune-MidiRegular";
   font-size: clamp(2.5rem, 3vw, 3.5rem);
   line-height: 1.2em;
 }
@@ -56,13 +57,13 @@ li, p, small {
   line-height: 1.4em;
 }
 
-li {
-  padding-right: 1rem;
-  display: inline-block;
-}
+//li {
+//  padding-right: 1rem;
+//  display: inline-block;
+//}
 
 small {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 span {
@@ -77,3 +78,4 @@ a {
     color: $teal;
   }
 }
+
