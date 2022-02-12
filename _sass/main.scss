@@ -41,8 +41,6 @@ body {
 	}
 }
 
-
-
 img {
 	width: 100%;
 	height: auto;
@@ -51,6 +49,15 @@ img {
 .wrap {
 	width: min(75rem, 95%);
 }
+
+
+.section-icon {
+	padding-right: 0.5em;
+	height: 1em;
+	width: auto;
+	vertical-align: bottom;
+}
+
 
 // 2. Layout 
 
@@ -145,16 +152,14 @@ header.home-hero {
 	}
 }
 
-/* .home-hero-image {
+.home-hero-image {
+
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -7em;
 	padding: 0 1rem;
 
-	@include for-size(phone-only) {    
-		margin-top: -4em;
-	}
-}*/
+
+}
 
 
 // 2.3 Work
@@ -305,7 +310,7 @@ section.about {
 footer {
 	background: $black;
 	padding-top: $spacer/2;
-	padding-bottom: $spacer/2;
+	padding-bottom: $spacer/4;
 	color: $beige;	
 
 	a {
@@ -317,10 +322,14 @@ footer {
 	}
 
 	li {
-		display: block;
-	    font-family: "NaNJaune-MidiMedium";	  
-		font-size: clamp(1.75rem, 2vw, 2rem);
-		line-height: 1.5em;	
+		display: inline-block;
+	    font-family: "NaNHolo-Regular";
+	    margin-right: 1rem;	  
+
+		@include for-size (phone-only){
+			display: block;
+		}
+
 
 		a {
 			color: $beige;	
