@@ -129,10 +129,10 @@ nav {
 
 header.home-hero {
 
-	min-height: 29rem;
+	min-height: 35rem;
 	
 	@media only screen and (max-width: 90rem) {
-		min-height: 22rem; 
+		min-height: 29rem; 
 	}
 
 	h1 {
@@ -154,9 +154,12 @@ header.home-hero {
 
 .home-hero-image {
 
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: $spacer;
 	padding: 0 1rem;
+
+	@media only screen and (max-width: 90rem) {
+		margin-top: $spacer/2; 
+	}
 
 
 }
@@ -184,9 +187,12 @@ section.thumbnails {
 		.thumbnail-image {
 			display: block;
 			width: 100%;
+			border-radius: 12px;
+
 		}
 
 		.thumbnail-overlay {
+			border-radius: 12px;
 			padding: 1rem;
 			text-align: center;
 			position: absolute;

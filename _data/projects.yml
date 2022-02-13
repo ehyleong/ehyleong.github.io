@@ -10,30 +10,18 @@ two-spies:
   url: work/two-spies
   client: Steamclock Software
   role: Branding, UI/UX, Website, Marketing
-  img: ../img/thumbnails/spies.png
+  img: ../img/thumbnails/spies.jpg
 
 bench:
   name: Bench Illustrations
   url: work/bench
   client: Bench Accounting
   role: Iconography, Illustration, Motion
-  img: ../img/thumbnails/keypads.jpg
+  img: ../img/thumbnails/bench.gif
 
-example1:
-  name: Something
-  url: work/something
-  role: Illustration, Iconography
-  img: ../img/thumbnails/keypads.jpg
+sybama:
+  name: Should You Build a Mobile App – Microsite
+  url: work/sybama
+  role: Website, Animations
+  img: ../img/thumbnails/sybama.gif
 
-example2:
-  name: Bench Illustrations
-  url: work/bench
-  client: Bench Accounting
-  role: Iconography, Illustration, Motion
-  img: ../img/thumbnails/keypads.jpg
-
-example3:
-  name: Something
-  url: work/something
-  role: Illustration, Iconography
-  img: ../img/thumbnails/keypads.jpg
