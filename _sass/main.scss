@@ -129,10 +129,10 @@ nav {
 
 header.home-hero {
 
-	min-height: 35rem;
+	min-height: 25rem;
 	
 	@media only screen and (max-width: 90rem) {
-		min-height: 29rem; 
+		min-height: 21rem; 
 	}
 
 	h1 {
@@ -152,15 +152,10 @@ header.home-hero {
 	}
 }
 
-.home-hero-image {
+section.home-hero-image {
 
-	margin-top: $spacer;
+	background: $beige;
 	padding: 0 1rem;
-
-	@media only screen and (max-width: 90rem) {
-		margin-top: $spacer/2; 
-	}
-
 
 }
 
