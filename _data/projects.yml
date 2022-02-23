@@ -16,12 +16,17 @@ bench:
   name: Bench Illustrations
   url: work/bench
   client: Bench Accounting
-  role: Iconography, Illustration, Motion
+  role: Iconography, Illustration, Animation
   img: ../img/thumbnails/bench.gif
 
 sybama:
   name: Should You Build a Mobile App – Microsite
   url: work/sybama
-  role: Website, Animations
-  img: ../img/thumbnails/sybama.gif
+  role: Website, Animation
+  img: ../img/thumbnails/sybama.jpg
 
+steamclock-swag:
+  name: Steamclock Swag
+  url: work/steamclock-swag
+  role: Illustration, Print
+  img: ../img/thumbnails/steamclockswag.jpg
