@@ -70,11 +70,18 @@ nav {
 	.logo {
 		display: flex;
 
-		img {
-			height: clamp(3em, 12vw, 2em);
-			width: auto;
-			mix-blend-mode: multiply;
+		svg {
+
+			filter: invert(6%) sepia(6%) saturate(2004%) hue-rotate(131deg) brightness(99%) contrast(90%);
+				
+			@media (prefers-color-scheme: dark) {
+				filter: invert(100%) sepia(0%) saturate(3845%) hue-rotate(52deg) brightness(102%) contrast(102%);
+			}
 		}
+	}
+
+	.logo-color {
+		fill: white;	
 	}
 
 	ul {
@@ -99,6 +106,11 @@ nav {
 			overflow: hidden;
 			position: relative;
 			line-height: 2em;
+
+				@media (prefers-color-scheme: dark) {
+			  		color: $beige;
+				}
+
 
 			&:after {
 				position: absolute;
@@ -137,18 +149,6 @@ header.home-hero {
 
 	h1 {
 		color: $charcoal;
-	}
-
-	.icon {
-		&:before {
-			display:inline-block;
-			content: '';
-			background-image: url('/img/hand-point-right.svg');
-			background-size: cover;
-			height: 1.0rem;
-			width: 1.3rem;
-			margin-right: 7px;
-		}
 	}
 }
 
@@ -269,9 +269,22 @@ section.about {
 
 // 2.5 Projects
 
+.external-link {
+	&:after {
+		display: inline-block;
+		content: '';
+		background-size: cover;
+		background-image: url('/img/icon-external-link.svg');
+		height: 16px;
+		width: 16px;
+		margin-left: 10px;
+	}
+}
+
 .project-nav {
 
 	.arrow-prev {
+		margin-bottom: 2rem;
 		&:before {
 			display: inline-block;
 			content: '';
@@ -284,6 +297,7 @@ section.about {
 	}
 
 	.arrow-next {
+		margin-bottom: 2rem;
 		&:after {
 			display: inline-block;
 			content: '';
@@ -325,7 +339,8 @@ footer {
 	li {
 		display: inline-block;
 	    font-family: "NaNHolo-Regular";
-	    margin-right: 1rem;	  
+	    margin-right: 1.5rem;
+	    margin-bottom: 1rem;	  
 
 		@include for-size (phone-only){
 			display: block;
@@ -360,5 +375,19 @@ footer {
 	&:hover {
 		background: $beige;
 		color: $charcoal;
+	}
+}
+
+// Dark Mode
+
+header, section, section.home-hero-image, nav, .project-nav, header.home-hero {
+	@media (prefers-color-scheme: dark) {
+  		background: $charcoal;
+  		color: $beige;
+
+  		h1, a {
+  			color: $beige;
+  		}
+
 	}
 }

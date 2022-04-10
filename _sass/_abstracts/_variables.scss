@@ -2,8 +2,8 @@
 $spacer: 6.25rem;
 
 // Colours
-$charcoal: #1C2323;
-$black: #181E1E;
+$charcoal: #1A2020;
+$black: #151B1B;
 $beige: #F2F0EA;
 $teal: #2F9B9B;
 
@@ -101,5 +101,12 @@ $teal: #2F9B9B;
 
 .debug2 {
   background: red;
+}
+
+// Padding Overrides
+
+#py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 

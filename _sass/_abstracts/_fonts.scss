@@ -20,35 +20,45 @@
   src: url("/fonts/NaNJaune-MidiBold.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "NaNJaune-Midi-Var";
+  src: url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2 woff2 supports variations");
+  src: url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+}
+
 
 h1, h2, h3, h4, p, small {
-  font-family: "NaNJaune-MidiMedium";
+  font-family: "NaNJaune-Midi-Var";
   margin-bottom: 2rem;
 }
 
 h1 {
+  font-weight: 600;
   font-size: clamp(3rem, 4.5vw, 5.6rem);
   line-height: 1em;
 }
 
 h2 {
-  font-family: "NaNJaune-MidiRegular";
+  font-weight: 480;
   font-size: clamp(2.5rem, 3vw, 3.5rem);
-  line-height: 1.2em;
+  line-height: 1.1em;
 }
 
 h3 {  
-  font-size: clamp(1.75rem, 2vw, 2rem);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 2.5vw, 2.2rem);
   line-height: 1.2em;
 }
 
 h4 {
-  font-family: "NaNJaune-MidiBold";
+  font-weight: 900;
   font-size: clamp(0.7rem, 2vw, 0.8rem);
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
   color: $teal;
+  margin-bottom: 1rem;
 }
 
 li, p, small {

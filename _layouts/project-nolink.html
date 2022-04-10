@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/style.css">
-    <style> 
-      header h4 {
-        margin-bottom: 1rem;
-      }
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
   </head>
@@ -18,26 +13,28 @@
   <header>
       <div class="row wrap bottom-half-spacer">
         <div class="col-md-6 col-xs-12">
-          <h1>{{ page.project }}</h1>
+          <h2>{{ page.project }}</h2>
         </div>
         <div class="col-md-6 col-xs-12">
           <h3>{{ page.intro }}</h3>
           <p>{{ page.byline }}</p>
         </div>
       </div>
+
       <div class="row wrap">
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12" id="py-0">
           <h4>{% if page.client == 'Personal' %} Project {% else %} Client {% endif %}</h4>
           <p>{{ page.client }}</p>
         </div>
-        <div class="col-md-6 col-xs-12">
-        <h4>Work</h4>
+
+        <div class="col-md-6 col-xs-12" id="py-0">
+         <h4>Work</h4>
           <p>{{ page.role }}</p>
         </div>
       </div>
   </header>
-    {{ content }}
-    {% include project-nav.html %}
-    {% include footer.html %}
+  {{ content }}
+  {% include project-nav.html %}
+  {% include footer.html %}
   </body>
 </html>
