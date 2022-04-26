@@ -28,7 +28,7 @@
 }
 
 
-h1, h2, h3, h4, p, small {
+h1, h2, h3, h4, h5 {
   font-family: "NaNJaune-Midi-Var";
   margin-bottom: 2rem;
 }
@@ -62,7 +62,14 @@ h4 {
   margin-bottom: 1rem;
 }
 
-li, p, small {
+h5, li {
+  font-weight: 470;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+p, small {
   font-family: "NaNHolo-Regular";
   font-size: clamp(1.25rem, 2vw, 1.4rem);
   line-height: 1.5em;

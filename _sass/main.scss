@@ -339,13 +339,9 @@ footer {
 
 	li {
 		display: block;
-	    font-family: "NaNHolo-Regular";
-	    margin-right: 1.5rem;
-	    margin-bottom: .5rem;	 
-
-    	@include for-size(phone-only) {    
-			display: inline-block;
-		} 
+	    font-family: "NaNJaune-Midi-Var";
+	    font-weight: 300;
+	    margin-bottom: .5rem;	
 
 
 		a {
