@@ -377,7 +377,7 @@ footer {
 
 // Dark Mode
 
-header, section, section.home-hero-image, nav, .project-nav, header.home-hero {
+header, header.home-hero, section, section.home-hero-image, nav, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $charcoal;
   		color: $beige;
@@ -387,4 +387,10 @@ header, section, section.home-hero-image, nav, .project-nav, header.home-hero {
   		}
 
 	}
+}
+
+body, body.page, body.project, section.thumbnails, footer {
+	@media (prefers-color-scheme: dark) {
+  		background: $black;
+  	}
 }
