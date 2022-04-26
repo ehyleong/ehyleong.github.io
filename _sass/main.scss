@@ -338,10 +338,14 @@ footer {
 	}
 
 	li {
-		display: inline-block;
+		display: block;
 	    font-family: "NaNHolo-Regular";
 	    margin-right: 1.5rem;
-	    margin-bottom: 1rem;	  
+	    margin-bottom: .5rem;	 
+
+    	@include for-size(phone-only) {    
+			display: inline-block;
+		} 
 
 
 		a {
