@@ -7,8 +7,8 @@
 {% for links in document %}
   {% if links.title == page.title %}
     {% unless forloop.first %}
-      {% assign prevurl = prev.url %}
       {% assign prevtitle = prev.title %}
+      {% assign prevurl = prev.url %}
     {% endunless %}
     {% unless forloop.last %}
       {% assign next = document[forloop.index] %}
@@ -23,16 +23,21 @@
   <div class="wrap row">      
 
     {% if prevurl %}
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-5 col-xs-12">
       <h4 class="arrow-prev">Previous</h4>
-      <h2><a href="{{ prevurl }}">{{ prevtitle l}}</a><h2>
+      <h3><a href="{{ prevurl }}">{{ prevtitle l}}</a><h3>
       </div>
     {% endif %}
 
     {% if nexturl %}
-      <div class="next-project {% if page.index == 0 %}col-md-offset-6 col-md-6 col-xs-12{% else %}col-md-6 col-xs-12{% endif %}">
+      <div class="next-project 
+      {% if page.index == 0 %}
+        col-md-offset-7 col-md-5 col-xs-12
+      {% else %}
+      col-md-5 col-md-offset-2 col-xs-12
+      {% endif %}">
       <h4 class="arrow-next">Next</h4>
-      <h2><a href="{{ nexturl }}">{{ nexttitle }}</a></h2>
+      <h3><a href="{{ nexturl }}">{{ nexttitle }}</a></h3>
       </div>
     {% endif %}
 
