@@ -386,6 +386,19 @@ header, header.home-hero, section, section.home-hero-image, nav, .project-nav, f
   			color: $beige;
   		}
 
+  		a {
+  			&:hover {
+  				color: $teal;
+  			}
+  		}
+
+  		.footer-link {
+  			color: $teal;
+
+  			&:hover {
+  				color: $beige;
+  			}
+  		}
 	}
 }
 
