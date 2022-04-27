@@ -9,24 +9,24 @@ two-spies:
   name: Two Spies
   url: work/two-spies
   client: Steamclock Software
-  role: Branding, UI/UX, Website, Marketing
+  role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
   img: ../img/thumbnails/spies.jpg
 
 bench:
   name: Bench Illustrations
   url: work/bench
   client: Bench Accounting
-  role: Iconography, Illustration, Animation
+  role: Illustration, Animation, Iconography
   img: ../img/thumbnails/bench.gif
 
 sybama:
   name: Should You Build a Mobile App – Microsite
   url: work/sybama
-  role: Website, Animation
+  role: Website Design, Illustration, Animation
   img: ../img/thumbnails/sybama.jpg
 
 steamclock-swag:
   name: Steamclock Swag
   url: work/steamclock-swag
-  role: Illustration, Print
+  role: Illustration, Print Design
   img: ../img/thumbnails/steamclockswag.jpg
