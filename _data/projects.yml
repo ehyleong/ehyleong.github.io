@@ -20,13 +20,15 @@ bench:
   img: ../img/thumbnails/bench.gif
 
 sybama:
-  name: Should You Build a Mobile App – Microsite
+  name: Should you build a mobile app?
   url: work/sybama
+  client: Steamclock Software
   role: Website Design, Illustration, Animation
   img: ../img/thumbnails/sybama.jpg
 
 steamclock-swag:
   name: Steamclock Swag
   url: work/steamclock-swag
+  client: Steamclock Software
   role: Illustration, Print Design
   img: ../img/thumbnails/steamclockswag.jpg

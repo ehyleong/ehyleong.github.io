@@ -53,7 +53,7 @@ img {
 
 
 .section-icon {
-	padding-right: 0.5em;
+	padding-right: 1em;
 	height: 1em;
 	width: auto;
 	vertical-align: text-bottom;
@@ -285,7 +285,7 @@ section.about {
 .project-nav {
 
 	.arrow-prev {
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		&:before {
 			display: inline-block;
 			content: '';
@@ -298,7 +298,7 @@ section.about {
 	}
 
 	.arrow-next {
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		&:after {
 			display: inline-block;
 			content: '';
