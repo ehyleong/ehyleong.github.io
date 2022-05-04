@@ -53,7 +53,7 @@ img {
 
 
 .section-icon {
-	padding-right: em;
+	padding-right: 1em;
 	height: 1em;
 	width: auto;
 	vertical-align: text-bottom;
@@ -145,7 +145,7 @@ header.home-hero {
 	min-height: 30rem;
 	
 	@media only screen and (max-width: 90rem) {
-		min-height: 25rem; 
+		min-height: 23rem; 
 	}
 
 	h1 {
