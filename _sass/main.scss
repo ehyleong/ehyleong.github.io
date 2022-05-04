@@ -21,7 +21,8 @@ html {
 
 header {
 	background: $beige;
-	padding-top: $spacer/2;
+	padding-top: $spacer;
+	padding-bottom: $spacer;
 
 	@include for-size(phone-only) {    
 		padding-top: $spacer/4;
@@ -53,7 +54,7 @@ img {
 
 
 .section-icon {
-	padding-right: 1em;
+	padding-right: em;
 	height: 1em;
 	width: auto;
 	vertical-align: text-bottom;
