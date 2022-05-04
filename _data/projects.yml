@@ -32,3 +32,10 @@ steamclock-swag:
   client: Steamclock Software
   role: Illustration, Print Design
   img: ../img/thumbnails/steamclockswag.jpg
+
+something-else:
+  name: Steamclock Swag
+  url: work/steamclock-swag
+  client: Steamclock Software
+  role: Illustration, Print Design
+  img: ../img/thumbnails/steamclockswag.jpg

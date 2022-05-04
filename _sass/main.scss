@@ -102,7 +102,7 @@ nav {
 		a {
 			display: inline-block;
 			font-family: "NaNJaune-MidiBold";
-			font-size: 0.8em;
+			font-size: 1em;
 			color: $charcoal;
 			overflow: hidden;
 			position: relative;
@@ -276,8 +276,8 @@ section.about {
 		content: '';
 		background-size: cover;
 		background-image: url('/img/icon-external-link.svg');
-		height: 16px;
-		width: 16px;
+		height: 14px;
+		width: 14px;
 		margin-left: 10px;
 	}
 }
