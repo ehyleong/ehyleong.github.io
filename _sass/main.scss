@@ -22,7 +22,6 @@ html {
 header {
 	background: $beige;
 	padding-top: $spacer;
-	padding-bottom: $spacer;
 
 	@include for-size(phone-only) {    
 		padding-top: $spacer/4;
@@ -143,10 +142,10 @@ nav {
 
 header.home-hero {
 
-	min-height: 25rem;
+	min-height: 30rem;
 	
 	@media only screen and (max-width: 90rem) {
-		min-height: 21rem; 
+		min-height: 25rem; 
 	}
 
 	h1 {
