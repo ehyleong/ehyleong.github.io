@@ -26,14 +26,23 @@
           <h4>{% if page.client == 'Personal' %} Project {% else %} Client {% endif %}</h4>
           <h5>{{ page.client }}</h5>
         </div>
+
+        {% if page.link == true %}
         <div class="col-md-3 col-xs-12" id="py-0">
           <h4>Link</h4>
-          <h5><a href="{{ page.href }}" class="external-link" target="_blank">{{ page.link }}</a></h5>
+          <h5><a href="{{ page.href }}" class="external-link" target="_blank">{{ page.linktext }}</a></h5>
         </div>
         <div class="col-md-6 col-xs-12" id="py-0">  
           <h4>Work</h4>
           <h5>{{ page.role }}</h5>
         </div>
+        {% else %}
+        <div class="col-md-6 col-md-offset-3 col-xs-12" id="py-0">  
+          <h4>Work</h4>
+          <h5>{{ page.role }}</h5>
+        </div>
+        {% endif %}
+
       </div>
   </header>
   {{ content }}

@@ -60,6 +60,13 @@ img {
 }
 
 
+hr {
+	display: block;
+	border: 0;
+    border-bottom: 1px solid $teal;
+    opacity: 0.5;
+}
+
 // 2. Layout 
 
 // 2.1 Nav
