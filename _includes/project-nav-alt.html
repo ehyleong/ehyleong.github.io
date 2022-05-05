@@ -24,21 +24,25 @@
 
     {% if prevurl %}
       <div class="col-md-6 col-xs-12">
-      <h4 class="arrow-prev">Left-Arrow Key</h4>
-      <h2><a href="{{ prevurl }}">{{ prevtitle l}}</a><h2>
+        <a href="{{ prevurl }}" class="box">
+        <h4 class="arrow-prev">Previous</h4>
+        <h3>{{ prevtitle l}}<h3>
+        </a>
       </div>
     {% endif %}
 
     {% if nexturl %}
-      <div class="next-project 
+      <div class="next-project col-xs-12
       {% if page.index == 0 %}
         col-md-offset-6 col-md-6 col-xs-12
       {% else %}
       col-md-6 col-xs-12
-      {% endif %}">
-      <h4 class="arrow-next">Right-Arrow Key</h4>
-      <h2><a href="{{ nexturl }}">{{ nexttitle }}</a></h2>
+     {% endif %}">
+     <a href="{{ nexturl }}" class="box">
+      <h4 class="arrow-next">Next</h4>
+      <h3>{{ nexttitle }}</h3>
       </div>
+    </a>
     {% endif %}
 
   </div>
