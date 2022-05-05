@@ -1,30 +1,9 @@
-figma-keypads:
-  name: Figma Keypads
-  url: work/figma-keypads
-  client: Personal
-  role: Illustration
-  img: ../img/thumbnails/keypads.jpg
-
 two-spies:
   name: Two Spies
   url: work/two-spies
   client: Steamclock Software
   role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
   img: ../img/thumbnails/spies.jpg
-
-bench:
-  name: Bench Illustrations
-  url: work/bench
-  client: Bench Accounting
-  role: Illustration, Animation, Iconography
-  img: ../img/thumbnails/bench.gif
-
-sybama:
-  name: Should You Build a Mobile App - Microsite
-  url: work/sybama
-  client: Steamclock Software
-  role: Website Design, Illustration, Animation
-  img: ../img/thumbnails/sybama.jpg
 
 steamclock-swag:
   name: Steamclock Swag
@@ -33,9 +12,30 @@ steamclock-swag:
   role: Illustration, Print Design
   img: ../img/thumbnails/steamclockswag.jpg
 
-something-else:
-  name: Steamclock Swag
-  url: work/steamclock-swag
+sybama:
+  name: Should You Build a Mobile App - Microsite
+  url: work/sybama
   client: Steamclock Software
-  role: Illustration, Print Design
-  img: ../img/thumbnails/steamclockswag.jpg
+  role: Website Design, Illustration, Animation
+  img: ../img/thumbnails/sybama.jpg
+
+bench:
+  name: Bench Illustrations
+  url: work/bench
+  client: Bench Accounting
+  role: Illustration, Animation, Iconography
+  img: ../img/thumbnails/bench.gif
+
+figma-keypads:
+  name: Figma Keypads
+  url: work/figma-keypads
+  client: Personal
+  role: Illustration
+  img: ../img/thumbnails/keypads.jpg
+
+portraits:
+  name: Digital Portraits
+  url: work/digital-portraits
+  client: Personal
+  role: Illustration
+  img: ../img/thumbnails/procreate.jpg
