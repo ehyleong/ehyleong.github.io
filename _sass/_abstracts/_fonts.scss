@@ -6,6 +6,16 @@
 }
 
 @font-face {
+  font-family: "NaNHolo-Bold";
+  src: url("/fonts/NaNHolo_TRIAL-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NaNHoloMono-Bold";
+  src: url("/fonts/NaNHoloMono_TRIAL-Bold.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "NaNJaune-MidiRegular";
   src: url("/fonts/NaNJaune-MidiRegular.woff2") format("woff2");
 }
@@ -73,6 +83,10 @@ p, small {
   font-family: "NaNHolo-Regular";
   font-size: clamp(1.25rem, 2vw, 1.4rem);
   line-height: 1.5em;
+}
+
+.bold {
+  font-family: "NaNHolo-Bold";
 }
 
 //li {

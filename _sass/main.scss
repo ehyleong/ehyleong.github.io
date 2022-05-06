@@ -63,18 +63,18 @@ img {
 .box {
 	display: block;
 	vertical-align: middle;
-	border: 4px solid rgba(47, 155, 155, 0.2);
-   	box-shadow: 0 8px 0 rgba(47, 155, 155, 0.2);
-    border-radius: 12px;
+	border: 4px solid rgba(47, 155, 155, 0.4);
+   	box-shadow: 0 8px 0 rgba(47, 155, 155, 0.4);
+    border-radius: 16px;
     padding: 2rem;
     padding-bottom: 0;
     transition: 100ms ease;
     min-height: 150px;
 
     &:hover {
-		border: 4px solid rgba(47, 155, 155, .7);
-	   	box-shadow: 0 8px 0 rgba(47, 155, 155, .7);
-    	background-color: rgba(47, 155, 155, 0.05);
+		border: 4px solid rgba(47, 155, 155, 1);
+	   	box-shadow: 0 8px 0 rgba(47, 155, 155, 1);
+    	background-color: rgba(47, 155, 155, 0.1);
 
     }
 
@@ -192,7 +192,7 @@ section.thumbnails {
 	.thumbnail-grid {
 		padding: 0 1rem; 
 		display: grid;
-		gap: 2rem;
+		gap: 1.5rem;
 		grid-template-columns: auto auto;
 
 		@include for-size (phone-only){
@@ -205,16 +205,16 @@ section.thumbnails {
 		position: relative;
 
 		.thumbnail-image {
-			border: 4px solid rgba(255, 255, 255, 0.1);
+			border: 4px solid rgba(242, 240, 234, 0.1);
 			display: block;
 			width: 100%;
 			height: 100%;
-			border-radius: 12px;
+			border-radius: 16px;
 
 		}
 
 		.thumbnail-overlay {
-			border-radius: 12px;
+			border-radius: 16px;
 			padding: 1rem;
 			text-align: center;
 			position: absolute;
