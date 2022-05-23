@@ -32,12 +32,12 @@ body {
 	border: 20px solid $charcoal;
 	background: $charcoal;
 
-	@include for-size(phone-only) {
-		border: 0;
-	}
-
 	@media (prefers-color-scheme: dark) {
 		border: 20px solid $black;
+	}
+
+	@include for-size(phone-only) {
+		border: 0;
 	}
 
 	color: $charcoal;
