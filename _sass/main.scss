@@ -29,17 +29,24 @@ header {
 }
 
 body {
+	border: 20px solid $charcoal;
+	background: $charcoal;
+
+	@include for-size(phone-only) {
+		border: 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		border: 20px solid $black;
+	}
+
 	color: $charcoal;
 	display: flex;
 	flex-direction: column;
+}
 
-	&.page {
-		background: $charcoal;
-	}
-
-	&.project {
-		background: $beige;
-	}
+.work, .project-nav {
+	background: $beige;
 }
 
 img {
@@ -91,6 +98,11 @@ img {
 nav {
 	background: $beige;
 	padding-top: 2em;
+	border-radius: 20px 20px 0 0;
+
+	@include for-size(phone-only) {    
+		border-radius: 0;
+	}
 
 	.logo {
 		display: flex;
@@ -165,7 +177,7 @@ nav {
 // 2.2 Home
 
 header.home-hero {
-
+	border-radius: 0 0 20px 20px;
 	min-height: 30rem;
 	
 	@media only screen and (max-width: 90rem) {
@@ -177,12 +189,13 @@ header.home-hero {
 	}
 }
 
-section.home-hero-image {
+//section.home-hero-image {
 
-	background: $beige;
-	padding: 0 1rem;
+//	background: $beige;
+//	padding: 0 1rem;
+//	border-radius: 0 0 20px 20px;
 
-}
+//}
 
 
 // 2.3 Work
@@ -258,40 +271,8 @@ section.thumbnails {
 
 // 2.4 About
 
-header.about-hero {
-	min-height: 30rem; 
-	background: $beige;
-
-	h1 {
-		color: $charcoal;
-	}
-
-}
-
-section.about {
-
-	a {
-		color: $teal;
-
-		&:hover {
-			color: $beige;
-		}
-	}
-
-	h4 {
-		padding-top: 0rem;
-
-		@include for-size (tablet-landscape-up){
-			padding-top: 1rem;
-		}
-	}
-}
-
-.about-arrow-next {
-	height: 40px; 
-	width: 40px; 
-	vertical-align: middle; 
-	margin-left: 10px;
+.about {
+	border-radius: 0 0 20px 20px;
 }
 
 // 2.5 Projects
@@ -321,6 +302,8 @@ section.about {
 }
 
 .project-nav {
+
+	border-radius: 0 0 20px 20px;
 
 	.arrow-prev {
 		margin-bottom: 1rem;
@@ -415,7 +398,7 @@ footer {
 
 // Dark Mode
 
-header, header.home-hero, section, section.home-hero-image, nav, .project-nav, footer  {
+header, header.home-hero, section, section.home-hero-image, nav, .work, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $charcoal;
   		color: $beige;
@@ -440,7 +423,7 @@ header, header.home-hero, section, section.home-hero-image, nav, .project-nav, f
 	}
 }
 
-body, body.page, body.project, section.thumbnails, footer {
+body, section.thumbnails, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
   	}
