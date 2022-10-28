@@ -132,20 +132,25 @@ img {
 		transition: all 100ms ease;
 	}
 
-&:hover {
-	&:after {
-		opacity: 1;
-		transform: scale(1);
+	&:hover {
+		&:after {
+			opacity: 1;
+			transform: scale(1);
 
+		}
 	}
-}
 }
 
 .link-underline {
  	text-decoration: underline;
- 	text-decoration-color: rgba(219, 119, 4, .5);
+ 	text-decoration-color: rgba(219, 119, 4, 0);
  	text-underline-offset: 0.4em;
  	text-decoration-thickness: 3px;
+	transition: all 100ms ease;
+
+	&:hover { 		
+ 		text-decoration-color: rgba(219, 119, 4, .5);
+	}
 }
 
 // 2. Layout 
