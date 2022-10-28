@@ -27,8 +27,8 @@ bench:
   img: ../img/thumbnails/bench.jpg
 
 figma-keypads:
-  name: Figma Keypads
-  url: work/figma-keypads
+  name: The Keypad Project
+  url: work/keypad-project
   client: Personal
   role: Illustration
   img: ../img/thumbnails/keypads.jpg

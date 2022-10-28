@@ -68,7 +68,7 @@ h4 {
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
-  color: $teal;
+  color: $orange;
   margin-bottom: 1rem;
 }
 
@@ -99,15 +99,15 @@ small {
 }
 
 span {
-  color: $teal;
+  color: $orange;
 }
 
 a {
-  color: $charcoal;
+  color: $orange;
   transition: all 150ms ease-in-out;
 
   &:hover {
-    color: $teal;
+    color: $orange;
   }
 }
 
