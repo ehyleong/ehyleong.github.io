@@ -74,18 +74,21 @@ img {
 .project-button {
 	display: block;
 	vertical-align: middle;
-	border: 4px solid rgba(219, 119, 4, .5);
-   	box-shadow: 0 8px 0 rgba(219, 119, 4, .5);
+	border: 4px solid rgba(0, 44, 44, .3);
+   	box-shadow: 0 8px 0 rgba(0, 44, 44, .3);
     border-radius: 16px;
     padding: 2rem;
     padding-bottom: 0;
     transition: 100ms ease;
     min-height: 150px;
 
+    h3 {
+    	color: $green;
+    }
+
     &:hover {
-		border: 4px solid rgba(219, 119, 4, 1);
-	   	box-shadow: 0 8px 0 rgba(219, 119, 4, 1);
-    	background-color: rgba(219, 119, 4, .05);
+		border: 4px solid rgba(0, 44, 44, 1);
+	   	box-shadow: 0 8px 0 rgba(0, 44, 44, 1);
 
     }
 
@@ -93,6 +96,23 @@ img {
     	box-shadow: none;
     	transform: translateY(8px);
     }
+
+	@media (prefers-color-scheme: dark) {
+		border: 4px solid rgba(250, 248, 241, .3);
+	   	box-shadow: 0 8px 0 rgba(250, 248, 241, .3);
+
+	   	h3 {
+	   		color: $beige;
+	   	}
+
+   	    &:hover {
+			border: 4px solid rgba(250, 248, 241, 1);
+	   		box-shadow: 0 8px 0 rgba(250, 248, 241, 1);
+
+    }
+
+
+	}
 }
 
 .external-link {
@@ -143,7 +163,7 @@ img {
 
 .link-underline {
  	text-decoration: underline;
- 	text-decoration-color: rgba(219, 119, 4, 0);
+ 	text-decoration-color: rgba(219, 119, 4, 0.2);
  	text-underline-offset: 0.4em;
  	text-decoration-thickness: 3px;
 	transition: all 100ms ease;
@@ -170,9 +190,8 @@ nav {
 		display: flex;
 
 		svg {
-
 			@media (prefers-color-scheme: dark) {
-				filter: invert(100%) sepia(0%) saturate(3845%) hue-rotate(52deg) brightness(102%) contrast(102%);
+				filter: invert(42%) sepia(82%) saturate(2230%) hue-rotate(15deg) brightness(103%) contrast(97%);
 			}
 		}
 	}
@@ -278,7 +297,7 @@ section.thumbnails {
 		position: relative;
 
 		.thumbnail-image {
-			border: 4px solid rgba(219, 119, 4, .1);
+			border: 4px solid rgba(0, 76, 76, .3);
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -295,7 +314,7 @@ section.thumbnails {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(219, 119, 4, 1);
+			background: rgba(0, 76, 76, 1);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -390,7 +409,7 @@ footer {
 		color: $orange;
 
 		&:hover {
-			color: $orange;
+			color: $beige;
 		}
 	}
 
@@ -440,22 +459,8 @@ header, header.home-hero, section, section.home-hero-image, nav, .work, .project
   		background: $forestgreen;
   		color: $beige;
 
-  		h1, a {
+  		h1 {
   			color: $beige;
-  		}
-
-  		a {
-  			&:hover {
-  				color: $teal;
-  			}
-  		}
-
-  		.footer-link {
-  			color: $orange;
-
-  			&:hover {
-  				color: $beige;
-  			}
   		}
 	}
 }
@@ -464,4 +469,11 @@ body, section.thumbnails, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
   	}
+}
+
+// TypeIt Cursor
+
+:root {
+	--ti-cursor-font-size: clamp(3.2rem, 6.5vw, 5.6rem);
+	--ti-cursor-line-height: 1em;
 }
