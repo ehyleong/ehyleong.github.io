@@ -12,11 +12,18 @@ sybama:
   role: Website Design, Illustration, Animation
   img: ../img/thumbnails/sybama.jpg
 
+figma-keypads:
+  name: The Keypad Project
+  url: work/keypad-project
+  client: Personal
+  role: Illustration
+  img: ../img/thumbnails/keypads.jpg
+
 steamclock-swag:
   name: Steamclock Swag
   url: work/steamclock-swag
   client: Steamclock Software
-  role: Illustration, Print Design
+  role: Art Direction, Illustration, Print
   img: ../img/thumbnails/steamclockswag.jpg
 
 bench:
@@ -25,13 +32,6 @@ bench:
   client: Bench Accounting
   role: Illustration, Animation, Iconography
   img: ../img/thumbnails/bench.jpg
-
-figma-keypads:
-  name: The Keypad Project
-  url: work/keypad-project
-  client: Personal
-  role: Illustration
-  img: ../img/thumbnails/keypads.jpg
 
 portraits:
   name: Digital Portraits

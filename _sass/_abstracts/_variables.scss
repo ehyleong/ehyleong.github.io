@@ -1,5 +1,5 @@
 // Margin
-$spacer: 6.25rem;
+$spacer: 5rem;
 
 // Colours
 $forestgreen: #002C2C;
@@ -19,6 +19,10 @@ $orange: #DB7704;
 
 .teal {
   color: $teal;
+}
+
+.orange {
+  color: $orange;
 }
 
 // Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
@@ -96,6 +100,13 @@ $orange: #DB7704;
 
 .bottom-div {
   border-bottom: 2px solid $forestgreen;
+}
+
+
+// Corners
+
+.round-12 {
+  border-radius: 12px;
 }
 
 // Debug
