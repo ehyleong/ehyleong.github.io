@@ -33,10 +33,6 @@ body {
 	border-width: 20px 20px 0 20px;
 	background: $forestgreen;
 
-	@media (prefers-color-scheme: dark) {
-		border: 20px solid $black;
-	}
-
 	@include for-size(phone-only) {
 		border: 0;
 	}
@@ -515,7 +511,13 @@ footer {
 
 // Dark Mode
 
-header, header.home-hero, section, section.home-hero-image, nav, .work, .project-nav, footer  {
+body {
+	@media (prefers-color-scheme: dark) {
+		border: 20px solid $black;
+	}
+}
+
+header, section, section.home-hero-image, nav, .work, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $forestgreen;
   		color: $beige;
@@ -526,7 +528,7 @@ header, header.home-hero, section, section.home-hero-image, nav, .work, .project
 	}
 }
 
-body, section.thumbnails, footer {
+body, section.home-intro, section.thumbnails, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
   	}
