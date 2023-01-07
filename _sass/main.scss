@@ -33,6 +33,10 @@ body {
 	border-width: 20px 20px 0 20px;
 	background: $forestgreen;
 
+	@media (prefers-color-scheme: dark) {
+			border: 20px solid $black;
+	}
+
 	@include for-size(phone-only) {
 		border: 0;
 	}
@@ -322,7 +326,7 @@ section.home-intro {
 section.thumbnails {
 
 	.thumbnail-grid {
-		padding: 0 1rem; 
+		padding: 0 .5rem; 
 		display: grid;
 		gap: 1.5rem;
 		grid-template-columns: auto auto;
@@ -511,11 +515,6 @@ footer {
 
 // Dark Mode
 
-body {
-	@media (prefers-color-scheme: dark) {
-		border: 20px solid $black;
-	}
-}
 
 header, section, section.home-hero-image, nav, .work, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
