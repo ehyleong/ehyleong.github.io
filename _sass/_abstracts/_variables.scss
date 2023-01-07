@@ -47,7 +47,7 @@ $orange: #DB7704;
 // Spacers
 
 .spacer {
-  padding-top: $spacer !important; 
+  padding-top: $spacer; 
 
   @include for-size(phone-only) { 
     padding-top: $spacer/2;
@@ -55,7 +55,7 @@ $orange: #DB7704;
 }
 
 .half-spacer{
-  padding-top: $spacer/2 !important;
+  padding-top: $spacer/2;
 
   @include for-size(phone-only) { 
     padding-top: $spacer/4;
