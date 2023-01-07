@@ -61,7 +61,7 @@ img {
 
 
 .section-icon {
-	padding-right: 1em;
+	padding-right: 1rem;
 	height: 1em;
 	width: auto;
 	vertical-align: text-bottom;
@@ -170,6 +170,14 @@ img {
 	}
 }
 
+.label {
+	display: inline-block;
+	background: rgba(0, 0, 0, .2);
+	color: $beige;
+	padding: 1rem 1.5rem;
+	border-radius: 40px;
+}
+
 // 2. Layout 
 
 // 2.1 Nav
@@ -255,27 +263,10 @@ nav {
 header.home-hero {
 	border-radius: 0 0 20px 20px;
 	position: relative;
-
+	min-height: 20rem;
 	
 	@include for-size(phone-only) {    
-		min-height: 30rem; 
-	}
-
-	@include for-size(tablet-portrait-up) {
-		min-height: 36rem;
-	}
-
-	@include for-size(tablet-landscape-up) {
-		min-height: 46rem;
-	}
-
-
-	h1 {
-		color: $green;
-	}
-
-	p {
-		margin-bottom: 2em;
+		min-height: 10rem; 
 	}
 
 	//background-image: url("/img/hero-bg.svg");
@@ -296,7 +287,11 @@ header.home-hero {
 	img {
 		position: absolute;
 		bottom: 0;
-		max-height: 55%;
+		max-height: 100%;
+
+		@include for-size(phone-only) {
+			max-height: 100%;
+		}
 	}
 }
 
@@ -310,6 +305,23 @@ header.home-hero {
 
 
 // 2.3 Work
+
+section.home-intro {
+
+	h1 { 
+		color: $beige;
+	}
+
+	p {
+		color: $beige;
+	}
+
+	div.home-intro-title {
+		@include for-size(phone-only) {    
+			min-height: 28rem; 
+		}
+	}
+}
 
 section.thumbnails {
 
@@ -453,8 +465,16 @@ footer {
 		}
 	}
 
+	ul {
+		display: grid;
+		grid-template-columns: auto auto;
+
+		@include for-size (tablet-portrait-up){
+			grid-template-columns: auto;
+		}
+	}
+
 	li {
-		display: block;
 	    font-family: "NaNJaune-Midi-Var";
 	    font-weight: 300;
 	    margin-bottom: .5rem;	
@@ -468,6 +488,7 @@ footer {
 				color: $orange;
 			}
 		}
+
 	}
 
 	.copyright {

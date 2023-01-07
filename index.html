@@ -2,25 +2,38 @@
 layout: home
 title: Home
 permalink: /
-byline: Designing cool things at
-current_work: Steamclock Software
-current_work_url: https://steamclock.com
-
+cta: Hi! I'm open to <a href="#contact">small freelance requests.</a>
 ---
 
 <header class="home-hero data-scroll-container">
-  <div class="wrap row">
-    <div class="col-xs-12">
-      <h1>Hi, I'm Erica Leong.<br> I design <span class="orange" id="typewriter"></span></h1>
-    </div>
-  </div>
   <div class="home-hero-img">
     <img src="/img/hero-bg.svg">
   </div>
 </header>
 
+<section class="wrap row home-intro">
+    <div class="col-xs-12 spacer home-intro-title">
+        <div class="label"><small><img src="/img/icon-smile.svg" class="section-icon">{{page.cta}}</small></div>
+
+        <h1 class="half-spacer">Hi, I'm Erica Leong.<br> I design <span class="orange" id="typewriter"></span>
+        </h1>
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-12">
+      <h4>In a Nutshell</h4>
+    </div>
+    <div class="col-lg-6 col-md-8 col-xs-12">
+      <p>
+        I’m a senior visual product designer based in Vancouver, Canada. Currently making all kinds of cool things in-house and for clients at <a href="#">Steamclock Software.</a>
+      <p>
+      <p>
+        I enjoy crafting fun, delightful, and polished experiences regardless of medium. I love  learning, tinkering, and collaborating with cool people. I think great design lies in the culmination of small, thoughtful details.
+      </p>
+      <p>
+        In my free time, I draw weird fun things under <a href="#">Dead Hands Club.</a>
+      </p>
+    </div>
+</section>
+
 <main class="wrap row">
-
-{% include thumbnails.html %}
-
+  {% include thumbnails.html %}
 </main>

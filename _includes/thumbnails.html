@@ -4,7 +4,7 @@
         <h4><img src="/img/icon-work.svg" class="section-icon">Select Projects</h4>
         <h2 class="beige">Hello, Work.</h2>
       </div>
-    <div class="row thumbnail-grid spacer">
+    <div class="row thumbnail-grid">
     {% for project in site.data.projects %}
     {% assign count = forloop.length %}
     <a href="../{{ project[1].url }}"><div class="thumbnail" onclick="" aria-label="{{ project[1].name }}">

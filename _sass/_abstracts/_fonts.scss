@@ -47,6 +47,7 @@ h1 {
   font-weight: 700;
   font-size: clamp(2.8rem, 5vw, 6.0rem);
   line-height: 1em;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -70,6 +71,7 @@ h4 {
   letter-spacing:3px;
   color: $orange;
   margin-bottom: 1rem;
+  margin-top: .5rem;
 }
 
 h5, li {
@@ -83,6 +85,11 @@ p, small {
   font-family: "NaNHolo-Regular";
   font-size: clamp(1.25rem, 2vw, 1.4rem);
   line-height: 1.5em;
+  margin-bottom: 1rem;
+
+  -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
+-webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
+font-feature-settings: 'ss02' on;     /* low-level (all new browsers) */
 }
 
 .bold {
