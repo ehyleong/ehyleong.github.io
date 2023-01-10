@@ -173,6 +173,11 @@ nav {
 				filter: invert(42%) sepia(82%) saturate(2230%) hue-rotate(15deg) brightness(103%) contrast(97%);
 			}
 		}
+
+		&:hover {
+			opacity: 0.75;
+			transition: all 150ms ease-in-out;
+		}
 	}
 
 	.logo-color {
