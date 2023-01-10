@@ -493,7 +493,15 @@ footer {
 
 	.copyright {
 		p {
-			opacity: .25;
+			opacity: .3;
+		}
+
+		a {
+			text-decoration: underline;
+			color: $beige;
+			text-underline-offset: 2px;
+			text-decoration-color: rgba(250, 248, 241, .5);
+
 		}
 	}
 }
