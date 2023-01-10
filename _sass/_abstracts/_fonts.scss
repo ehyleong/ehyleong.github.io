@@ -38,7 +38,7 @@
 }
 
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, li {
   font-family: "NaNJaune-Midi-Var";
   margin-bottom: 2rem;
 }
@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 480;
+  font-weight: 600;
   font-size: clamp(2.3rem, 3vw, 3.5rem);
   line-height: 1.1em;
 }
@@ -64,7 +64,7 @@ h3 {
 }
 
 h4 {
-  font-weight: 900;
+  font-weight: 750;
   font-size: clamp(0.7rem, 2vw, 0.8rem);
   line-height: 1.4em;
   text-transform: uppercase;
@@ -75,7 +75,7 @@ h4 {
 }
 
 h5, li {
-  font-weight: 470;
+  font-weight: 360;
   font-size: clamp(1.1rem, 2vw, 1.2rem);
   line-height: 1.5em;
   letter-spacing: 0.5px;
