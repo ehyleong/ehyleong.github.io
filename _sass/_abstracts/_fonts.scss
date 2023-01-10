@@ -88,18 +88,9 @@ p, small {
   margin-bottom: 1.5rem;
 
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
--webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
-font-feature-settings: 'ss02' on;     /* low-level (all new browsers) */
+  -webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
+  font-feature-settings: 'ss02' on;     /* low-level (all new browsers) */
 }
-
-.bold {
-  font-family: "NaNHolo-Bold";
-}
-
-//li {
-//  padding-right: 1rem;
-//  display: inline-block;
-//}
 
 small {
   font-size: clamp(1rem, 2vw, 1.1rem);

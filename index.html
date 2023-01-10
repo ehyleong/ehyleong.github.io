@@ -2,12 +2,15 @@
 layout: home
 title: Home
 permalink: /
-cta: Currently open to small freelance requests. <a href="#contact">Reach out here!</a>
+cta: Currently open to small freelance requests. <a href="#contact" class="inline-link">Reach out here!</a>
 ---
 
 <header class="home-hero data-scroll-container">
   <div class="home-hero-img">
-    <img src="/img/hero-bg.svg">
+    <picture>
+      <source srcset="/img/hero-bg.svg" media="(min-width: 64rem)" />
+      <img src="/img/hero-bg-mobile.svg"/>
+    </picture>
   </div>
 </header>
 
@@ -22,13 +25,10 @@ cta: Currently open to small freelance requests. <a href="#contact">Reach out he
     </div>
     <div class="col-lg-6 col-md-8 col-xs-12 col-gutter-lr">
       <p>
-        I’m a senior visual product designer based in Vancouver, Canada. Currently making nice mobile apps for clients at <a href="#">Steamclock Software.</a>
+        I’m a visual product designer based in Vancouver, Canada. Currently shipping delightful mobile apps at <a href="#" class="inline-link">Steamclock Software.</a>
       <p>
-      <p>
-        I enjoy crafting fun, delightful, and polished experiences. I love  learning, tinkering, and collaborating with cool people. I believe great design lies in the culmination of small, thoughtful details.
-      </p>
       <p class="bottom-half-spacer">
-        In my free time, I draw weird fun things under <a href="#">Dead Hands Club.</a>
+        In my free time, I draw weird fun things under <a href="#" class="inline-link">Dead Hands Club.</a>
       </p>
 
       <span class="label "><small><img src="/img/icon-smile.svg" class="section-icon">{{page.cta}}</small></span>
