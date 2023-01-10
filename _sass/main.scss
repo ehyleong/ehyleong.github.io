@@ -46,6 +46,11 @@ body {
 	flex-direction: column;
 }
 
+
+header.home, header.about, header.fourohfour, .project-nav {
+	border-radius: 0 0 20px 20px;
+}
+
 .work, .project-nav {
 	background: $beige;
 }
@@ -238,8 +243,7 @@ nav {
 
 // 2.2 Home
 
-header.home-hero {
-	border-radius: 0 0 20px 20px;
+header.home {
 	position: relative;
 	min-height: 20rem;
 	
@@ -247,18 +251,6 @@ header.home-hero {
 		min-height: 10rem; 
 	}
 
-	//background-image: url("/img/hero-bg.svg");
-	//background-position: center bottom;
-	//background-repeat: no-repeat;
-	
-	//@include for-size (tablet-portrait-up){
-	//	background-size: 80vw 50%;
-	//}
-
-	//@include for-size (phone-only){
-	//	background-image: url("/img/hero-bg-mobile.svg");
-	//	background-size: 80%;
-	//}
 }
 
 .home-hero-img {
@@ -273,16 +265,6 @@ header.home-hero {
 	}
 }
 
-//section.home-hero-image {
-
-//	background: $beige;
-//	padding: 0 1rem;
-//	border-radius: 0 0 20px 20px;
-
-//}
-
-
-// 2.3 Work
 
 section.home-intro {
 
@@ -301,6 +283,10 @@ section.home-intro {
 		}
 	}
 }
+
+
+// 2.3 Work
+
 
 section.thumbnails {
 
@@ -374,16 +360,13 @@ section.thumbnails {
 // 2.4 About
 
 .about {
-	border-radius: 0 0 20px 20px;
+
 }
 
 // 2.5 Projects
 
 
 .project-nav {
-
-	border-radius: 0 0 20px 20px;
-
 	.arrow-prev {
 		margin-bottom: 1rem;
 		&:before {
@@ -473,12 +456,8 @@ section.thumbnails {
 footer {
 	min-height: 30rem;
 	background: $forestgreen;
-	//background-image: url("/img/footer-bg.svg");
-	//background-position: center bottom;
-	//background-repeat: no-repeat;
-	//background-size: 90%;
 	padding-top: $spacer/2;
-	padding-bottom: $spacer;
+	padding-bottom: $spacer/2;
 	color: $beige;	
 
 	a {
