@@ -73,7 +73,7 @@ h4 {
 
 h5, li {
   font-weight: 360;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.5em;
   letter-spacing: 0.5px;
 }
@@ -82,7 +82,7 @@ p, small {
   font-family: "NaNHolo-Regular";
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   line-height: 1.5em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
