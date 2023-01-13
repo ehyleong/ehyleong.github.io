@@ -402,20 +402,16 @@ section.thumbnails {
 	}
 }
 
-.project-button {
+.outline-button {
 		display: block;
 		vertical-align: middle;
 		border: 3px solid rgba($forestgreen, .3);
    	box-shadow: 0 8px 0 rgba($forestgreen, .3);
     border-radius: 1rem;
-    padding: 2rem;
-    padding-bottom: 0;
-    transition: 150ms ease-in-out;
-    min-height: 10rem;
-
-    h3 {
-    	color: $green;
-    }
+    padding: 2.5rem;
+    transition: 100ms ease-in-out;
+    min-height: 12rem;
+    color: $green;
 
     &:hover {
 		border: 3px solid rgba($forestgreen, 1);
@@ -423,13 +419,14 @@ section.thumbnails {
 
     }
 
-	@media (prefers-color-scheme: dark) {
-		border: 3px solid rgba($beige, .3);
-	   	box-shadow: 0 8px 0 rgba($beige, .3);
+    @include for-size(phone-only){
+    	min-height: 10rem;
+    }
 
-	   	h3 {
-	   		color: $beige;
-	   	}
+	@media (prefers-color-scheme: dark) {
+			color: $beige;
+			border: 3px solid rgba($beige, .3);
+	   	box-shadow: 0 8px 0 rgba($beige, .3);
 
    	    &:hover {
 				border: 3px solid rgba($beige, 1);
@@ -448,10 +445,7 @@ section.thumbnails {
 
 .blog-preview {
 	margin-bottom: 1rem;
-	padding: 3rem;
-	border: 3px solid rgba($forestgreen, 1);
- 	box-shadow: 0 8px 0 rgba($forestgreen, 1);
-  border-radius: 1rem;
+	min-height: 15rem;
 }
 
 
@@ -533,21 +527,6 @@ header.fourohfour {
 				max-height: 15rem;
 			}
 		}
-	}
-}
-
-// 3. Components 
-
-.button {
-	font-family: "NaNJaune-MidiBold";
-	border-radius: 1rem/4;
-	border: 2px solid $beige;
-	color: $beige;
-	padding: 1em 1.5em;
-
-	&:hover {
-		background: $beige;
-		color: $forestgreen;
 	}
 }
 
