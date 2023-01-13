@@ -40,14 +40,13 @@
 
 h1, h2, h3, h4, h5, li {
   font-family: "NaNJaune-Midi-Var";
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-weight: 700;
   font-size: clamp(2.8rem, 5vw, 6.0rem);
   line-height: 1em;
-  margin-bottom: 1em;
 }
 
 h2 {
@@ -57,10 +56,9 @@ h2 {
 }
 
 h3 {  
-  font-weight: 500;
-  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
   line-height: 1.2em;
-  margin-bottom: 1rem;
 }
 
 h4 {
@@ -70,7 +68,6 @@ h4 {
   text-transform: uppercase;
   letter-spacing:3px;
   color: $orange;
-  margin-bottom: 1rem;
   margin-top: .5rem;
 }
 
@@ -105,3 +102,14 @@ a {
   }
 }
 
+a.green {
+    color: $green;
+     @media (prefers-color-scheme: dark) {
+        color: $beige;
+    }
+      
+      &:hover {
+         color: $orange;
+  }
+
+}

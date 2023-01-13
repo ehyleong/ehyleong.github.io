@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	{% include header.html %}
+
+	<body>
+
+	{% include navigation.html %}
+
+	<header>
+		<div class="row wrap">
+			<div class="col-lg-8 col-xs-12">	
+				<h4>{{ page.date | date_to_string }}</h4>
+				<h2>{{ page.title }}</h2>
+			</div>
+		</div>
+	</header>
+
+	<section class="blog bottom-spacer">
+		<div class="row wrap">
+			<div class="col-lg-7 col-xs-12">	
+			{{ content }}
+			</div>
+		</div>
+	</section>
+
+	{% include footer.html %}
+
+	</body>
+</html>

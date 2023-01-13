@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
   {% include header.html %}
-  <body class="project">
+  <body>
     {% include navigation.html %}
   <header>
       <div class="row wrap bottom-half-spacer">
+        <!--<div class="row bottom-spacer"><div class="col-xs-12 hero"><img src="/img/hero.png"></div></div>-->
         <div class="col-md-5 col-xs-12">
           <h2>{{ page.title }}</h2>
         </div>
@@ -26,7 +27,7 @@
           <h5><a href="{{ page.href }}" class="project-link external-link" target="_blank">{{ page.linktext }}</a></h5>
         </div>
         <div class="col-md-6 col-xs-12" id="py-0">  
-          <h4>Work</h4>
+          <h4>Role</h4>
           <h5>{{ page.role }}</h5>
         </div>
         {% else %}

@@ -19,9 +19,8 @@ html {
 	font-size: 16px;
 }
 
-header {
-	background: $beige;
-	padding-top: $spacer;
+header, section {
+	padding-top: $spacer/2;
 
 	@include for-size(phone-only) {    
 		padding-top: $spacer/4;
@@ -46,12 +45,11 @@ body {
 	flex-direction: column;
 }
 
-
-header.home, header.about, header.fourohfour, .project-nav {
+header.home, header.about, header.fourohfour, section.blog, .project-nav {
 	border-radius: 0 0 20px 20px;
 }
 
-.work, .project-nav {
+header, section.work, section.blog, section.about, .project-nav {
 	background: $beige;
 }
 
@@ -71,6 +69,7 @@ img {
 	width: auto;
 	vertical-align: text-bottom;
 }
+
 
 // Links
 
@@ -248,23 +247,21 @@ header.home {
 	min-height: 20rem;
 	
 	@include for-size(phone-only) {    
-		min-height: 10rem; 
+		min-height: 15rem; 
 	}
 
-}
-
-.home-hero-img {
-	img{
-		position: absolute;
-		bottom: 0;
-		max-height: 100%;
-
-		@include for-size(phone-only) {
+	.hero-img {
+		img{
+			position: absolute;
+			bottom: 0;
 			max-height: 100%;
+
+			@include for-size(phone-only) {
+				max-height: 15rem;
+			}
 		}
 	}
 }
-
 
 section.home-intro {
 
@@ -394,7 +391,6 @@ section.thumbnails {
 			margin-bottom:-4px;
 
 		}
-
 	}
 }
 
@@ -407,15 +403,15 @@ section.thumbnails {
 }
 
 .project-button {
-	display: block;
-	vertical-align: middle;
-	border: 3px solid rgba($forestgreen, .3);
+		display: block;
+		vertical-align: middle;
+		border: 3px solid rgba($forestgreen, .3);
    	box-shadow: 0 8px 0 rgba($forestgreen, .3);
     border-radius: 1rem;
     padding: 2rem;
     padding-bottom: 0;
     transition: 150ms ease-in-out;
-    min-height: 150px;
+    min-height: 10rem;
 
     h3 {
     	color: $green;
@@ -427,11 +423,6 @@ section.thumbnails {
 
     }
 
-    &:active{
-    	box-shadow: none;
-    	transform: translateY(8px);
-    }
-
 	@media (prefers-color-scheme: dark) {
 		border: 3px solid rgba($beige, .3);
 	   	box-shadow: 0 8px 0 rgba($beige, .3);
@@ -441,17 +432,30 @@ section.thumbnails {
 	   	}
 
    	    &:hover {
-			border: 3px solid rgba($beige, 1);
+				border: 3px solid rgba($beige, 1);
 	   		box-shadow: 0 8px 0 rgba($beige, 1);
 
     }
-
-
 	}
+
+    &:active{
+    	box-shadow: none;
+    	transform: translateY(8px);
+    }
+}
+
+// 2.6 Blog
+
+.blog-preview {
+	margin-bottom: 1rem;
+	padding: 3rem;
+	border: 3px solid rgba($forestgreen, 1);
+ 	box-shadow: 0 8px 0 rgba($forestgreen, 1);
+  border-radius: 1rem;
 }
 
 
-// 2.6 Footer
+// 2.7 Footer
 
 footer {
 	min-height: 30rem;
@@ -507,6 +511,31 @@ footer {
 	}
 }
 
+
+// 2.8 404
+
+
+header.fourohfour {
+	position: relative;
+	min-height: 40rem;
+	
+	@include for-size(phone-only) {    
+		min-height: 30rem; 
+	}
+
+	.hero-img {
+		img{
+			position: absolute;
+			bottom: 0;
+			max-height: 50%;
+
+			@include for-size(phone-only) {
+				max-height: 15rem;
+			}
+		}
+	}
+}
+
 // 3. Components 
 
 .button {
@@ -525,7 +554,7 @@ footer {
 // Dark Mode
 
 
-header, section, section.home-hero-image, nav, .work, .project-nav, footer  {
+header, section, section.home-hero-image, nav, section.work, section.blog, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $forestgreen;
   		color: $beige;
