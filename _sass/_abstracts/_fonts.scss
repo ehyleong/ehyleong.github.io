@@ -51,19 +51,19 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: clamp(2.3rem, 3vw, 3.5rem);
+  font-size: clamp(2.3rem, 3vw, 3rem);
   line-height: 1.1em;
 }
 
 h3 {  
   font-weight: 600;
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.1vw, 2rem);
   line-height: 1.2em;
 }
 
 h4 {
   font-weight: 750;
-  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  font-size: clamp(0.4rem, 2vw, 0.8rem);
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
@@ -73,14 +73,14 @@ h4 {
 
 h5, li {
   font-weight: 360;
-  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.5em;
   letter-spacing: 0.5px;
 }
 
 p, small {
   font-family: "NaNHolo-Regular";
-  font-size: clamp(1.25rem, 2vw, 1.4rem);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   line-height: 1.5em;
   margin-bottom: 1.5rem;
 
@@ -90,7 +90,7 @@ p, small {
 }
 
 small {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 0.8rem);
 }
 
 a {

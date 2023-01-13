@@ -276,7 +276,7 @@ section.home-intro {
 
 	div.home-intro-title {
 		@include for-size(phone-only) {    
-			min-height: 18rem; 
+			min-height: 20rem; 
 		}
 	}
 }
@@ -448,12 +448,12 @@ section.thumbnails {
 	min-height: 15rem;
 
 	span {
-		background: rgba($orange, 0.25);
+		background: rgba($orange,0.1);
 		display: inline-block;
 		padding: 0.5em 1.5em .3em;
 		margin-right: 1rem;
 		border-radius: 2rem;
-		color: $orange; 
+		color: $beige; 
 	}
 }
 
