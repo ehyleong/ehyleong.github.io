@@ -244,7 +244,7 @@ nav {
 
 header.home {
 	position: relative;
-	min-height: 20rem;
+	min-height: 18rem;
 	
 	@include for-size(phone-only) {    
 		min-height: 15rem; 
@@ -520,7 +520,7 @@ footer {
 
 header.fourohfour {
 	position: relative;
-	min-height: 40rem;
+	min-height: 34rem;
 	
 	@include for-size(phone-only) {    
 		min-height: 30rem; 
