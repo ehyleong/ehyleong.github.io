@@ -148,13 +148,34 @@ a.inline-link {
 	}
 }
 
-.label {
-	display: inline-block;
+div.callout {
+	display: flex;
+	align-items: baseline;
+	max-width: contents;
 	background: rgba(0, 0, 0, .2);
 	color: $beige;
-	padding: 1rem 1.5rem;
+	padding: 1rem 1.4rem 1.2rem;
 	border-radius: 1rem;
+	max-width: fit-content;
+
+	& > * {
+		margin: 0;
+	}
 }
+
+span.label {
+	display: inline-block;
+	background: $orange;
+	color: $black;
+	text-transform: uppercase;
+	font-family: "NaNJaune-Midi-Var";
+	font-weight: 800;
+	font-size: .7rem;
+	margin-right: 1rem;
+	padding: .3rem .4rem .2rem;
+	border-radius: 6px;
+}
+
 
 // 2. Layout 
 
@@ -224,8 +245,8 @@ nav {
 				height: 3px;
 				background-color: $orange;
 				opacity: 0;
-				transform: translate3d(0, -100%, 0);
-				transition: opacity 300ms, transform 300ms;
+				transform: translate3d(0, -200%, 0);
+				transition: opacity 150ms, transform 150ms ease;
 			}
 
 			&:hover {
@@ -308,7 +329,6 @@ section.thumbnails {
 			width: 100%;
 			height: 100%;
 			border-radius: 1rem;
-
 		}
 
 		.thumbnail-overlay {
@@ -565,3 +585,4 @@ body, section.home-intro, section.thumbnails, footer {
 	--ti-cursor-font-size: clamp(2.8rem, 5vw, 5.6rem);
 	--ti-cursor-line-height: 1em;
 }
+

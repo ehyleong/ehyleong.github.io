@@ -7,6 +7,16 @@
 	{{ content }}
 	{% include footer.html %}
 
+	<script src="js/locomotive-scroll.min.js"></script>
+	<script>
+    (function () {
+        var scroll = new LocomotiveScroll();
+    	smooth: true
+
+    })();
+
+			console.log('ya')
+	</script>
 	<script src="https://unpkg.com/typeit@8.1.0/dist/index.umd.js"></script>
 	<script>
 	  new TypeIt("#typewriter", {
@@ -35,6 +45,7 @@
   	  .pause(2500)
 	  .go();
 
+	  console.log('meow')
 	</script>
 	</body>
 </html>

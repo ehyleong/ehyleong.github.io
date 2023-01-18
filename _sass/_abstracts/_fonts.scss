@@ -62,21 +62,21 @@ h3 {
   line-height: 1.2em;
 }
 
-h4 {
-  font-weight: 750;
+h4, li {
+  font-weight: 360;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+h5 {
+  font-weight: 700;
   font-size: clamp(.7rem, 2vw, .8rem);
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
   color: $orange;
   margin-top: .5rem;
-}
-
-h5, li {
-  font-weight: 360;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.5em;
-  letter-spacing: 0.5px;
 }
 
 p, small {
@@ -96,7 +96,7 @@ small {
 
 a {
   color: $orange;
-  transition: all 150ms ease-in-out;
+  transition: all 100ms ease-out;
 
   &:hover {
     color: $orange;

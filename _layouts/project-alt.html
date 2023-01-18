@@ -13,16 +13,16 @@
         </div>
 
         <div class="col-lg-offset-3 col-lg-3 col-md-offset-2 col-md-4 col-sm-offset-1 col-sm-3 col-xs-12">
-        <h4>{% if page.client == 'Personal' %} Project {% else %} Client {% endif %}</h4>
-          <h5>{{ page.client }}</h5>
+        <h5>{% if page.client == 'Personal' %} Project {% else %} Client {% endif %}</h5>
+          <h4>{{ page.client }}</h4>
         {% if page.link == true %}
-          <h4>Role</h4>
-          <h5>{{ page.role }}</h5>
-          <h4>Link</h4>
-          <h5><a href="{{ page.href }}" class="project-link external-link" target="_blank">{{ page.linktext }}</a></h5>
+          <h5>Role</h5>
+          <h4>{{ page.role }}</h4>
+          <h5>Link</h5>
+          <h4><a href="{{ page.href }}" class="project-link external-link" target="_blank">{{ page.linktext }}</a></h4>
         {% else %}
-          <h4>Work</h4>
-          <h5>{{ page.role }}</h5>
+          <h5>Work</h5>
+          <h4>{{ page.role }}</h4>
         {% endif %}
 
         </div>
