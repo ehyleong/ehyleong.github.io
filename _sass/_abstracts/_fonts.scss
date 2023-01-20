@@ -38,14 +38,14 @@
 }
 
 
-h1, h2, h3, h4, h5, li {
-  font-family: "NaNJaune-Midi-Var";
-  margin-bottom: 1rem;
+h1, h2, h3, h4, h5, li, label {
+  font-family: "NaNJaune-Midi-Var", sans-serif;
+  margin-block-end: 1rem;
 }
 
 h1 {
   font-weight: 700;
-  font-size: clamp(2.8rem, 6vw, 6.0rem);
+  font-size: clamp(2.8rem, 6vw, 8rem);
   line-height: 1em;
   letter-spacing: -.02em;
 }
@@ -69,7 +69,7 @@ h4, li {
   letter-spacing: 0.5px;
 }
 
-h5 {
+h5, label {
   font-weight: 700;
   font-size: clamp(.7rem, 2vw, .8rem);
   line-height: 1.4em;

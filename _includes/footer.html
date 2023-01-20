@@ -1,22 +1,24 @@
 <footer class="spacer" id="contact">
+  {% unless page.slug == "contact" %}
   <div class="wrap row bottom-text-spacer">
     <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
-      <h5><img src="/img/icon-contact.svg" class="section-icon">Wanna get in touch?</h5>
-    <h1 class="bottom-text-spacer">Send me a  
-      <a href="mailto:ehyleong@gmail.com?subject=Cool%20project%20inquiry">message.</a></h1>
+      <h5><img src="/img/icon-contact.svg" class="section-icon">Wanna work together?</h5>
+    <!--<h1 class="bottom-text-spacer">Send me a  
+      <a href="mailto:ehyleong@gmail.com?subject=Cool%20project%20inquiry">message.</a></h1>-->
+        <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
     <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
       <h5><img src="/img/icon-social.svg" class="section-icon">ehyleong</h5>
-      <ul>
+      <ul class="social-links">
         <li><a href="https://twitter.com/ehyleong" class="external-link" target="_blank">Twitter</a></li>
         <li><a href="https://dribbble.com/ehyleong" class="external-link" target="_blank">Dribbble</a></li>
         <li><a href="https://linkedin.com/in/ehyleong/" class="external-link" target="_blank">LinkedIn</a></li>
         <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank">Instagram</a></li>
         <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank">Mastodon</a></li>
-
       </li>
     </ul>
   </div>
+  {% endunless %}
 </div>
 <div class="wrap row copyright top-text-spacer bottom-text-spacer">
   <div class="col-xs-12">
