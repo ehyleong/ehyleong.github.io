@@ -59,7 +59,7 @@ img {
 }
 
 .wrap {
-	width: min(100rem, 90%);
+	width: min(120rem, 90%);
 }
 
 
@@ -239,7 +239,17 @@ ul.social-links {
 	}
 }
 
-
+.right-arrow {
+		&:after {
+		display: inline-block;
+		content: '';
+		background-size: cover;
+		background-image: url('/img/right-arrow.svg');
+		height: 10px;
+		width: 18px;
+		margin-left: .5rem;
+	}
+}
 
 
 // 2. Layout 
@@ -383,7 +393,7 @@ section.home-intro {
 
 	div.home-intro-title {
 		@include for-size(phone-only) {    
-			min-height: 20rem; 
+			min-height: 25rem; 
 		}
 	}
 }
