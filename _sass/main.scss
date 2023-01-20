@@ -291,7 +291,7 @@ nav {
 	}
 
 	li {			
-		padding-left: 1.2em;
+		padding-left: 1em;
 		padding-right: 0;
 
 		&:nth-child(1){
@@ -361,7 +361,7 @@ nav {
 
 header.home {
 	position: relative;
-	min-height: 18rem;
+	min-height: 20rem;
 	
 	@include for-size(phone-only) {    
 		min-height: 15rem; 
@@ -622,7 +622,7 @@ footer {
 
 header.fourohfour {
 	position: relative;
-	min-height: 34rem;
+	min-height: 40rem;
 	
 	@include for-size(phone-only) {    
 		min-height: 30rem; 
