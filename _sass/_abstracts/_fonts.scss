@@ -79,10 +79,10 @@ h5, label {
   margin-top: .5rem;
 }
 
-p, small {
+p {
   font-family: "NaNHolo-Regular";
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  line-height: 1.5em;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  line-height: 1.4em;
   margin-bottom: 2rem;
 
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */

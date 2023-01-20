@@ -46,7 +46,7 @@ body {
 }
 
 header.home, header.about, header.contact, header.fourohfour, section.blog, .project-nav {
-	border-radius: 0 0 20px 20px;
+	border-radius: 0 0 2rem 2rem;
 }
 
 header, section.work, section.blog, section.about, .project-nav {
@@ -259,7 +259,7 @@ ul.social-links {
 nav {
 	background: $beige;
 	padding-top: 1.5rem;
-	border-radius: 20px 20px 0 0;
+	border-radius: 2rem 2rem 0 0;
 
 	@include for-size(phone-only) {    
 		border-radius: 0;
@@ -393,7 +393,7 @@ section.home-intro {
 
 	div.home-intro-title {
 		@include for-size(phone-only) {    
-			min-height: 25rem; 
+			min-height: 20rem; 
 		}
 	}
 }
@@ -454,8 +454,8 @@ section.thumbnails {
 			& > * {
 				margin: 0.7rem;
 				color: $beige;
-				transform: translateY(20px);
-				transition: transform 220ms ease-in-out;
+				transform: translateY(30px);
+				transition: all 220ms ease;
 			}
 
 			&:hover {
@@ -610,6 +610,7 @@ footer {
 			text-decoration-color: rgba($beige, 0.5);
 
 			&:hover {
+				color: $beige;
 				text-decoration-color: rgba($beige, 0);
 			}
 		}
