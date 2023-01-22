@@ -262,7 +262,7 @@ nav {
 	background: $beige;
 	padding-top: 1.5rem;
 	border-radius: 2rem 2rem 0 0;
-  transition: top 0.2s ease-in-out;
+  transition: top 200ms ease;
 
 	@include for-size(phone-only) {    
 		border-radius: 0;
