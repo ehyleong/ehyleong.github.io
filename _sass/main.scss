@@ -625,7 +625,7 @@ footer {
 
 header.fourohfour {
 	position: relative;
-	min-height: 40rem;
+	min-height: 50rem;
 	
 	@include for-size(phone-only) {    
 		min-height: 30rem; 

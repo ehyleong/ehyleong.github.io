@@ -51,9 +51,10 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
-  font-size: clamp(2.3rem, 3vw, 3rem);
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 4rem);
   line-height: 1.1em;
+  letter-spacing: -.02em;
 }
 
 h3 {  
