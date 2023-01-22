@@ -404,11 +404,6 @@ section.home-intro {
 
 // 2.3 Work
 
-#work {
-	@include for-size(phone-only) {
-		  scroll-margin-top: $spacer;
-	}
-}
 
 section.thumbnails {
 
