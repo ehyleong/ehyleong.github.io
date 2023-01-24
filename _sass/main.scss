@@ -371,13 +371,13 @@ div.desktop-menu {
 		box-shadow: 0 8px 0 rgba(black, 0.2);
 	  transform: translateY(-110%);
 
-	ul {
-		margin-block-start: 2rem;
-	}  
+		ul {
+			margin-block-start: 2rem;
+		}  
 
-	li {
-		margin-block-end: 1rem;
-	}
+		li {
+			margin-block-end: 1rem;
+		}
 
   a.menuItem {
 	  	color: $beige;
@@ -410,7 +410,7 @@ div.desktop-menu {
 
 .showMenu {
   transform: translateY(0);
-  transition: all 200ms ease;
+  transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .hamburger {
