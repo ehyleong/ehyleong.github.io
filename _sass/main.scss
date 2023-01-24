@@ -442,16 +442,11 @@ div.desktop-menu {
 	}
 }
 
-
-
 .hamburger {
 	display: none;
 
 	@include for-size(phone-only) {  
 		display: block;
-	  top: 1rem;
-	  right: 1rem;
-	  padding: 8px;
 	  cursor: pointer;
 	  border: none;
 	  background: none;
