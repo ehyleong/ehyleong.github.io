@@ -1,17 +1,40 @@
-<nav class="nav-down menu">
-  <div class="wrap row">
-      <div class="col-lg col-xs logo">
-        <a href="{% link index.html %}">
-          <svg width="50" height="50">
-            <image xlink:href="/img/logo.svg" src="svg.png" width="50" height="50" />
-          </svg>
-      </div>
-      <ul class="col-lg col-xs">
-        <li><a href="{% link index.html %}#work">Work</a></li>
-        <li><a href="{% link about.html %}">About</a></li>
-        <!--<li><a href="{% link blog.html %}">Blog</a></li>-->
-        <li><a href="{% link contact.html %}" class="button button-contact">Contact</a></li>
-      </ul>
+<nav class="nav-down">
+  <div class="row wrap desktop-menu">
+    <div class="logo">
+      <a href="{% link index.html %}">
+        <svg width="50" height="50">
+          <image xlink:href="/img/logo.svg" src="svg.png" width="50" height="50" />
+        </svg>
+      </a>
     </div>
+    <ul>
+      <li><a href="{% link index.html %}#work">Work</a></li>
+      <li><a href="{% link about.html %}">About</a></li>
+      <li><a href="{% link blog.html %}">Blog</a></li>
+      <li><a href="{% link contact.html %}" class="button button-contact" class="menuItem">Contact</a></li>
+    </ul>
   </div>
+  <button class="hamburger">
+    <img src="/img/icon-menu.svg" class="menuIcon">
+  </button>
 </nav>
+
+<div class="mobile-menu">
+  <div class="logo">
+      <a href="{% link index.html %}">
+        <svg width="50" height="50">
+          <image xlink:href="/img/logo.svg" src="svg.png" width="50" height="50" />
+        </svg>
+      </a>
+    </div>
+  <ul>
+    <li><a href="{% link index.html %}#work" class="menuItem">Work</a></li>
+    <li><a href="{% link about.html %}" class="menuItem">About</a></li>
+    <li><a href="{% link blog.html %}" class="menuItem">Blog</a></li>
+    <li><a href="{% link contact.html %}" class="menuItem">Contact</a></li>
+  </ul>
+  <button class="menuItem hamburger">
+    <img src="/img/icon-close.svg" class="closeIcon">
+  </button>
+</div>
+
