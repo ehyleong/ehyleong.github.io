@@ -718,12 +718,12 @@ footer {
 // 2.8 404
 
 
-header.fourohfour {
+header.fourohfour, header.thanks {
 	position: relative;
 	min-height: 50rem;
 	
 	@include for-size(phone-only) {    
-		min-height: 30rem; 
+		min-height: 36rem; 
 	}
 
 	.hero-img {
