@@ -187,7 +187,7 @@ span.lottie {
 
 .button {
 	border: 3px solid rgba($green, .3);
- 	box-shadow: 0 3px 0 rgba($green, .3);
+ 	//box-shadow: 0 3px 0 rgba($green, .3);
  	color: $green;
   transition: 100ms ease-in-out;
 
@@ -202,7 +202,7 @@ span.lottie {
 	@media (prefers-color-scheme: dark) {
 			color: $beige;
 			border: 3px solid rgba($beige, .3);
-	   	box-shadow: 0 3px 0 rgba($beige, .3);
+	   	//box-shadow: 0 3px 0 rgba($beige, .3);
 
  	    &:hover {
 	   		color: $beige;
@@ -377,7 +377,8 @@ div.desktop-menu {
 
 		li {
 			margin-block-end: 1.5rem;
-			font-weight: 800;
+		  letter-spacing: -.01em;
+			font-weight: 700;
 			opacity: 0;
 			transform: translateX(20px);
 			transform-origin: bottom left;
@@ -385,7 +386,7 @@ div.desktop-menu {
 
   a.menuItem {
 	  	color: $beige;
-	  	font-size: 2.8em;
+	  	font-size: 1.8rem;
 
 	  	&:hover, &:focus, &:active {
 	  		color: $orange;
@@ -490,7 +491,7 @@ section.home-intro {
 
 	div.home-intro-title {
 		@include for-size(phone-only) {    
-			min-height: 22rem; 
+			min-height: 18rem; 
 		}
 	}
 }
@@ -633,7 +634,7 @@ section.thumbnails {
 .button-project {
 		display: block;
 		vertical-align: middle;
-   	box-shadow: 0 8px 0 rgba($green, .3);
+   	//box-shadow: 0 8px 0 rgba($green, .3);
     border-radius: 1rem;
     padding: 2.5rem;
     min-height: 12rem;
@@ -651,7 +652,7 @@ section.thumbnails {
     }
 
 	@media (prefers-color-scheme: dark) {
-	   	box-shadow: 0 8px 0 rgba($beige, .3);
+	   	//box-shadow: 0 8px 0 rgba($beige, .3);
 
  	    &:hover {
 	   		box-shadow: 0 8px 0 rgba($beige, .8);
@@ -861,7 +862,7 @@ body, section.home-intro, section.thumbnails, footer {
 // TypeIt Cursor
 
 :root {
-	--ti-cursor-font-size: clamp(2.8rem, 5vw, 5.6rem);
+	--ti-cursor-font-size:   font-size: clamp(2.4rem, 6vw, 8rem);
 	--ti-cursor-line-height: 1em;
 }
 
