@@ -187,7 +187,7 @@ span.lottie {
 
 .button {
 	border: 3px solid rgba($green, .3);
- 	//box-shadow: 0 3px 0 rgba($green, .3);
+ 	box-shadow: 0 3px 0 rgba($green, .3);
  	color: $green;
   transition: 100ms ease-in-out;
 
@@ -202,7 +202,7 @@ span.lottie {
 	@media (prefers-color-scheme: dark) {
 			color: $beige;
 			border: 3px solid rgba($beige, .3);
-	   	//box-shadow: 0 3px 0 rgba($beige, .3);
+	   	box-shadow: 0 3px 0 rgba($beige, .3);
 
  	    &:hover {
 	   		color: $beige;
@@ -634,7 +634,7 @@ section.thumbnails {
 .button-project {
 		display: block;
 		vertical-align: middle;
-   	//box-shadow: 0 8px 0 rgba($green, .3);
+   	box-shadow: 0 6px 0 rgba($green, .3);
     border-radius: 1rem;
     padding: 2.5rem;
     min-height: 12rem;
@@ -644,7 +644,7 @@ section.thumbnails {
     }
 
     &:hover {
-	   	box-shadow: 0 8px 0 rgba($green, 1);
+	   	box-shadow: 0 6px 0 rgba($green, 1);
     }
 
     @include for-size(phone-only){
@@ -652,7 +652,7 @@ section.thumbnails {
     }
 
 	@media (prefers-color-scheme: dark) {
-	   	//box-shadow: 0 8px 0 rgba($beige, .3);
+	   	box-shadow: 0 8px 0 rgba($beige, .3);
 
  	    &:hover {
 	   		box-shadow: 0 8px 0 rgba($beige, .8);
@@ -664,7 +664,7 @@ section.thumbnails {
 	}
     &:active{
     	box-shadow: none;
-    	transform: translateY(8px);
+    	transform: translateY(6px);
     }
 }
 
