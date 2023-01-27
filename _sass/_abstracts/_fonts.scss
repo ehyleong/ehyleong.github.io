@@ -82,9 +82,9 @@ h5, label {
 
 p {
   font-family: "NaNHolo-Regular";
-  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   line-height: 1.4em;
-  margin-bottom: 2rem;
+  margin-block-end: 2rem;
 
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */

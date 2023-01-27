@@ -63,8 +63,8 @@ img {
 }
 
 
-.section-icon {
-	padding-right: 1rem;
+.icon {
+	padding-right: .5em;
 	height: 1em;
 	width: auto;
 	vertical-align: text-bottom;
@@ -371,12 +371,17 @@ div.desktop-menu {
 		box-shadow: inset 0 -2px 0 0 rgba($green,.5), 0 8px 0 rgba(black, 1), 0 16px 0 2px rgba($black, 0.25);
 	  transform: translateY(-110%);
 
-		ul {
+		ul:has(.menuItem) {
 			margin-block-start: 3rem;
+			margin-block-end: 1rem;
 		}  
 
+		h5 {
+			opacity: 0;
+		}
+
 		li {
-			margin-block-end: 1.5rem;
+			margin-block-end: 1.25em;
 		  letter-spacing: -.01em;
 			font-weight: 700;
 			opacity: 0;
@@ -384,9 +389,23 @@ div.desktop-menu {
 			transform-origin: bottom left;
 		}
 
+		li:has(.social-link) {
+			display: inline-block;
+			margin-right: 1rem;
+
+			svg {
+				fill: $beige;
+				transition: all 150ms;
+
+				&:hover, &:active, &:focus {
+					fill: $orange;
+				}
+			}
+		}
+
   a.menuItem {
-	  	color: $beige;
-	  	font-size: 1.8rem;
+  	color: $beige;
+  	font-size: 1.8rem;
 
 	  	&:hover, &:focus, &:active {
 	  		color: $orange;
@@ -420,7 +439,7 @@ div.desktop-menu {
   transform: translateY(0);
   transition: all 400ms cubic-bezier(0.87, 0, 0.13, 1);
 
-   .logo {
+  h5, .logo {
    	opacity: 1;
 	  transition: all 300ms ease-out 300ms;
   }
@@ -818,7 +837,7 @@ form.contact {
 
 	textarea {
 		min-height: 20rem;
-	  resize: none;
+	  resize: vertical;
 	}
 
 	label {
@@ -836,7 +855,6 @@ form.contact {
 		}
 	}
 }
-
 
 
 // Dark Mode
