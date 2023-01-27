@@ -765,6 +765,12 @@ header.fourohfour, header.thanks {
 // 2.9 Contact
 
 header.contact {
+	position: relative;
+
+	@media (max-width: 41rem) {
+		padding-bottom: 15rem;
+	}
+
 	ul.social-links {
 		li {
 			a {
@@ -779,6 +785,21 @@ header.contact {
 				}
 			}
 		}
+	}
+
+.compooty {
+			position: absolute;
+			bottom: 0;
+			margin: auto 0;
+			width: 25vw;
+			max-width: 400px;
+	
+		@include for-size(phone-only) {
+			width: 250px;
+	    margin-left: -125px;
+			left: 50%;
+		}	
+
 	}
 }
 
