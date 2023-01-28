@@ -7,13 +7,13 @@
         </svg>
       </a>
     </div>
+  {% for category in site.data.nav.deskop-nav limit:1 %}
     <ul>
-      <li><a href="{% link index.html %}#work">Work</a></li>
-      <li><a href="{% link blog.html %}">Blog</a></li>
-      <li><a href="{% link blog.html %}">Shop</a></li>
-      <li><a href="{% link about.html %}">About</a></li>
-      <li><a href="{% link contact.html %}" class="button button-contact" class="menuItem">Contact</a></li>
+      {% for item in category.items %}
+      <li><a href="{{ item.href }}"{% if page.url contains item.href %} class="current{% if item.class %} {{ item.class }}{%endif %}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</a></li> 
+      {% endfor %}
     </ul>
+  {% endfor %}
   </div>
   <button class="hamburger">
     <svg width="24" height="24" class="menuIcon">
@@ -30,13 +30,15 @@
         </svg>
       </a>
     </div>
-  <ul>
-    <li><a href="{% link index.html %}#work" class="menuItem">Work</a></li>
-    <li><a href="{% link blog.html %}" class="menuItem">Blog</a></li>
-    <li><a href="{% link blog.html %}" class="menuItem">Shop</a></li>
-    <li><a href="{% link about.html %}" class="menuItem">About</a></li>
-    <li><a href="{% link contact.html %}" class="menuItem">Contact</a></li>
-  </ul>
+
+  {% for category in site.data.nav.mobile-nav limit:1 %}
+    <ul>
+      {% for item in category.items %}
+      <li><a href="{{ item.href }}"{% if page.url contains item.href %} class="{% if item.class %} {{ item.class }}{%endif %}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</a></li> 
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
   <h5>Find me on</h5>
   <ul>
     <li><a href="#" class="social-link">

@@ -38,6 +38,8 @@ plugins:
 collections:
   work:
     output: true
+  posts:
+    permalink: /blog/:year/:month/:title
 
 title: Formspark | Jekyll
 formspark_form_id: ZfOeuDrT

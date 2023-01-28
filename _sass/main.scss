@@ -260,7 +260,7 @@ ul.social-links {
 
 nav {
 	background: $beige;
-	padding-top: 2rem;
+	padding: 2rem .75rem 0;
 	border-radius: 2rem 2rem 0 0;
   transition: top 200ms ease-out;
   display: flex;
@@ -318,6 +318,11 @@ div.desktop-menu {
 			position: relative;
 			line-height: 2em;
 
+			&.current {
+				color: $orange;
+				
+				}	
+
 				@media (prefers-color-scheme: dark) {
 			  		color: $beige;
 				}
@@ -333,6 +338,8 @@ div.desktop-menu {
 				opacity: 0;
 				transform: translate3d(0, -100%, 0);
 				transition: opacity 150ms, transform 150ms ease;
+
+
 			}
 
 			&:hover {
@@ -351,6 +358,8 @@ div.desktop-menu {
 			border-radius: .5rem;
 		}
 	}
+
+
 }
 
 .mobile-menu {
@@ -689,19 +698,35 @@ section.thumbnails {
 
 // 2.6 Blog
 
+
 .blog-preview {
-	margin-bottom: 1rem;
-	min-height: 15rem;
+	margin-block-end: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 2px solid rgba($orange, .2);
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	& > * {
+		
+		color: $green;
+
+		@media (prefers-color-scheme: dark) {
+			color: $beige;
+		}
+	}
 }
 
 span.category {
-	background: rgba($orange,0.8);
+	background-color: rgba($orange, 0.15);
 	display: inline-block;
-	padding: 0.5em 1.5em .3em;
+	padding: 0.4em 1em .2em;
 	margin-right: 1rem;
-	border-radius: 2rem;
-	color: $beige; 
-	}
+	border-radius: 8px;
+	color: $orange; 
+}
+
 
 
 // 2.7 Footer

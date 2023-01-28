@@ -1,0 +1,59 @@
+desktop-nav:
+  # Desktop Nav
+  - category: Desktop Nav
+    items:
+      - title: "Work"
+        href: "/#work"
+        class: work
+      - title: "Shop"
+        href: "/#work"
+        class: shop
+      - title: "Blog"
+        href: "/blog"
+        class: blog
+      - title: "About"
+        href: "/about"
+        class: about
+      - title: "Contact"
+        href: "/contact"
+        class: "button button-contact"
+
+mobile-nav:
+  # Mobile Nav
+  - category: Mobile Nav
+    items:
+      - title: "Work"
+        href: "/#work"
+        class: work menuItem
+      - title: "Shop"
+        href: "/#work"
+        class: shop menuItem
+      - title: "Blog"
+        href: "/blog"
+        class: blog menuItem
+      - title: "About"
+        href: "/about"
+        class: about menuItem
+      - title: "Contact"
+        href: "/contact"
+        class: contact menuItem
+
+social-links:
+  # Social Links
+  - category: Social Links
+    items:
+      - title: "Work"
+        href: "/#work"
+        class: work menuItem
+      - title: "Shop"
+        href: "/#work"
+        class: shop menuItem
+      - title: "Blog"
+        href: "/blog"
+        class: blog menuItem
+      - title: "About"
+        href: "/about"
+        class: about menuItem
+      - title: "Contact"
+        href: "/contact"
+        class: contact menuItem
