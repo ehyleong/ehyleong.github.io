@@ -768,7 +768,7 @@ header.contact {
 	position: relative;
 
 	@media (max-width: 41rem) {
-		padding-bottom: 15rem;
+		padding-bottom: 18rem;
 	}
 
 	ul.social-links {
@@ -787,14 +787,15 @@ header.contact {
 		}
 	}
 
-.compooty {
+.contact-img {
 			position: absolute;
 			bottom: 0;
-			margin: auto 0;
+			padding-left: 0.75rem;
 			width: 25vw;
 			max-width: 400px;
 	
 		@include for-size(phone-only) {
+			padding-left: 0;
 			width: 250px;
 	    margin-left: -125px;
 			left: 50%;
@@ -873,6 +874,15 @@ form.contact {
 
 		@include for-size(phone-only) {
 			width: 100%;
+		}
+
+		svg {
+			margin-left: .25em;
+			fill: $green;
+
+			@media (prefers-color-scheme: dark){
+				fill: $beige;
+			}
 		}
 	}
 }
