@@ -2,8 +2,8 @@
 $spacer: 5rem;
 
 // Colours
-$forestgreen: #012727;
 $green: #004C4C;
+$forestgreen: #012727;
 $black: #001D1D;
 $beige: #ECEAE3;
 $orange: #DB7704;
@@ -91,6 +91,9 @@ $teal: #108888;
   padding-top: .5rem;
 }
 
+.margin-end {
+  margin-block-end: $spacer/4;
+}
 
 // Divs
 
