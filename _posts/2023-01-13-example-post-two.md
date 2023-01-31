@@ -7,6 +7,7 @@ category: art
 Chances are you’ve heard of the common adage, “share work, early and often.” The benefits are clear: sharing in-progress work early on allows teams to get on the same page and avoid surprises or wasted work. Easy win, right? A lot of teams find it easier said than done.
 
 <h3>The Bumpy Beginnings</h3>
+<h4>The Bumpy Beginnings</h4>
 
 You might’ve heard that Steamclock has a culture of focusing on quality and polish. This has led, on occasion, to us taking things too far – or, relatedly, jumping to polish too early. In the early days for instance, we sometimes ran into situations where a designer would take a concept, dive straight into a rabbit hole, get sidetracked by the allure of polish, and eventually emerge with a proposal weeks later that was totally out of scope. Suffice it to say, we’ve learned some hard lessons.
 

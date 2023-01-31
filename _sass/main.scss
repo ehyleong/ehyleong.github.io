@@ -612,6 +612,27 @@ section.thumbnails {
 
 // 2.5 Projects
 
+header.work {
+	.hero-img {
+		img {
+			border-radius: 1rem;
+		}
+	}
+
+	.project-meta{
+		display: grid;
+		gap: 1rem;
+		background-color: rgba($orange, 0.05);
+		padding: 2rem;
+		border-radius: 1rem;
+		
+		* {
+			margin-block-end: .5rem;
+		}
+
+	}
+}
+
 
 .project-nav {
 	.arrow-prev {
