@@ -625,7 +625,11 @@ header.work {
 		background-color: rgba($orange, 0.05);
 		padding: 2rem;
 		border-radius: 1rem;
-		
+
+		@media (prefers-color-scheme: dark) {
+			background-color: rgba($green, 0.2);
+		}
+
 		* {
 			margin-block-end: .5rem;
 		}
