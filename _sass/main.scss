@@ -275,8 +275,9 @@ nav {
 	}
 
 	svg {
+		fill: $green;
 			@media (prefers-color-scheme: dark) {
-				filter: invert(42%) sepia(82%) saturate(2230%) hue-rotate(15deg) brightness(103%) contrast(97%);
+				fill: $orange;
 		}
 
 		&:hover {
@@ -433,11 +434,16 @@ div.desktop-menu {
 
 	.logo {
 		opacity: 0;
-
-		svg {
-			filter: invert(42%) sepia(82%) saturate(2230%) hue-rotate(15deg) brightness(103%) contrast(97%);
-		}
 	}
+
+	svg {
+			fill: $orange;
+			transition: all 150ms;
+
+			&:hover {
+				opacity: .75;
+			}
+		}
 }
 
 .nav-up {
