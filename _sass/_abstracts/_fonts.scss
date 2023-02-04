@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, li, label {
 
 h1 {
   font-weight: 750;
-  font-size: clamp(2.4rem, 6vw, 8rem);
+  font-size: clamp(2.4rem, 6vw, 7rem);
   line-height: 1em;
   letter-spacing: -.02em;
 }
@@ -65,7 +65,7 @@ h3 {
 
 h4, li {
   font-weight: 360;
-  font-size: clamp(.9rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.5em;
   letter-spacing: 0.5px;
 }

@@ -529,8 +529,8 @@ section.home-intro {
 
 
 	div.home-intro-title {
-		@include for-size(phone-only) {    
-			min-height: 18rem; 
+		@media (max-width: 40rem) {
+			min-height: 17.5rem;
 		}
 	}
 }
