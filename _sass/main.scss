@@ -269,7 +269,7 @@ nav {
 	@include for-size(phone-only) {    
 		border-radius: 0;
 		position: sticky;
-		padding: 1.5rem 1.75rem;
+		padding: 1.5rem 1.5rem;
 		top: 0px;
 		z-index: 9;
 	}
@@ -377,7 +377,7 @@ div.desktop-menu {
 	  z-index: 999;
 	  flex-direction: column;
 	  align-items: start;
-	  padding: 1.5rem 2.25rem;
+	  padding: 1.5rem 2rem;
 	  background: $forestgreen;
 	  width: 100%;
     transition: all 200ms ease;
@@ -431,8 +431,8 @@ div.desktop-menu {
 	button.hamburger {
 		transform: scale(0);
 		position: fixed;
-		top: 2rem;
-		right: 2rem;
+		top: 1.75rem;
+		right: 1.75rem;
 		height: 40px;
 		width: 40px;
 	}
