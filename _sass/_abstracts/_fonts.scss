@@ -45,34 +45,34 @@ h1, h2, h3, h4, h5, li, label {
 
 h1 {
   font-weight: 750;
-  font-size: clamp(2.3rem, 6vw, 7rem);
+  font-size: clamp(2.3rem, calc(4vw + 1.1rem), 7rem);
   line-height: 1em;
   letter-spacing: -.02em;
 }
 
 h2 {
   font-weight: 500;
-  font-size: clamp(1.8rem, 3vw, 4rem);
+  font-size: clamp(1.8rem, calc(2.2vw + 1rem), 4.5rem);
   line-height: 1.1em;
   letter-spacing: -.01em;
 }
 
 h3 {  
   font-weight: 500;
-  font-size: clamp(1.4rem, 2.1vw, 2rem);
+  font-size: clamp(1.2rem, calc(1vw + 1rem), 3rem);
   line-height: 1.2em;
 }
 
 h4, li {
   font-weight: 360;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
   line-height: 1.5em;
   letter-spacing: 0.5px;
 }
 
 h5, label {
   font-weight: 700;
-  font-size: clamp(.7rem, 2vw, .8rem);
+  font-size: clamp(.7rem, calc(1vw + .2rem), .8rem);
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
@@ -88,7 +88,7 @@ p, small, em, strong, {
 }
 
 p {
-  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  font-size: clamp(1.1rem, calc(1vw + .5rem), 1.4rem);
   line-height: 1.3em;
   margin-block-end: 2rem;
 }
