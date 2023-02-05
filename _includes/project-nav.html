@@ -6,6 +6,11 @@
 
 {% for links in document %}
   {% if links.title == page.title %}
+    {% if forloop.first %}
+      {% assign previous = document[forloop.index] %}
+      {% assign prevtitle = prev.title %}
+      {% assign prev.url = prev.url  %}
+    {% endif %}
     {% unless forloop.first %}
       {% assign prevtitle = prev.title %}
       {% assign prevurl = prev.url %}

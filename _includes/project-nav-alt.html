@@ -6,6 +6,16 @@
 
 {% for links in document %}
   {% if links.title == page.title %}
+    {% if forloop.first %}
+      {% assign prev = document.last %}
+      {% assign prevtitle = prev.title %}
+      {% assign prevurl = prev.url %}
+    {% endif %}
+    {% if forloop.last %}
+      {% assign next = document.first %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endif %}
     {% unless forloop.first %}
       {% assign prevtitle = prev.title %}
       {% assign prevurl = prev.url %}
@@ -20,7 +30,7 @@
 {% endfor %}
 
 <article class="bottom-spacer project-nav">
-  <div class="wrap row">      
+  <div class="wrap row">
 
     {% if prevurl %}
       <div class="col-md-6 col-xs-12">
@@ -32,12 +42,7 @@
     {% endif %}
 
     {% if nexturl %}
-      <div class="next-project col-xs-12
-      {% if page.index == 0 %}
-        col-md-offset-6 col-md-6 col-xs-12
-      {% else %}
-      col-md-6 col-xs-12
-     {% endif %}">
+      <div class="next-project col-md-6 col-xs-12">
      <a href="{{ nexturl }}" class="button-project button">
       <h5 class="arrow-next">Next</h5>
       <h3>{{ nexttitle }}</h3>
