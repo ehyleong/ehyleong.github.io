@@ -6,11 +6,6 @@
 
 {% for links in document %}
   {% if links.title == page.title %}
-    {% if forloop.first %}
-      {% assign previous = document[forloop.index] %}
-      {% assign prevtitle = prev.title %}
-      {% assign prev.url = prev.url  %}
-    {% endif %}
     {% unless forloop.first %}
       {% assign prevtitle = prev.title %}
       {% assign prevurl = prev.url %}
@@ -25,23 +20,23 @@
 {% endfor %}
 
 <article class="bottom-spacer project-nav">
-  <div class="wrap row">      
-    {% if prevurl %}
-      <div class="col-md-6 col-xs-12">
-      <h5 class="arrow-prev">Previous</h5>
-      <h2><a href="{{ prevurl }}" class="green">{{ prevtitle l}}</a><h2>
-      </div>
-    {% endif %}
+  <div class="wrap row">
 
     {% if nexturl %}
-      <div class="next-project 
-      {% if page.index == 0 %}
-        col-md-offset-6 col-md-6 col-xs-12
-      {% else %}
-      col-md-6 col-xs-12
-      {% endif %}">
-      <h5 class="arrow-next">Next</h5>
-      <h2><a href="{{ nexturl }}" class="green">{{ nexttitle }}</a></h2>
+      <div class="col-md-6 col-xs-12">
+     <a href="{{ nexturl }}" class="button-project button">
+      <h5 class="arrow-prev">Previous</h5>
+      <h3>{{ nexttitle }}</h3>
+      </div>
+    </a>
+    {% endif %}
+
+    {% if prevurl %}
+      <div class="col-md-6 col-xs-12">
+        <a href="{{ prevurl }}" class="button-project button">
+        <h5 class="arrow-next">Next</h5>
+        <h3>{{ prevtitle l}}<h3>
+        </a>
       </div>
     {% endif %}
 

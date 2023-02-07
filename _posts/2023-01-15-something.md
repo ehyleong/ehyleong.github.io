@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why I use Jekyll to write.
+title: This is another post
 category: art
 ---
 

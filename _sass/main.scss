@@ -37,7 +37,7 @@ body {
 	flex-direction: column;
 }
 
-header.home, header.about, header.contact, header.fourohfour, section.blog, .project-nav {
+header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav {
 	border-radius: 0 0 2rem 2rem;
 }
 
@@ -733,12 +733,13 @@ header.work {
 
 
 .blog-preview {
-	margin-block-end: 2rem;
-	padding-bottom: 1.5rem;
-	border-bottom: 2px solid rgba($orange, .2);
+	margin-block-end: 3rem;
+	padding: 0 0 2rem;
+	border-bottom: 3px solid rgba($orange, .15);
 
 	&:last-child {
 		border-bottom: none;
+		margin-block-end: 0;
 	}
 
 	& > * {
