@@ -178,8 +178,8 @@ span.lottie {
 
 
 .button {
-	border: 3px solid rgba($green, .3);
- 	box-shadow: 0 3px 0 rgba($green, .3);
+	border: 3px solid rgba($green, .15);
+ 	box-shadow: 0 0px 0 rgba($green, .15);
  	color: $green;
   transition: 100ms ease-in-out;
 
@@ -193,8 +193,8 @@ span.lottie {
 
 	@media (prefers-color-scheme: dark) {
 			color: $beige;
-			border: 3px solid rgba($beige, .3);
-	   	box-shadow: 0 3px 0 rgba($beige, .3);
+			border: 3px solid rgba($beige, .15);
+	   	box-shadow: 0 0px 0 rgba($beige, .15);
 
  	    &:hover {
 	   		color: $beige;
@@ -695,7 +695,7 @@ header.work {
 .button-project {
 		display: block;
 		vertical-align: middle;
-   	box-shadow: 0 6px 0 rgba($green, .3);
+   	box-shadow: 0 0px 0 rgba($green, .15);
     border-radius: 1rem;
     padding: 2.5rem;
     min-height: 12rem;
@@ -713,10 +713,10 @@ header.work {
     }
 
 	@media (prefers-color-scheme: dark) {
-	   	box-shadow: 0 8px 0 rgba($beige, .3);
+	   	box-shadow: 0 0px 0 rgba($beige, .15);
 
  	    &:hover {
-	   		box-shadow: 0 8px 0 rgba($beige, .8);
+	   		box-shadow: 0 6px 0 rgba($beige, .8);
     	}
 
     	h5 {
@@ -731,6 +731,11 @@ header.work {
 
 // 2.6 Blog
 
+section.blog {
+	h4 {
+		font-weight: 500;
+	}
+}
 
 .blog-preview {
 	margin-block-end: 3rem;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: This is a second post
-category: art
+category: development
 ---
 
 Chances are you’ve heard of the common adage, “share work, early and often.” The benefits are clear: sharing in-progress work early on allows teams to get on the same page and avoid surprises or wasted work. Easy win, right? A lot of teams find it easier said than done.
