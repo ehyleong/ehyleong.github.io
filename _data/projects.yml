@@ -3,35 +3,35 @@ two-spies:
   url: work/two-spies
   client: Steamclock Software
   role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
-  img: ../img/thumbnails/spies.jpg
+  img: ../img/thumbnails/spies.webp
 
 sybama:
   name: Should You Build a Mobile App?
   url: work/sybama
   client: Steamclock Software
   role: Website Design, Illustration, Animation
-  img: ../img/thumbnails/sybama.jpg
+  img: ../img/thumbnails/sybama.webp
 
 figma-keypads:
   name: The Keypad Project
   url: work/keypad-project
   client: Personal
   role: Illustration
-  img: ../img/thumbnails/keypads.jpg
+  img: ../img/thumbnails/keypads.webp
 
 steamclock-swag:
   name: Steamclock Swag
   url: work/steamclock-swag
   client: Steamclock Software
   role: Art Direction, Illustration, Print
-  img: ../img/thumbnails/steamclockswag.jpg
+  img: ../img/thumbnails/steamclockswag.webp
 
 bench:
   name: Bench Illustrations
   url: work/bench
   client: Bench Accounting
   role: Illustration, Animation, Iconography
-  img: ../img/thumbnails/bench.jpg
+  img: ../img/thumbnails/bench.webp
 
 portraits:
   name: Digital Portraits
