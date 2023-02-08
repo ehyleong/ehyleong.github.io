@@ -165,7 +165,7 @@ span.label {
 	font-size: .7rem;
 	margin-right: 1rem;
 	margin-bottom: .2rem;
-	padding: .3rem .4rem .2rem;
+	padding: .4rem .5rem .3rem;
 	border-radius: 6px;
 }
 
@@ -989,7 +989,7 @@ header.holding {
 
 	@include for-size(phone-only) {
 		border-radius: 0 0 2rem 2rem;
-		min-height: 45rem;
+		min-height: 42rem;
 	}
 
 	.hero-img {
@@ -1011,7 +1011,6 @@ header.holding {
 
 		@include for-size(phone-only) {
 			align-items: start;
-			flex-direction: column-reverse;
 		}
 	}
 
@@ -1020,22 +1019,18 @@ header.holding {
 			@media (prefers-color-scheme: dark) {
 				fill: $orange;
 		}
-
-		&:hover {
-			opacity: 0.75;
-			transition: all 150ms ease-in-out;
-		}
 	}
 
 	div.callout {
 			@include for-size(phone-only) {
 				gap: .25em;
+				flex-direction: column;
 			}
 
-		background: rgba($orange, .05);	
+		background: rgba($orange, .1);	
 
 			@media (prefers-color-scheme: dark) {
-				background: rgba($green, .1);	
+				background: rgba($green, .2);	
 			}
 
 		span.label {
