@@ -1,20 +1,96 @@
-<footer class="row wrap spacer" id="contact">
-    <div class="col-lg-6 col-md-5 col-xs-12">
-    <h2><img src="/img/icon-contact.svg" class="img-spacer">Contact</h2>
+<footer class="spacer" id="contact">
+  {% unless page.slug == "contact" or page.slug == "thanks" or page.slug == "holding" %}
+  <div class="wrap row bottom-text-spacer">
+    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
+      <h5>Wanna get in touch?</h5>
+    <!--<h1 class="bottom-text-spacer">Send me a  
+      <a href="mailto:ehyleong@gmail.com?subject=Cool%20project%20inquiry">message.</a></h1>-->
+        <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
-    <div class="col-lg-6 col-md-7 col-xs-12">
-    <h3>Want to work together? <br>Feel free to <a href="#">get in touch.</a></h3>
+    <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
+    <h5>Find me on</h5>
+      <ul class="social-links">
+        <li><a href="https://twitter.com/ehyleong" class="external-link" target="_blank"><img src="/img/icon-social-twitter.svg" class="icon">Twitter</a></li>
+        <li><a href="https://dribbble.com/ehyleong" class="external-link" target="_blank"><img src="/img/icon-social-dribbble.svg" class="icon">Dribbble</a></li>
+        <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-instagram.svg" class="icon">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-linkedin.svg" class="icon">LinkedIn</a></li>
+        <li><a href="http://mastodon.cloud/@ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-mastodon.svg" class="icon">Mastodon</a></li>
+      </li>
+    </ul>
   </div>
-
-  <div class="row">
-    <div class="col-lg-offset-6 col-lg-6 col-md-offset-5 col-md-7 col-xs-12">
-      <h4>Find me on the Internet</h4>
-      <ul>
-        <li><a href="https://twitter.com/ehyleong">Twitter</a></li>
-        <li><a href="https://dribbble.com/ehyleong">Dribbble</a></li>
-        <li><a href="https://linkedin.com/in/ehyleong/">LinkedIn</a></li>
-        <li><a href="https://instagram.com/ehyleong/">Instagram</a></li>
-      </li> 
-    </div>
+  {% endunless %}
+</div>
+<div class="wrap row copyright top-text-spacer bottom-text-spacer">
+  <div class="col-xs-12">
+  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Built on <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
   </div>
+</div>
 </footer>
+
+<script>
+
+  const menu = document.querySelector(".mobile-menu");
+  const menuItems = document.querySelectorAll(".menuItem");
+  const hamburger= document.querySelector(".hamburger");
+  const closeIcon= document.querySelector(".closeIcon");
+  const menuIcon = document.querySelector(".menuIcon");
+
+  function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+      menu.classList.remove("showMenu");
+    } else {
+      menu.classList.add("showMenu");
+      menuItems.classList.add("showMenu");
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
+
+</script>
+
+
+<script>
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('nav').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 200);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('nav').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('nav').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        lastScrollTop = st;
+    }
+</script>

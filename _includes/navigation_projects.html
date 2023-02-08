@@ -1,0 +1,58 @@
+{% capture the_collection %}{{ page.collection }}{% endcapture %}
+
+{% if page.collection %}
+  {% assign document = site[the_collection] %}
+{% endif %}
+
+{% for links in document %}
+  {% if links.title == page.title %}
+    {% if forloop.last %}
+      {% assign next = document.first %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endif %}
+    {% unless forloop.first %}
+      {% assign prevtitle = prev.title %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+<article class="bottom-spacer project-nav">
+  <div class="wrap row">
+
+<!--    {% if prevurl %}
+      <div class="col-md-6 col-xs-12">
+        <a href="{{ prevurl }}" class="button-project button">
+        <h5 class="arrow-prev">Previous</h5>
+        <h3>{{ prevtitle l}}<h3>
+        </a>
+      </div>
+    {% endif %} -->
+
+    {% if nexturl %}
+      <div class="col-xs-12">
+     <a href="{{ nexturl }}" class="button-project button">
+      <h5 class="arrow-next">Next Project</h5>
+      <h2>{{ nexttitle }}</h2>
+      </div>
+    </a>
+    {% endif %}
+
+  </div>
+</article>
+
+<script>
+/* post pagination keyboard shortcuts */
+document.body.onkeyup = function(e){
+  if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
+};
+</script>
+
+

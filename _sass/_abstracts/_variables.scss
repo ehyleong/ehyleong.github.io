@@ -1,0 +1,134 @@
+// Margin
+$spacer: 5rem;
+
+// Colours
+$green: #004C4C;
+$forestgreen: #012727;
+$deepgreen: #001818;
+$black: #001D1D;
+$beige: #F2F0EA;
+$orange: #DB7704;
+$teal: #108888;
+
+.forestgreen {
+  color: $forestgreen;
+}
+
+.beige {
+  color: $beige;
+}
+
+.beige-bg {
+  background: $beige;
+}
+
+.orange {
+  color: $orange;
+}
+
+
+// Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
+
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 40rem) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 40rem) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 64rem) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 90rem) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 120rem) { @content; }
+  }
+}
+
+
+
+// Spacers
+
+.spacer {
+  padding-top: $spacer/2;
+
+  @include for-size(tablet-landscape-up) {
+    padding-top: $spacer; 
+  }
+}
+
+.half-spacer{
+  padding-top: $spacer/4;
+
+  @include for-size(tablet-landscape-up) {
+    padding-top: $spacer/2; 
+  }
+}
+
+.bottom-spacer{
+  padding-bottom: $spacer/2;
+
+  @include for-size(tablet-landscape-up) {
+    padding-bottom: $spacer; 
+  }
+}
+
+.bottom-half-spacer{
+  padding-bottom: $spacer/4;
+
+  @include for-size(tablet-landscape-up) {
+    padding-bottom: $spacer/2; 
+  }
+}
+
+.top-text-spacer {
+  padding-top: 1rem;
+}
+
+.bottom-text-spacer{
+  padding-bottom: 1rem;
+}
+
+.top-text-spacer-half {
+  padding-top: .5rem;
+}
+
+.margin-end {
+  margin-block-end: $spacer/4;
+}
+
+// Divs
+
+.div {
+  border-top: 2px solid $forestgreen;
+}
+
+.bottom-div {
+  border-bottom: 2px solid $forestgreen;
+}
+
+
+// Corners
+
+.rounded {
+  border-radius: 1rem;
+}
+
+// Debug
+
+.debug {
+  background: blue;
+}
+
+.debug2 {
+  background: red;
+}
+
+// Padding Overrides
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}

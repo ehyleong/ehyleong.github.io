@@ -1,0 +1,24 @@
+<section class="thumbnails bottom-text-spacer">
+    <div class="row spacer" id="work">
+      <div class="col-xs-12">
+        <h5>Select Work</h5>
+        <h2 class="beige">Case Studies</h2>
+      </div>
+    <div class="row thumbnail-grid">
+    {% for project in site.data.projects %}
+    {% assign count = forloop.length %}
+    <a href="../{{ project[1].url }}"><div class="thumbnail" onclick="" aria-label="{{ project[1].name }}">
+        <img src="{{ project[1].img }}" alt="{{ project[1].name | strip_html }}" class="thumbnail-image">    
+        <div class="thumbnail-overlay">
+          <h3>{{ project[1].name }}</h3>
+          <img src="../img/icon-thumb-div.svg"/ class="thumbnail-div">
+          <h5 class="top-text-spacer-half">View Project</h5>
+          <!--<h5 class="top-text-spacer-half">{{ project[1].role }}</h5>-->
+          <!--<h4><small>{{ project[1].role }}</small></h4>-->     
+        </div>
+    </div>
+  </a>
+  {% endfor %}
+  </div>
+</div>
+</section>

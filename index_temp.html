@@ -1,0 +1,41 @@
+---
+layout: home
+title: Visual Designer
+slug: home
+permalink: /home
+cta: I'm open to small & fun freelance requests. <a href="/contact" class="inline-link">Reach out here.</a>
+---
+
+<header class="home">
+  <div class="hero-img">
+    <picture>
+      <source srcset="/img/home-bg.svg" media="(min-width: 64rem)" />
+      <img src="/img/home-bg-mobile.svg"/>
+    </picture>
+  </div>
+</header>
+
+<section class="wrap row home-intro half-spacer">
+    <div class="col-xs-12 home-intro-title">
+
+        <h1 class="spacer">Hi, I'm Erica Leong.</h1><h2 class="beige bottom-spacer">I&nbsp;make delightful <span class="orange" id="typewriter"></span>
+        </h2>
+
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-12 col-gutter-lr">
+      <h5>In a Nutshell</h5>
+    </div>
+    <div class="col-lg-6 col-md-8 col-xs-12 col-gutter-lr">
+      <p>
+        I’m a visual designer & illustrator dedicated to the craft of making delightful products and experiences. Currently I'm designing mobile apps for all sorts of clients at <a href="#" class="inline-link">Steamclock Software.</a>
+      <p>
+      <p class="bottom-half-spacer">
+        In my free time, I draw weird fun things under <a href="#" class="inline-link">Dead Hands Club.</a>
+      </p>
+      <div class="callout"><span class="label">Hey!</span><p><small>{{page.cta}}</small></p></div>
+    </div>
+</section>
+
+<main class="wrap row">
+  {% include thumbnails.html %}
+</main>
