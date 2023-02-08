@@ -1,14 +1,20 @@
 <footer class="spacer holding" id="contact">
-<div class="row wrap copyright top-text-spacer bottom-text-spacer">
-  <ul class="social-links">
-    <li><a href="https://twitter.com/ehyleong" target="_blank"><img src="/img/icon-social-twitter.svg" class="icon"></a></li>
-    <li><a href="https://dribbble.com/ehyleong" target="_blank"><img src="/img/icon-social-dribbble.svg" class="icon"></a></li>
-    <li><a href="https://instagram.com/ehyleong/" target="_blank"><img src="/img/icon-social-instagram.svg" class="icon"></a></li>
-    <li><a href="https://linkedin.com/in/ehyleong/" target="_blank"><img src="/img/icon-social-linkedin.svg" class="icon"></a></li>
-    <li><a href="http://mastodon.cloud/@ehyleong/" target="_blank"><img src="/img/icon-social-mastodon.svg" class="icon"></a></li>
-  </li>
+<div class="row wrap top-text-spacer bottom-text-spacer">
+  <div class="col-xs-12 copyright">
+  {% for category in site.data.nav.social-links limit:1 %}
+  <ul class="social-links bottom-text-spacer">
+    {% for item in category.items %}
+    <li><a href="{{ item.href }}" class="social-link" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="{{ item.path }}"/>
+      </svg>
+    </a></li>
+    {% endfor %}
   </ul>
+  {% endfor %}
+
   <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Built on <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
+</div>
 </div>
 </div>
 </footer>
