@@ -1044,3 +1044,23 @@ header.holding {
 	}
 }
 
+footer.holding {
+	ul.social-links {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		font-size: 1em;
+
+		li {
+			transition: opacity 150ms;
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+	div.copyright {
+		display: flex;
+		gap: 2rem;	
+		justify-content: space-between;
+	}
+}
