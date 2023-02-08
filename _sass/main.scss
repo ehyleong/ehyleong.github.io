@@ -37,7 +37,7 @@ body {
 	flex-direction: column;
 }
 
-header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding {
+header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding, header.holding-alt {
 	border-radius: 0 0 2rem 2rem;
 }
 
@@ -1076,6 +1076,36 @@ footer.holding {
 			flex-direction: column;
 			align-items: center;
 			gap: 2rem;
+		}
+	}
+}
+
+header.holding-alt {
+	position: relative;
+
+	@include for-size(phone-only) {    
+		min-height: 26rem; 
+	}
+
+	@include for-size(tablet-portrait-up) {
+		min-height: 36rem;
+	}
+	
+	@include for-size(tablet-landscape-up) {
+		min-height: 46rem;
+	}
+
+
+
+	.hero-img {
+		img{
+			position: absolute;
+			bottom: 0;
+			max-height: 55%;
+
+			@include for-size(phone-only) {
+				max-height: 100%;
+			}
 		}
 	}
 }
