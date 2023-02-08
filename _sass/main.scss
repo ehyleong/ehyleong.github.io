@@ -827,6 +827,11 @@ header.fourohfour, header.thanks, header.holding {
 	}
 }
 
+header.fourohfour {
+	border-radius: 2rem;
+	padding-top: $spacer;
+}
+
 // 2.9 Contact
 
 header.contact {
