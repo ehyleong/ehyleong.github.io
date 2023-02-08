@@ -984,12 +984,12 @@ body, section.home-intro, section.thumbnails, footer {
 
 header.holding {
 	border-radius: 2rem;
-	padding-top: $spacer/2;
+	padding-top: $spacer/3;
 	min-height: 58rem;
 
 	@include for-size(phone-only) {
 		border-radius: 0 0 2rem 2rem;
-		min-height: 43rem;
+		min-height: 45rem;
 	}
 
 	.hero-img {
@@ -1007,10 +1007,11 @@ header.holding {
 	.top-bit {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 3rem;
 
 		@include for-size(phone-only) {
 			align-items: start;
+			flex-direction: column-reverse;
 		}
 	}
 
@@ -1028,7 +1029,6 @@ header.holding {
 
 	div.callout {
 			@include for-size(phone-only) {
-				flex-direction: column;
 				gap: .25em;
 			}
 
