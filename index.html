@@ -1,12 +1,35 @@
 ---
-layout: home
+layout: holding
 title: Visual Designer
-slug: home
+slug: holding
 permalink: /
-cta: I'm open to small & fun freelance requests. <a href="/contact" class="inline-link">Reach out here.</a>
+cta: This site is still under construction. Kindly tune in later!
 ---
 
-<header class="home">
+<header class="holding bottom-spacer">
+  <div class="wrap row">
+    <div class="col-xs-12">
+        <div class="top-bit bottom-text-spacer">
+          <div class="logo">
+            <a href="{% link index.html %}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+              <g clip-path="url(#clip0_1769_6507)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0C11.2 0 0 11.2 0 25C0 38.8 11.2 50 25 50C38.8 50 50 38.8 50 25C50 11.2 38.8 0 25 0ZM24.1 8.44995C21.3525 8.44995 19.1 10.7025 19.1 13.45V15.2H13.85V18.45H19.1V23.25H17.35C14.6025 23.25 12.35 25.5025 12.35 28.25C12.35 30.9974 14.6025 33.25 17.35 33.25C20.0975 33.25 22.35 30.9974 22.35 28.25V26.5H27.675V31.5499H25.925C23.1775 31.5499 20.925 33.8025 20.925 36.5499C20.925 39.2974 23.1775 41.5499 25.925 41.5499C28.6725 41.5499 30.925 39.2974 30.925 36.5499V34.7999H35.225V31.5499H30.925V26.5H32.675C35.4225 26.5 37.675 24.2474 37.675 21.5C37.675 18.7525 35.4225 16.5 32.675 16.5C29.9275 16.5 27.675 18.7525 27.675 21.5V23.25H22.35V18.45H24.1C26.8475 18.45 29.1 16.1974 29.1 13.45C29.1 10.7025 26.8475 8.44995 24.1 8.44995ZM24.1 15.2H22.35V13.45C22.35 12.4974 23.1475 11.7 24.1 11.7C25.0525 11.7 25.85 12.4974 25.85 13.45C25.85 14.4025 25.0525 15.2 24.1 15.2ZM17.35 26.5H19.1V28.25C19.1 29.2025 18.3025 30 17.35 30C16.3975 30 15.6 29.2025 15.6 28.25C15.6 27.2974 16.3975 26.5 17.35 26.5ZM25.925 34.7999H27.675V36.5499C27.675 37.5025 26.8775 38.2999 25.925 38.2999C24.9725 38.2999 24.175 37.5025 24.175 36.5499C24.175 35.5974 24.9725 34.7999 25.925 34.7999ZM32.675 23.25H30.925V21.5C30.925 20.5474 31.7225 19.75 32.675 19.75C33.6275 19.75 34.425 20.5474 34.425 21.5C34.425 22.4525 33.6275 23.25 32.675 23.25Z"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1769_6507">
+              <rect width="50" height="50" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+            </a>
+          </div>
+    <div class="callout"><span class="label">Hey!</span><p><small>{{ page.cta }}</small></p></div>
+  </div>
+      <h1 class="spacer">Hi, I'm Erica Leong. <br></h1>
+      <h2>I&nbsp;make delightful <span class="orange" id="typewriter"></span></h2>
+    </div>
+  </div>
   <div class="hero-img">
     <picture>
       <source srcset="/img/home-bg.svg" media="(min-width: 64rem)" />
@@ -14,28 +37,3 @@ cta: I'm open to small & fun freelance requests. <a href="/contact" class="inlin
     </picture>
   </div>
 </header>
-
-<section class="wrap row home-intro half-spacer">
-    <div class="col-xs-12 home-intro-title">
-
-        <h1 class="spacer">Hi, I'm Erica Leong.</h1><h2 class="beige bottom-spacer">I&nbsp;make delightful <span class="orange" id="typewriter"></span>
-        </h2>
-
-    </div>
-    <div class="col-lg-3 col-md-3 col-xs-12 col-gutter-lr">
-      <h5>In a Nutshell</h5>
-    </div>
-    <div class="col-lg-6 col-md-8 col-xs-12 col-gutter-lr">
-      <p>
-        I’m a visual designer & illustrator dedicated to the craft of making delightful products and experiences. Currently I'm designing mobile apps for all sorts of clients at <a href="#" class="inline-link">Steamclock Software.</a>
-      <p>
-      <p class="bottom-half-spacer">
-        In my free time, I draw weird fun things under <a href="#" class="inline-link">Dead Hands Club.</a>
-      </p>
-      <div class="callout"><span class="label">Hey!</span><p><small>{{page.cta}}</small></p></div>
-    </div>
-</section>
-
-<main class="wrap row">
-  {% include thumbnails.html %}
-</main>

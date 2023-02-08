@@ -37,7 +37,7 @@ body {
 	flex-direction: column;
 }
 
-header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav {
+header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding {
 	border-radius: 0 0 2rem 2rem;
 }
 
@@ -164,6 +164,7 @@ span.label {
 	font-weight: 800;
 	font-size: .7rem;
 	margin-right: 1rem;
+	margin-bottom: .2rem;
 	padding: .3rem .4rem .2rem;
 	border-radius: 6px;
 }
@@ -805,7 +806,7 @@ footer {
 // 2.8 404
 
 
-header.fourohfour, header.thanks {
+header.fourohfour, header.thanks, header.holding {
 	position: relative;
 	min-height: 50rem;
 	
@@ -977,5 +978,71 @@ body, section.home-intro, section.thumbnails, footer {
 :root {
 	--ti-cursor-font-size:   font-size: clamp(2.4rem, 6vw, 8rem);
 	--ti-cursor-line-height: 1em;
+}
+
+// TEMP HOLDING
+
+header.holding {
+	border-radius: 2rem;
+	padding-top: $spacer/2;
+	min-height: 58rem;
+
+	@include for-size(phone-only) {
+		border-radius: 0 0 2rem 2rem;
+		min-height: 43rem;
+	}
+
+	.hero-img {
+		img{
+			position: absolute;
+			bottom: 0;
+			max-height: 43%;
+
+			@include for-size(phone-only) {
+				max-height: 15rem;
+			}
+		}
+	}
+
+	.top-bit {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+
+		@include for-size(phone-only) {
+			align-items: start;
+		}
+	}
+
+	svg {
+		fill: $green;
+			@media (prefers-color-scheme: dark) {
+				fill: $orange;
+		}
+
+		&:hover {
+			opacity: 0.75;
+			transition: all 150ms ease-in-out;
+		}
+	}
+
+	div.callout {
+			@include for-size(phone-only) {
+				display: inline-block;
+			}
+
+		background: rgba($orange, .05);	
+
+			@media (prefers-color-scheme: dark) {
+				background: rgba($green, .1);	
+			}
+
+		span.label {
+			color: $beige;
+			@media (prefers-color-scheme: dark) {
+				color: $forestgreen;		
+			}
+		}
+	}
 }
 
