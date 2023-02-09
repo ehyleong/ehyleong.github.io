@@ -37,7 +37,7 @@ body {
 	flex-direction: column;
 }
 
-header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding, header.holding-alt {
+header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding, header.home-alt {
 	border-radius: 0 0 2rem 2rem;
 }
 
@@ -1080,32 +1080,31 @@ footer.holding {
 	}
 }
 
-header.holding-alt {
+header.home-alt {
+	padding-top: $spacer/3;
 	position: relative;
 
 	@include for-size(phone-only) {    
-		min-height: 26rem; 
+		min-height: 30rem; 
 	}
 
 	@include for-size(tablet-portrait-up) {
-		min-height: 36rem;
+		min-height: 40rem;
 	}
 	
-	@include for-size(tablet-landscape-up) {
-		min-height: 46rem;
+	@include for-size(desktop-up) {
+		min-height: 50rem;
 	}
-
-
 
 	.hero-img {
 		img{
 			position: absolute;
 			bottom: 0;
-			max-height: 55%;
-
-			@include for-size(phone-only) {
-				max-height: 100%;
-			}
+			max-height: 50%;
 		}
+	}
+
+	.home-text{
+		text-align: center;
 	}
 }
