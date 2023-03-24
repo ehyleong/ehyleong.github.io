@@ -3,12 +3,15 @@
 	{% include header.html %}
 	<body>
 	{% include navigation.html %}
-	<header>
-		<div class="row wrap half-spacer">
-			<div class="col-lg-8 col-xs-12">	
-			<a href="{% link blog.html %}" class="button button-small">Back</a>
-			<h2 class="spacer">{{ page.title }}</h2>
-          	<h5><span class="category">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+	<header class="spacer">
+		<div class="row wrap">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<a href="{% link blog.html %}" class="button button-small post-back">Back</a>
+			</div>
+			<div class="col-lg-6 col-md-7 col-xs-12">	
+			<h2>{{ page.title }}</h2>
+          	<h5 class="bottom-spacer"><span class="category">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+			{{ content }}
 
 			</div>
 		</div>
@@ -17,7 +20,6 @@
 	<section class="blog bottom-spacer">
 		<div class="row wrap">
 			<div class="col-lg-7 col-xs-12">	
-			{{ content }}
 			</div>
 		</div>
 	</section>

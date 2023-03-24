@@ -869,7 +869,7 @@ form.contact {
 	}
 
 	textarea {
-		min-height: 20rem;
+		min-height: 18rem;
 	  resize: vertical;
 	}
 
@@ -899,6 +899,12 @@ form.contact {
 }
 
 
+// Blog
+
+.post-back {
+	margin-bottom: $spacer/2;
+}
+
 // Dark Mode
 
 
@@ -913,7 +919,7 @@ header, section, section.home-hero-image, nav, section.work, section.blog, .proj
 	}
 }
 
-body, section.home-intro, section.thumbnails, footer {
+body, section.home-intro, section.thumbnails, section.testimonials, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
   	}
@@ -1066,14 +1072,15 @@ header.home-alt {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-
 }
 
 .testimonial {
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 0 15%;
+  padding: 0 12.5%;
   scroll-snap-align: start;
+	text-align: left;
+
 }
 
 .testimonial-carousel-controls {

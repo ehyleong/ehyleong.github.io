@@ -23,7 +23,7 @@
   <div class="wrap row">
 
     {% if nexturl %}
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-offset-3 col-md-6 col-xs-12">
        <a href="{{ nexturl }}" class="button-project button">
         <h5 class="arrow-prev">Previous</h5>
         <h3>{{ nexttitle }}</h3>
@@ -32,7 +32,7 @@
     {% endif %}
 
     {% if prevurl %}
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-offset-3 col-md-6 col-xs-12">
         <a href="{{ prevurl }}" class="button-project button">
         <h5 class="arrow-next">Next</h5>
         <h3>{{ prevtitle }}</h3>
