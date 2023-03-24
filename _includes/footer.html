@@ -2,9 +2,7 @@
   {% unless page.slug == "contact" or page.slug == "thanks" %}
   <div class="wrap row bottom-text-spacer">
     <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
-      <h5>Wanna get in touch?</h5>
-    <!--<h1 class="bottom-text-spacer">Send me a  
-      <a href="mailto:ehyleong@gmail.com?subject=Cool%20project%20inquiry">message.</a></h1>-->
+      <h5>Get in Touch</h5>
         <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
     <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
@@ -94,3 +92,22 @@
         lastScrollTop = st;
     }
 </script>
+
+  <script>
+    const carousel = document.querySelector(".testimonial-carousel");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    let scrollPos = 0;
+    const scrollStep = carousel.offsetWidth;
+
+    prevBtn.addEventListener("click", () => {
+      scrollPos = Math.max(scrollPos - scrollStep, 0);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+  </script>

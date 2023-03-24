@@ -13,7 +13,7 @@ nav:
         class: about
       - title: "Contact"
         href: "/contact"
-        class: "button button-contact"
+        class: "button button-small"
 
 mobile-nav:
   # Mobile Nav
