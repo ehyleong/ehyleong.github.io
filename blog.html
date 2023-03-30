@@ -13,10 +13,11 @@ permalink: /blog
     </div>
     <div class="col-lg-8 col-lg-offset-1 col-xs-12">
       {% for post in site.posts %}
-      <div class="col-lg-12 col-xs-12 blog-preview">
+      <div class="col-lg-12 col-xs-12 blog-post-preview">
         <a href="{{ post.url }}">
-          <h5><span class="category">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
+          <h5><span class="blog-post-category">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
           <h3>{{ post.title }}</h3>
+          <p class="blog-post-byline">{{ post.byline }}</p>
          </a>
       </div>
       {% endfor %}

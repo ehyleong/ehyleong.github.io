@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Look! This is a post!
+title: This is the first post
+byline: A one-line statement about this post.
 category: personal
 ---
 

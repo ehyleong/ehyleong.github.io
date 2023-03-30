@@ -19,23 +19,25 @@
   {% assign prev = links %}
 {% endfor %}
 
+
 <article class="bottom-spacer project-nav">
   <div class="wrap row">
-
-    {% if nexturl %}
-      <div class="col-md-offset-3 col-md-6 col-xs-12">
-       <a href="{{ nexturl }}" class="button-project button">
-        <h5 class="arrow-prev">Previous</h5>
-        <h3>{{ nexttitle }}</h3>
-        </a>
-      </div>
-    {% endif %}
 
     {% if prevurl %}
       <div class="col-md-offset-3 col-md-6 col-xs-12">
         <a href="{{ prevurl }}" class="button-project button">
-        <h5 class="arrow-next">Next</h5>
+        <h5 class="arrow-next">Next Post</h5>
         <h3>{{ prevtitle }}</h3>
+        </a>
+      </div>
+    {% endif %}
+
+
+    {% if nexturl %}
+      <div class="col-md-offset-3 col-md-6 col-xs-12">
+       <a href="{{ nexturl }}" class="button-project button">
+        <h5 class="arrow-prev">Previous Post</h5>
+        <h3>{{ nexttitle }}</h3>
         </a>
       </div>
     {% endif %}
@@ -46,8 +48,8 @@
 <script>
 /* post pagination keyboard shortcuts */
 document.body.onkeyup = function(e){
-  if (e.keyCode == '37') { window.location = '{{ prevurl }}'; } // left arrow key
-  if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
+  if (e.keyCode == '37') { window.location = '{{ nexturl }}'; } // left arrow key
+  if (e.keyCode == '39') { window.location = '{{ prevurl }}'; } // right arrow key
 };
 </script>
 

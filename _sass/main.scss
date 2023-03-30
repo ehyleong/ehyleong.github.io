@@ -21,11 +21,14 @@ html {
 
 body {
 	border: 20px solid $forestgreen;
+	border-image: url('/img/nnnoise.svg');
 	border-width: 20px 20px 0 20px;
 	background: $forestgreen;
+	background-image: url('/img/nnnoise.svg');
 
 	@media (prefers-color-scheme: dark) {
 			border: 20px solid $black;
+			border-image: url('/img/nnnoise.svg');
 	}
 
 	@include for-size(phone-only) {
@@ -43,6 +46,7 @@ header.home, header.about, header.contact, header.fourohfour, header.blog, .proj
 
 header, section.work, section.blog, section.about, .project-nav {
 	background: $beige;
+	background-image: url('/img/nnnoise.svg');
 }
 
 img {
@@ -141,7 +145,7 @@ span.lottie {
 
 .button-small {
 		font-family:  "NaNJaune-Midi-Var", sans-serif;
-		font-weight: 550;
+		font-weight: 650;
 		border-radius: .5rem;
 		padding: .5rem 1rem;
 	  transition: 100ms ease-in-out;
@@ -172,6 +176,7 @@ span.lottie {
 
 nav {
 	background: $beige;
+	background-image: url('/img/nnnoise.svg');
 	padding: 2rem 0 1rem;
 	border-bottom: rgba($green,0.15) 2px solid;
 	border-radius: 2rem 2rem 0 0;
@@ -222,7 +227,8 @@ div.desktop-menu {
 			} 
 		}
 
-			li {			
+			li {	
+				font-weight: 650;		
 				padding-left: 1em;
 				padding-right: 0;
 
@@ -231,7 +237,6 @@ div.desktop-menu {
 				}
 
 				a {
-					font-weight: 650;
 					margin-block-end: 0;
 				}
 
@@ -305,9 +310,9 @@ div.desktop-menu {
 		}
 
 		li {
+			font-weight: 550;		
 			margin-block-end: 1.25em;
 		  letter-spacing: -.01em;
-			font-weight: 550;
 			opacity: 0;
 			transform: translateX(20px);
 			transform-origin: bottom left;
@@ -682,27 +687,37 @@ section.blog {
 	}
 }
 
-.blog-preview {
-	margin-block-end: 3rem;
+.blog-post-back {
+	margin-bottom: $spacer/2;
+}
+
+.blog-post-preview {
+	margin-block-end: 2rem;
 	padding: 0 0 2rem;
-	border-bottom: 3px solid rgba($orange, .15);
 
 	&:last-child {
-		border-bottom: none;
 		margin-block-end: 0;
 	}
 
 	& > * {
-		
+		margin-block-end: 0;
 		color: $green;
 
 		@media (prefers-color-scheme: dark) {
 			color: $beige;
 		}
 	}
+
+	h3 {
+		margin-block-end: 0.5rem;
+	}
 }
 
-span.category {
+p.blog-post-byline {
+		opacity: 0.7;
+	}
+
+span.blog-post-category {
 	background-color: rgba($orange, 0.15);
 	display: inline-block;
 	padding: 0.4em 1em .2em;
@@ -712,11 +727,11 @@ span.category {
 }
 
 
-
 // 2.7 Footer
 
 footer {
 	background: $forestgreen;
+	background-image: url('/img/nnnoise.svg');
 	padding-top: $spacer/2;
 	padding-bottom: $spacer/2;
 	color: $beige;
@@ -817,7 +832,7 @@ header.contact {
 
 form.contact {
 	display: grid;
-	gap: 1rem;
+	gap: .5rem;
 
 	button, input, select, textarea {
 		font-family:  "NaNJaune-Midi-Var", sans-serif;
@@ -863,13 +878,13 @@ form.contact {
 
 	input, textarea, button {
 		padding: 1rem;
-  	font-size: clamp(1.1rem, 2vw, 1.4rem);
+  	font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
   	font-weight: 350;
   	line-height: 1.4em;
 	}
 
 	textarea {
-		min-height: 18rem;
+		min-height: 20rem;
 	  resize: vertical;
 	}
 
@@ -899,18 +914,13 @@ form.contact {
 }
 
 
-// Blog
-
-.post-back {
-	margin-bottom: $spacer/2;
-}
-
 // Dark Mode
 
 
 header, section, section.home-hero-image, nav, section.work, section.blog, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $deepgreen;
+			background-image: url('/img/nnnoise.svg');
   		color: $beige;
 
   		h1 {
@@ -922,6 +932,8 @@ header, section, section.home-hero-image, nav, section.work, section.blog, .proj
 body, section.home-intro, section.thumbnails, section.testimonials, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
+ 			background-image: url('/img/nnnoise.svg');
+
   	}
 }
 

@@ -6,11 +6,12 @@
 	<header class="spacer">
 		<div class="row wrap">
 			<div class="col-lg-3 col-md-3 col-xs-12">
-				<a href="{% link blog.html %}" class="button button-small post-back">Back</a>
+				<a href="{% link blog.html %}" class="button button-small blog-post-back">Back</a>
 			</div>
 			<div class="col-lg-6 col-md-7 col-xs-12">	
 			<h2>{{ page.title }}</h2>
-          	<h5 class="bottom-spacer"><span class="category">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+			<p class="blog-post-byline">{{ page.byline }}</p>
+          	<h5 class="bottom-spacer"><span class="blog-post-category">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
 			{{ content }}
 
 			</div>

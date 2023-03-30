@@ -52,7 +52,7 @@ h1 {
 
 h2 {
   font-weight: 550;
-  font-size: clamp(1.8rem, calc(2.2vw + 1rem), 4.5rem);
+  font-size: clamp(1.8rem, calc(2.2vw + 1rem), 4.3rem);
   line-height: 1.1em;
   letter-spacing: -.01em;
 }
@@ -88,7 +88,7 @@ p, small, em, strong, {
 }
 
 p {
-  font-size: clamp(1.1rem, calc(1vw + .5rem), 1.4rem);
+  font-size: clamp(1.05rem, calc(1vw + .2rem), 1.3rem);
   line-height: 1.4em;
   margin-block-end: 2rem;
 }
