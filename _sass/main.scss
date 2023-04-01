@@ -24,7 +24,7 @@ body {
 	border-image: url('/img/nnnoise.svg');
 	border-width: 20px 20px 0 20px;
 	background: $forestgreen;
-	background-image: url('/img/nnnoise.svg');
+	color: $green;
 
 	@media (prefers-color-scheme: dark) {
 			border: 20px solid $black;
@@ -34,19 +34,14 @@ body {
 	@include for-size(phone-only) {
 		border: 0;
 	}
-
-	color: $green;
-	display: flex;
-	flex-direction: column;
 }
 
 header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding, header.home-alt {
 	border-radius: 0 0 2rem 2rem;
 }
 
-header, section.work, section.blog, section.about, .project-nav {
+header, section.work, section.blog, section.about, nav, .project-nav {
 	background: $beige;
-	background-image: url('/img/nnnoise.svg');
 }
 
 img {
@@ -175,8 +170,6 @@ span.lottie {
 // 2.1 Nav
 
 nav {
-	background: $beige;
-	background-image: url('/img/nnnoise.svg');
 	padding: 2rem 0 1rem;
 	border-bottom: rgba($green,0.15) 2px solid;
 	border-radius: 2rem 2rem 0 0;
@@ -731,7 +724,6 @@ span.blog-post-category {
 
 footer {
 	background: $forestgreen;
-	background-image: url('/img/nnnoise.svg');
 	padding-top: $spacer/2;
 	padding-bottom: $spacer/2;
 	color: $beige;
@@ -914,6 +906,14 @@ form.contact {
 }
 
 
+// Background Noise
+
+body, header, section.work, section.blog, section.about, nav, .project-nav, footer {
+		background-image: url('/img/nnnoise.svg');
+
+}
+
+
 // Dark Mode
 
 
@@ -936,6 +936,9 @@ body, section.home-intro, section.thumbnails, section.testimonials, footer {
 
   	}
 }
+
+
+
 
 // TypeIt Cursor
 
