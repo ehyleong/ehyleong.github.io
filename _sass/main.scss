@@ -29,7 +29,6 @@ body {
 
 	@media (prefers-color-scheme: dark) {
 			border: 20px solid $black;
-			border-image: url('/img/nnnoise.svg');
 	}
 
 	@include for-size(phone-only) {
@@ -907,22 +906,12 @@ form.contact {
 	}
 }
 
-
-// Background Noise
-
-body, header, section.work, section.blog, section.about, nav, .project-nav, footer {
-		background-image: url('/img/nnnoise.svg');
-
-}
-
-
 // Dark Mode
 
 
 header, section, section.home-hero-image, nav, section.work, section.blog, .project-nav, footer  {
 	@media (prefers-color-scheme: dark) {
   		background: $deepgreen;
-			background-image: url('/img/nnnoise.svg');
   		color: $beige;
 
   		h1 {
@@ -934,8 +923,6 @@ header, section, section.home-hero-image, nav, section.work, section.blog, .proj
 body, section.home-intro, section.thumbnails, section.testimonials, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
- 			background-image: url('/img/nnnoise.svg');
-
   	}
 }
 
