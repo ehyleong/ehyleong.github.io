@@ -1072,7 +1072,10 @@ header.home-alt {
 
 }
 
-.testimonial-header{
+
+// TESTIMONIAL CHATGPT 1
+
+/*.testimonial-header{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -1121,4 +1124,49 @@ header.home-alt {
 .prev-btn:hover,
 .next-btn:hover {
   color: rgba($beige,.3);
+} */
+
+
+// Testimonial CHATGPT 2
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: $black;
+  border-radius: 1rem;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial-slide {
+
+}
+
+.testimonial {
+	background: red;
+	max-width: 100%;
+  flex: 0 0 100%;
+  padding: 5em 12.5%;
+}
+
+.arrow {
+	color: red;
+	background: red;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
 }

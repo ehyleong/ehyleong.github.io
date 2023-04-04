@@ -93,7 +93,7 @@
     }
 </script>
 
-  <script>
+<!--<script>
     const carousel = document.querySelector(".testimonial-carousel");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
@@ -110,4 +110,51 @@
       scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
       carousel.scroll({ left: scrollPos, behavior: "smooth" });
     });
-  </script>
+</script>-->
+
+<script>
+const carousel = document.querySelector('.testimonial-carousel');
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+
+arrowLeft.addEventListener('click', () => {
+  carousel.scrollBy({
+    left: -carousel.offsetWidth,
+    behavior: 'smooth'
+  });
+});
+
+arrowRight.addEventListener('click', () => {
+  carousel.scrollBy({
+    left: carousel.offsetWidth,
+    behavior: 'smooth'
+  });
+});
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 20; // Change the number to adjust the speed of scrolling
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+</script>
