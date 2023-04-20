@@ -3,14 +3,15 @@ layout: home
 title: Visual Designer
 slug: home
 permalink: /
-cta: I'm open to small & fun freelance requests. <a href="/contact" class="inline-link">Reach&nbsp;out&nbsp;here.</a>
+cta: Need a hand? I'm open to small & fun freelance requests. <a href="/contact" class="inline-link"><strong>Reach&nbsp;out&nbsp;here.</strong></a>
 ---
 
-<header class="home-alt bottom-spacer">
+<header class="home bottom-spacer">
   <div class="wrap row">
     <div class="col-xs-12">
-      <h1>Hello, I'm Erica&nbsp;Leong.</h1>
-      <h2>I&nbsp;make delightful <span class="orange" id="typewriter"></span></h2>
+    <!--<h1>Hello, I'm Erica&nbsp;Leong.</h1>
+      <h2>I&nbsp;make delightful <span class="orange" id="typewriter"></span></h2>-->
+      <h1>Erica Leong makes <span class="orange"> delightful <span id="typewriter"></span></span></h1>
     </div>
   </div>
   <div class="hero-img">
@@ -21,25 +22,30 @@ cta: I'm open to small & fun freelance requests. <a href="/contact" class="inlin
   </div>
 </header>
 
-<section class="wrap row home-intro spacer" style="margin-top: 2rem;">
-    <div class="col-lg-2 col-md-3 col-xs-12 col-gutter-lr">
+<section class="wrap row home-intro spacer">
+  <div class="col-lg-6 col-md-8 col-xs-12"><h2 class="beige strong">Visual design, <span class="orange">made&nbsp;with care.</span></h2></div>
+</div>
+</section>
+<section class="wrap row home-intro half-spacer">
+    <div class="col-lg-2 col-md-3 col-xs-12 col-gutter-lr spacer">
       <h5>In a Nutshell</h5>
     </div>
     <div class="col-lg-5 col-md-9 col-xs-12 col-gutter-lr">
-      <h2 class="beige">I bring joy to pixels.</h2>
-      <p>
-        I'm a visual designer and illustrator based in Vancouver, crafting thoughtful and delightful products, brands, and illustrations. Currently, I'm a senior designer at <a href="#" class="inline-link">Steamclock Software</a>, making nice mobile apps for clients of all kinds.<br><br> When I'm not working, I like to play boardgames, dabble in code, and make silly stickers and prints for my upcoming shop, <a href="#" class="inline-link">Dead Hands Club.</a>
-      <p>
+      <h3 class="beige">I make delightful product and brand experiences with well-crafted, thoughtful&nbsp;design.</h3>
+      <p class="beige">
+        Currently, I'm a senior designer at <a href="#" class="inline-link"><strong>Steamclock Software</strong></a>, designing nice mobile apps for clients of all stripes. My work is informed by healthy curiosity and communication – building a core understanding of client needs, while also sweating the details to make sure things are crafted well.</p>
+      <p class="beige bottom-text-spacer"> In my free time, I like to play boardgames, dabble in code, and make silly stickers and prints for my shop, <a href="#" class="inline-link"><strong>Dead Hands&nbsp;Club.</strong></a></p>
+        <div>
+           <a href="{% link about.html %}" class="button-small button-bio icon-right-arrow">Read All About Me</span></a>
+        </div>
     </div>
-
     <div class="col-lg-4 col-lg-offset-1 col-md-9 col-md-offset-3 col-xs-12 col-gutter-lr">
-      <div class="callout"><span class="label">Hey!</span><p><small>{{page.cta}}</small></p>
-      </div>
+      <div class="callout"><span class="label">Hey!</span><p class="beige"><small>{{page.cta}}</small></p></div>
     </div>
 </section>
 
 <main class="wrap row">
   {% include thumbnails.html %}
-  {% include testimonials-alt.html %}
+  <!--{% include testimonials.html %}-->
 
 </main>

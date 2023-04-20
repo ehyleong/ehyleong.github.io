@@ -50,18 +50,15 @@ img {
 	height: auto;
 }
 
-.wrap {
-	width: min(110rem, 90%);
-}
-
-
 .icon {
-	padding-right: .5em;
-	height: 1em;
 	width: auto;
+	height: 1em;
 	vertical-align: text-bottom;
 }
 
+.wrap {
+	width: min(110rem, 90%);
+}
 
 // Labels + Buttons
 
@@ -152,19 +149,57 @@ span.lottie {
 	}
 }
 
+.button-bio {
+	display: inline-block;
+	padding: 1em 3em;
+	border: 3px solid rgba($beige, 0.1);
+	color: $beige;
+	margin-bottom: $spacer/3;
 
-.right-arrow {
+  &:hover {
+  	color: $beige;
+		border: 3px solid rgba($orange, 1);
+ 		box-shadow: 0 5px 0 rgba($orange, .5);
+		background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23DB7704' fill-opacity='0.1	' fill-rule='evenodd'/%3E%3C/svg%3E");
+  	}
+
+  &:active{
+		box-shadow: none;
+		transform: translateY(5px);
+	}
+
+	@include for-size(phone-only) {    
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.icon-right-arrow {
 		&:after {
 		display: inline-block;
 		content: '';
 		background-size: cover;
-		background-image: url('/img/right-arrow.svg');
-		height: 10px;
-		width: 18px;
+		background-image: url('/img/icon-right-arrow.svg');
+		height: 1em;
+		width: 1em;
+		vertical-align: text-bottom;
 		margin-left: .5rem;
 	}
 }
 
+.icon-send {		
+	&:after {
+		display: inline-block;
+		content: '';
+		background-size: cover;
+		background-image: url('/img/icon-envelope.svg');
+		height: 1em;
+		width: 1em;
+		vertical-align: text-bottom;
+		margin-left: .5rem;
+	}
+}
 
 // 2. Layout 
 
@@ -304,7 +339,7 @@ div.desktop-menu {
 		}
 
 		li {
-			font-weight: 550;		
+			font-weight: 620;		
 			margin-block-end: 1.25em;
 		  letter-spacing: -.01em;
 			opacity: 0;
@@ -361,6 +396,11 @@ div.desktop-menu {
 
 .nav-up {
 	top: -110px;
+	transition: all 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.nav-down {
+	transition: all 400ms cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .showMenu {
@@ -405,56 +445,34 @@ div.desktop-menu {
 // 2.2 Home
 
 header.home {
+	padding-top: $spacer;
 	position: relative;
-	min-height: 24rem;
-	
+
 	@include for-size(phone-only) {    
-		min-height: 15rem; 
+		padding-top: $spacer/2;
+		min-height: 32rem; 
+	}
+
+	@include for-size(tablet-portrait-up) {
+		min-height: 42rem;
+	}
+	
+	@include for-size(desktop-up) {
+		min-height: 52rem;
 	}
 
 	.hero-img {
 		img{
 			position: absolute;
 			bottom: 0;
-			max-height: 100%;
-
-			@include for-size(phone-only) {
-				max-height: 15rem;
-			}
+			max-height: 46%;
 		}
 	}
 
-	.extra-text {
-		position: absolute;
-		right: 6em;
-		bottom: 4em;
-		writing-mode: vertical-rl;
+	h1, h2 {
+		text-align: left;
 	}
 }
-
-section.home-intro {
-
-	h1 { 
-		color: $beige;
-	}
-
-	p {
-		color: $beige;
-	}
-
-
-	div.home-intro-title {
-
-		@media (min-width: 30rem) and (max-width: 40rem) {
-			min-height: 18rem;
-		}
-
-		@media (max-width: 30rem) {
-			min-height: 19.5rem;
-		}
-	}
-}
-
 
 // 2.3.1 Work
 
@@ -641,7 +659,7 @@ header.work {
 		vertical-align: middle;
    	box-shadow: 0 0px 0 rgba($green, .2);
     border-radius: 1rem;
-    padding: 2.5rem;
+    padding: 2.5em 3em 2em;
     min-height: 12rem;
 
     h5 {
@@ -729,6 +747,10 @@ footer {
 	padding-bottom: $spacer/2;
 	color: $beige;
 
+	img.icon {
+			padding-right: .5em;
+		}
+
 	h1 a {
 		color: $orange;
 
@@ -760,17 +782,24 @@ footer {
 
 header.fourohfour, header.thanks, header.holding {
 	position: relative;
-	min-height: 50rem;
-	
+
 	@include for-size(phone-only) {    
 		min-height: 36rem; 
+	}
+
+	@include for-size(tablet-portrait-up) {
+		min-height: 42rem;
+	}
+	
+	@include for-size(desktop-up) {
+		min-height: 52rem;
 	}
 
 	.hero-img {
 		img{
 			position: absolute;
 			bottom: 0;
-			max-height: 50%;
+			max-height: 46%;
 
 			@include for-size(phone-only) {
 				max-height: 15rem;
@@ -1008,16 +1037,22 @@ footer.holding {
 		font-size: 1em;
 
 		svg {
-					fill: $beige;
-
+			fill: $beige;
 		}
+
 		li {
 			transition: opacity 150ms;
+
 			&:hover {
 				opacity: .5;
 			}
 		}
+
+		img.icon {
+			padding-right: .5em;
+		}
 	}
+
 	div.copyright {
 		display: flex;
 		gap: 4rem;	
@@ -1031,38 +1066,10 @@ footer.holding {
 	}
 }
 
-header.home-alt {
-	padding-top: $spacer;
-	position: relative;
-
-	@include for-size(phone-only) {    
-		padding-top: $spacer/2;
-		min-height: 30rem; 
-	}
-
-	@include for-size(tablet-portrait-up) {
-		min-height: 40rem;
-	}
-	
-	@include for-size(desktop-up) {
-		min-height: 50rem;
-	}
-
-	.hero-img {
-		img{
-			position: absolute;
-			bottom: 0;
-			max-height: 50%;
-		}
-	}
-
-
-}
-
 
 // TESTIMONIAL CHATGPT 1
 
-/*.testimonial-header{
+.testimonial-header{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -1111,11 +1118,11 @@ header.home-alt {
 .prev-btn:hover,
 .next-btn:hover {
   color: rgba($beige,.3);
-} */
+} 
 
 
 // Testimonial CHATGPT 2
-
+/*
 .testimonial-carousel {
   display: flex;
   overflow-x: hidden;
@@ -1156,4 +1163,4 @@ header.home-alt {
 
 .arrow-right {
   right: 20px;
-}
+}*/

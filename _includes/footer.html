@@ -20,7 +20,7 @@
 </div>
 <div class="wrap row copyright top-text-spacer bottom-text-spacer">
   <div class="col-xs-12">
-  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Built on <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
+  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Designed in <a href="https://figma.com" class="inline-link beige" target="_blank">Figma</a>, built with <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
   </div>
 </div>
 </footer>
@@ -93,7 +93,7 @@
     }
 </script>
 
-<!--<script>
+<script>
     const carousel = document.querySelector(".testimonial-carousel");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
@@ -110,8 +110,8 @@
       scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
       carousel.scroll({ left: scrollPos, behavior: "smooth" });
     });
-</script>-->
-
+</script>
+<!--
 <script>
 const carousel = document.querySelector('.testimonial-carousel');
 const arrowLeft = document.querySelector('.arrow-left');
@@ -157,4 +157,10 @@ carousel.addEventListener('mousemove', (e) => {
   carousel.scrollLeft = scrollLeft - walk;
 });
 
+</script>-->
+
+<script>
+  $(document).ready(function(){
+  $('.owl-carousel').owlCarousel();
+});
 </script>
