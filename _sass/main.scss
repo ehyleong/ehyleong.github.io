@@ -605,10 +605,45 @@ section.testimonials {
 		}
 	}
 
-header.about {
+@keyframes fade-slide-in{
+	0% {
+		opacity: 0;
+		transform: translateY(-10%);
+		transform-origin: 0% 0%;
+	} 
+
+	15% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+
+	}
+}	
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-5%);
+		transform-origin: 0% 0%;
+	} 
+
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+
+	}
+}
+
+header.about { 
+
 	div.about-illo {
 		margin-bottom: $spacer/2;
-		animation: wiggle 1.2s ease 0s 1 normal forwards;
+		animation: 
+			fade-slide-in .5s ease 0s 1,
+			wiggle 1.2s ease .4s 1 normal forwards;
 
 		img {
 			&:hover {
