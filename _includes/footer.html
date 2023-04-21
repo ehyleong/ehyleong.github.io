@@ -18,9 +18,24 @@
   </div>
   {% endunless %}
 </div>
-<div class="wrap row copyright top-text-spacer bottom-text-spacer">
-  <div class="col-xs-12">
-  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Designed in <a href="https://figma.com" class="inline-link beige" target="_blank">Figma</a>, built with <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
+<div class="wrap row top-text-spacer bottom-text-spacer">
+  <div class="col-xs-12 copyright">
+  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Made with <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune & Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN Foundry.</a></small></p> 
+
+  {% if page.slug == "contact" or page.slug == "thanks" %}
+  {% for category in site.data.nav.social-links limit:1 %}
+    <ul class="social-icons bottom-text-spacer">
+      {% for item in category.items %}
+      <li><a href="{{ item.href }}" class="social-link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="{{ item.path }}"/>
+        </svg>
+      </a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  {% endif %}
+
   </div>
 </div>
 </footer>
@@ -162,5 +177,14 @@ carousel.addEventListener('mousemove', (e) => {
 <script>
   $(document).ready(function(){
   $('.owl-carousel').owlCarousel();
+});
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('#about-illo').hover(
+        function(){$(this).attr("src","/img/about-illo-hover.png")},
+        function(){$(this).attr("src","/img/about-illo.png")}
+    );
 });
 </script>

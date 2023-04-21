@@ -48,7 +48,7 @@
     </div>
 
   {% for category in site.data.nav.mobile-nav limit:1 %}
-    <ul>
+    <ul class="mobile-menu-links">
       {% for item in category.items %}
       <li><a href="{{ item.href }}"{% if page.url contains item.href %} class="{% if item.class %} {{ item.class }}{%endif %}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</a></li> 
       {% endfor %}
@@ -59,7 +59,7 @@
   {% for category in site.data.nav.social-links limit:1 %}
   <ul>
     {% for item in category.items %}
-    <li><a href="{{ item.href }}" class="social-link" target="_blank">
+    <li class="mobile-menu-social-links"><a href="{{ item.href }}" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path d="{{ item.path }}"/>
       </svg>

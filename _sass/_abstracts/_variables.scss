@@ -14,6 +14,10 @@ $teal: #108888;
   color: $forestgreen;
 }
 
+.green {
+  color: $green;
+}
+
 .teal {
   color: $teal;
 }
@@ -30,6 +34,11 @@ $teal: #108888;
   color: $orange;
 }
 
+.on-dark {
+    @media (prefers-color-scheme: dark) {
+      color: $beige;
+  }
+}
 
 // Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
 
