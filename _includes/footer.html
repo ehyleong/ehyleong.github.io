@@ -41,7 +41,6 @@
 </footer>
 
 <script>
-
   const menu = document.querySelector(".mobile-menu");
   const menuItems = document.querySelectorAll(".menuItem");
   const hamburger= document.querySelector(".hamburger");
@@ -126,53 +125,6 @@
       carousel.scroll({ left: scrollPos, behavior: "smooth" });
     });
 </script>
-<!--
-<script>
-const carousel = document.querySelector('.testimonial-carousel');
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
-
-arrowLeft.addEventListener('click', () => {
-  carousel.scrollBy({
-    left: -carousel.offsetWidth,
-    behavior: 'smooth'
-  });
-});
-
-arrowRight.addEventListener('click', () => {
-  carousel.scrollBy({
-    left: carousel.offsetWidth,
-    behavior: 'smooth'
-  });
-});
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener('mousedown', (e) => {
-  isDown = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-});
-
-carousel.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-carousel.addEventListener('mouseup', () => {
-  isDown = false;
-});
-
-carousel.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 20; // Change the number to adjust the speed of scrolling
-  carousel.scrollLeft = scrollLeft - walk;
-});
-
-</script>-->
 
 <script>
   $(document).ready(function(){
@@ -180,6 +132,7 @@ carousel.addEventListener('mousemove', (e) => {
 });
 </script>
 
+{% if page.slug == "about" %}
 <script>
   $(document).ready(function(){
     $('#about-illo').hover(
@@ -188,3 +141,4 @@ carousel.addEventListener('mousemove', (e) => {
     );
 });
 </script>
+{% endif %}
