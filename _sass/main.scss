@@ -579,8 +579,7 @@ section.testimonials {
 
 
 @keyframes wiggle {
-		0%,
-		100% {
+		0%,100% {
 			transform: translateX(0%);
 			transform-origin: 50% 50%;
 		}
@@ -607,8 +606,7 @@ section.testimonials {
 	}
 
 @keyframes slight-wiggle {
-	0%,
-		100% {
+	0%,100% {
 			transform: translateX(0%);
 			transform-origin: 50% 50%;
 		}
@@ -623,6 +621,7 @@ section.testimonials {
 	75% {
 			transform: translateX(-6px) rotate(-1.2deg);
 		}
+
 }
 
 @keyframes slide-in{
@@ -656,6 +655,7 @@ header.about {
 			wiggle 1.2s ease .3s 1 normal forwards;
 
 		img {
+
 			&:hover {
 					animation: slight-wiggle .8s ease;
 				}
@@ -1236,6 +1236,41 @@ footer.holding {
   color: rgba($beige,.3);
 } 
 
+
+
+// Animation
+
+@keyframes h1-intro {
+	0% {
+		font-weight: 200;
+		opacity: 0
+	}
+
+	100% {
+		font-weight: 750;
+		opacity: 1;
+	}
+}
+
+@keyframes h2-intro {
+	0% {
+		font-weight: 100;
+		opacity: 0
+	}
+
+	100% {
+		font-weight: 620;
+		opacity: 1;
+	}
+}
+
+h1.intro {
+	animation: h1-intro 1s cubic-bezier(0.87, 0, 0.13, 1); 
+}
+
+h2.intro {
+	animation: h2-intro 1s cubic-bezier(0.87, 0, 0.13, 1); 
+}
 
 // Testimonial CHATGPT 2
 /*
