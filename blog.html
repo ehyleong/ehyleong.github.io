@@ -7,18 +7,22 @@ permalink: /blog
 
 <header class="blog spacer bottom-spacer">
   <div class="wrap row">
-    <div class="col-lg-4 col-xs-12">
-      <h1 class="intro">Words <span class="orange">Words</span> Words</h1>
-      <p>Sometimes I write things. They're not always good, but they're there.</p>
+    <div class="col-lg-4 col-md-4 col-xs-12">
+      <h1 class="intro">Words <span class="orange">+&nbsp;Play</span></h1>
+      <p class="fade-up-delay">A personal collection of stuff: some inspiration, some personal jams, and occasionally, some words I've written.</p>
     </div>
-    <div class="col-lg-7 col-lg-offset-1 col-xs-12">
+    <div class="col-lg-7 col-lg-offset-1 col-md-offset-1 col-md-7 col-xs-12">
       {% for post in site.posts %}
-      <div class="col-lg-12 col-xs-12 blog-post-preview">
+      <div class="blog-post-preview">
         <a href="{{ post.url }}">
-          <h5><span class="blog-post-category">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
+        {% if post.image %}
+        <img src="{{ post.image }}" class="rounded">
+        {% endif %}
+          <h5 class="top-text-spacer"><span class="blog-post-category">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
           <h3>{{ post.title }}</h3>
           <p class="blog-post-byline">{{ post.byline }}</p>
          </a>
+        
       </div>
       {% endfor %}
      </div>

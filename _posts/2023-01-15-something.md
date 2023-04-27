@@ -1,8 +1,9 @@
 ---
 layout: post
-title: This is the first post
+title: Experimental Jams
 byline: A one-line statement about this post.
-category: personal
+category: Exploration
+image: /img/posts/test.jpg
 ---
 
 Chances are you’ve heard of the common adage, “share work, early and often.” The benefits are clear: sharing in-progress work early on allows teams to get on the same page and avoid surprises or wasted work. Easy win, right? A lot of teams find it easier said than done.
