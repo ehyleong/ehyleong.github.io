@@ -38,6 +38,9 @@
         <h2>{{ nexttitle }}</h2>
       </a>
     </div>
+    <div class="col-xs-12 pro-tip">      
+      <p><small><strong>Browsing on desktop?</strong> Try hitting the<span class="arrow-next" alt="right"></span> key to jump to the next project.</small></p>
+  </div>
     {% endif %}
   </div>
 </article>
@@ -45,7 +48,6 @@
 <script>
 /* post pagination keyboard shortcuts */
 document.body.onkeyup = function(e){
-  if (e.keyCode == '37') { window.location = '{{ prevurl }}'; } // left arrow key
   if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
 };
 </script>
