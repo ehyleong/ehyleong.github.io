@@ -5,9 +5,6 @@ nav:
       - title: "Work"
         href: "/#work"
         class: work
-      - title: "Shop"
-        href: "#"
-        class: shop
       - title: "Play"
         href: "/blog"
         class: play
@@ -24,10 +21,7 @@ mobile-nav:
     items:
       - title: "Work"
         href: "/#work"
-        class: work menuItem
-      - title: "Shop"
-        href: "#"
-        class: shop menuItem        
+        class: work menuItem   
       - title: "Play"
         href: "/blog"
         class: play menuItem
