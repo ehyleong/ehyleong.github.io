@@ -3,6 +3,7 @@ two-spies:
   url: work/two-spies
   client: Steamclock Software
   role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
+  summary: A turn-based spy strategy game for iOS.
   img: ../img/thumbnails/spies.webp
 
 sybama:
@@ -10,6 +11,7 @@ sybama:
   url: work/sybama
   client: Steamclock Software
   role: Website Design, Illustration, Animation
+  summary: A tongue-in-cheek microsite for curious clients.
   img: ../img/thumbnails/sybama.webp
 
 figma-keypads:
@@ -17,6 +19,7 @@ figma-keypads:
   url: work/figma-keypads
   client: Personal
   role: Illustration
+  summary: A side project for experimenting with Figma.
   img: ../img/thumbnails/keypads.webp
 
 steamclock-swag:
@@ -24,18 +27,5 @@ steamclock-swag:
   url: work/steamclock-swag
   client: Steamclock Software
   role: Art Direction, Illustration, Print
+  summary: A collection of custom illustrated company keepsakes.
   img: ../img/thumbnails/steamclockswag.webp
-
-bench:
-  name: Bench Illustrations
-  url: work/bench
-  client: Bench Accounting
-  role: Illustration, Animation, Iconography
-  img: ../img/thumbnails/bench.webp
-
-portraits:
-  name: Digital Portraits
-  url: work/portraits
-  client: Personal
-  role: Illustration
-  img: ../img/thumbnails/procreate.jpg

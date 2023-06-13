@@ -45,7 +45,7 @@ h2 {
 
 h3 {  
   font-weight: 480;
-  font-size: clamp(1.6rem, calc(1.1vw + 1rem), 2.5rem);
+  font-size: clamp(1.6rem, calc(2.1vw + 1rem), 2.5rem);
   line-height: 1.2em;
 }
 
@@ -74,9 +74,13 @@ p, small, em, strong {
 }
 
 p {
-  font-size: clamp(1.05rem, calc(1vw + .2rem), 1.3rem);
+  font-size: clamp(1.1rem, calc(1.1vw + .2rem), 1.3rem);
   line-height: 1.4em;
   margin-block-end: 1rem;
+}
+
+p.large{
+  font-size: clamp(1.2rem, calc(1.2vw + .3rem), 1.5rem);
 }
 
 small {
@@ -134,9 +138,9 @@ a {
       content: '';
       background-size: cover;
       background-image: url('/img/global/icon-external-link.svg');
-      height: 14px;
-      width: 14px;
-      margin-left: 10px;  
+      height: .85em;
+      width: .85em;
+      margin-left: 4px;  
       opacity: 0;
       transform: scale(0);
       transition: all 150ms ease-in-out;
@@ -159,7 +163,7 @@ a {
     background-image: url('/img/global/icon-plane.svg');
     height: 14px;
     width: 14px;
-    margin-left: 10px;  
+    margin-left: 4px;  
     opacity: 0;
     transform: scale(0);
     transition: all 150ms ease-in-out;
