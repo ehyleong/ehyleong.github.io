@@ -112,6 +112,8 @@ span.lottie {
 
 
 .button {
+	font-family: "NaNJaune-Midi-Var", sans-serif;
+	font-weight: 650;
 	display: inline-block;
 	border: 3px solid rgba($green, .2);
  	box-shadow: 0 0px 0 rgba($green, .2);
@@ -148,8 +150,6 @@ span.lottie {
 }
 
 .button-small {
-		font-family:  "NaNJaune-Midi-Var", sans-serif;
-		font-weight: 650;
 		padding: .5rem 1.5rem;
 	  transition: 100ms ease-in-out;
 	  
@@ -163,7 +163,7 @@ span.lottie {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1em 3em;
+	padding: 1rem 3rem;
 	border: 3px solid rgba($beige, 0.1);
 	color: $beige;
 	margin-bottom: $spacer/3;
@@ -856,7 +856,7 @@ div.in-progress {
 	align-items: baseline;
 	justify-content: center;
 	background: rgba($orange, .1);		
-	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23DB7704' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23DB7704' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 	
 		@include for-size(phone-only) {
 			flex-direction: column;

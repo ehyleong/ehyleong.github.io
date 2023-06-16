@@ -18,7 +18,7 @@ permalink: /blog
         {% if post.image %}
         <img src="{{ post.image }}" class="rounded">
         {% endif %}
-          <h5 class="top-text-spacer"><span class="category-label">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
+          <h5 class="top-text-spacer bottom-text-spacer"><span class="category-label">{{ post.category }}</span>{{ post.date | date_to_string: "ordinal", "US" }}</h5>
           <h3>{{ post.title }}</h3>
           <p class="blog-post-byline">{{ post.byline }}</p>
          </a>
