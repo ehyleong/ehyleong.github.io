@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "NaNHolo-Bold";
-  src: local('NaNHolo-Bold'), url("/fonts/NaNHolo_TRIAL-Bold.woff2") format("woff2");
+  src: local('NaNHolo-Bold'), url("/fonts/NaNHolo-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -52,7 +52,7 @@ h3 {
 h4, li, .button-small {
   font-weight: 330;
   font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
-  line-height: 1.5em;
+  line-height: 1.4em;
   letter-spacing: 0.5px;
 }
 
@@ -80,7 +80,8 @@ p {
 }
 
 p.large{
-  font-size: clamp(1.2rem, calc(1.2vw + .3rem), 1.5rem);
+  font-size: clamp(1.3rem, calc(1.2vw + .4rem), 1.6rem);
+  line-height: 1.2em;
 }
 
 small {

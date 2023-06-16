@@ -14,7 +14,7 @@
         	{% endif %}	
 			<h2 class="fade-up {% if page.image %} half-spacer{% endif %}">{{ page.title }}</h2>
 			<p class="blog-post-byline large">{{ page.byline }}</p>
-          	<h5 class="bottom-half-spacer"><span class="blog-post-category">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+          	<h5 class="bottom-half-spacer"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
 			{{ content }}
 
 			</div>
