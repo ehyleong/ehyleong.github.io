@@ -11,6 +11,11 @@
       {% assign nexttitle = next.title %}
       {% assign nexturl = next.url %}
     {% endif %}
+    {% if forloop.first %}
+      {% assign prev = document.last %}
+      {% assign prevtitle = prev.title %}
+      {% assign prevurl = prev.url %}
+    {% endif %}
     {% unless forloop.first %}
       {% assign prevtitle = prev.title %}
       {% assign prevurl = prev.url %}
@@ -29,10 +34,13 @@
     {% if nexturl %}
       <div class="col-xs-12">
       <a href="{{ nexturl }}" class="button-project button">
-        <h5 class="arrow-next">Next Project</h5>
+        <h5 class="arrow-next">Up Next</h5>
         <h2>{{ nexttitle }}</h2>
       </a>
     </div>
+    <div class="col-xs-12 pro-tip">      
+      <p><small><strong>Browsing on desktop?</strong> Hit the<span class="arrow-next" alt="right arrow"></span> key to jump to the next project.</small></p>
+  </div>
     {% endif %}
   </div>
 </article>

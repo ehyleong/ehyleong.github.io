@@ -1,34 +1,45 @@
 <footer class="spacer" id="contact">
   {% unless page.slug == "contact" or page.slug == "thanks" %}
   <div class="wrap row bottom-text-spacer">
-    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
-      <h5>Wanna get in touch?</h5>
-    <!--<h1 class="bottom-text-spacer">Send me a  
-      <a href="mailto:ehyleong@gmail.com?subject=Cool%20project%20inquiry">message.</a></h1>-->
-        <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
+    <div class="col-lg-12 col-xs-12">
+      <h5>Wanna chat?</h5>
+        <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/global/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
-    <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
+<!--    <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
     <h5>Find me on</h5>
       <ul class="social-links">
-        <li><a href="https://twitter.com/ehyleong" class="external-link" target="_blank"><img src="/img/icon-social-twitter.svg" class="icon">Twitter</a></li>
-        <li><a href="https://dribbble.com/ehyleong" class="external-link" target="_blank"><img src="/img/icon-social-dribbble.svg" class="icon">Dribbble</a></li>
-        <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-instagram.svg" class="icon">Instagram</a></li>
-        <li><a href="https://linkedin.com/in/ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-linkedin.svg" class="icon">LinkedIn</a></li>
-        <li><a href="http://mastodon.cloud/@ehyleong/" class="external-link" target="_blank"><img src="/img/icon-social-mastodon.svg" class="icon">Mastodon</a></li>
+        <li><a href="https://twitter.com/ehyleong" class="external-link" target="_blank"><img src="/img/global/icon-social-twitter.svg" class="icon">Twitter</a></li>
+        <li><a href="https://dribbble.com/ehyleong" class="external-link" target="_blank"><img src="/img/global/icon-social-dribbble.svg" class="icon">Dribbble</a></li>
+        <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-instagram.svg" class="icon">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-linkedin.svg" class="icon">LinkedIn</a></li>
+        <li><a href="http://mastodon.cloud/@ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-mastodon.svg" class="icon">Mastodon</a></li>
       </li>
     </ul>
   </div>
+-->
   {% endunless %}
 </div>
-<div class="wrap row copyright top-text-spacer bottom-text-spacer">
-  <div class="col-xs-12">
-  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong. Built on <a href="https://jekyllrb.com/" class="inline-link beige" target="_blank">Jekyll</a>. Typefaces are Jaune and Holo by <a href="https://www.nan.xyz/" class="inline-link beige" target="_blank">NaN.</a></small></p>
+<div class="wrap row top-text-spacer bottom-text-spacer">
+  <div class="col-xs-12 copyright">
+  {% for category in site.data.nav.social-links limit:1 %}
+    <ul class="social-icons bottom-text-spacer">
+      {% for item in category.items %}
+      <li><a href="{{ item.href }}" class="social-link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="{{ item.path }}"/>
+        </svg>
+      </a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong <!--• <a href="/colophon" class="inline-link beige">Colophon</a>--></small></p> 
+
   </div>
 </div>
 </footer>
 
 <script>
-
   const menu = document.querySelector(".mobile-menu");
   const menuItems = document.querySelectorAll(".menuItem");
   const hamburger= document.querySelector(".hamburger");
@@ -94,3 +105,39 @@
         lastScrollTop = st;
     }
 </script>
+
+<script>
+    const carousel = document.querySelector(".testimonial-carousel");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    let scrollPos = 0;
+    const scrollStep = carousel.offsetWidth;
+
+    prevBtn.addEventListener("click", () => {
+      scrollPos = Math.max(scrollPos - scrollStep, 0);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+</script>
+
+<script>
+  $(document).ready(function(){
+  $('.owl-carousel').owlCarousel();
+});
+</script>
+
+<!--{% if page.slug == "about" %}
+<script>
+  $(document).ready(function(){
+    $('#about-illo').hover(
+        function(){$(this).attr("src","/img/global/about-illo-hover.png")},
+        function(){$(this).attr("src","/img/global/about-illo.png")}
+    );
+});
+</script>
+{% endif %}-->

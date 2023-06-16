@@ -2,77 +2,63 @@
 
 @font-face {
   font-family: "NaNHolo-Regular";
-  src: url("/fonts/NaNHolo-Regular.woff2") format("woff2");
+  src: local('NaNHolo-Regular'), url("/fonts/NaNHolo-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "NaNHolo-Bold";
-  src: url("/fonts/NaNHolo_TRIAL-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "NaNHoloMono-Bold";
-  src: url("/fonts/NaNHoloMono_TRIAL-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "NaNJaune-MidiRegular";
-  src: url("/fonts/NaNJaune-MidiRegular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "NaNJaune-MidiMedium";
-  src: url("/fonts/NaNJaune-MidiMedium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "NaNJaune-MidiBold";
-  src: url("/fonts/NaNJaune-MidiBold.woff2") format("woff2");
+  src: local('NaNHolo-Bold'), url("/fonts/NaNHolo-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "NaNJaune-Midi-Var";
-  src: url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2 woff2 supports variations");
-  src: url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2-variations");
+  src: local('NaNJaune-Midi-Var'), url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2 woff2 supports variations");
+  src: local('NaNJaune-Midi-Var'), url("/fonts/NaNJaune-Midi-Var.woff2") format("woff2-variations");
   font-weight: 100 1000;
+  font-display: swap;
 }
 
 
 h1, h2, h3, h4, h5, li, label {
   font-family: "NaNJaune-Midi-Var", sans-serif;
+  -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
+  -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
+  font-feature-settings: 'ss03' on;     /* low-level (all new browsers) */
   margin-block-end: 1rem;
 }
 
 h1 {
   font-weight: 750;
-  font-size: clamp(2.3rem, calc(4vw + 1.2rem), 7rem);
+  font-size: clamp(2.3rem, calc(5vw + 1.2rem), 7rem);
   line-height: 1em;
   letter-spacing: -.02em;
 }
 
 h2 {
-  font-weight: 550;
-  font-size: clamp(1.8rem, calc(2.2vw + 1rem), 4.5rem);
+  font-weight: 620;
+  font-size: clamp(1.8rem, calc(3.6vw + 1rem), 4.3rem);
   line-height: 1.1em;
   letter-spacing: -.01em;
 }
 
 h3 {  
-  font-weight: 500;
-  font-size: clamp(1.4rem, calc(1.1vw + 1rem), 2.5rem);
+  font-weight: 480;
+  font-size: clamp(1.6rem, calc(2.1vw + 1rem), 2.5rem);
   line-height: 1.2em;
 }
 
-h4, li {
-  font-weight: 360;
+h4, li, .button {
+  font-weight: 330;
   font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
-  line-height: 1.5em;
+  line-height: 1.4em;
   letter-spacing: 0.5px;
 }
 
 h5, label {
   font-weight: 700;
-  font-size: clamp(.7rem, calc(1vw + .2rem), .8rem);
+  font-size: clamp(.65rem, calc(1vw + .2rem), .75rem);
   line-height: 1.4em;
   text-transform: uppercase;
   letter-spacing:3px;
@@ -80,23 +66,38 @@ h5, label {
   margin-top: .5rem;
 }
 
-p, small, em, strong, {
-  font-family: "NaNHolo-Regular";
+p, small, em, strong {
+  font-family: "NaNHolo-Regular", sans-serif;
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
   font-feature-settings: 'ss02' on;     /* low-level (all new browsers) */
 }
 
 p {
-  font-size: clamp(1.1rem, calc(1vw + .5rem), 1.4rem);
-  line-height: 1.3em;
-  margin-block-end: 2rem;
+  font-size: clamp(1.1rem, calc(1.1vw + .2rem), 1.3rem);
+  line-height: 1.4em;
+  margin-block-end: 1rem;
+}
+
+p.large{
+  font-size: clamp(1.3rem, calc(1.2vw + .4rem), 1.6rem);
+  line-height: 1.2em;
 }
 
 small {
   font-size: smaller;
   line-height: 1em;
 }
+
+strong {
+  font-family: "NaNHolo-Bold", sans-serif;
+}
+
+.strong {
+  font-weight: 750;
+}
+
+// Links
 
 a {
   color: $orange;
@@ -118,3 +119,97 @@ a.green {
   }
 
 }
+
+a.inline-link {
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-color: rgba($orange, 0.3);
+
+  &:hover {
+    text-decoration-color: rgba($orange, 0.8);
+  }
+}
+a {
+  transition: all 150ms ease-in-out;
+}
+
+.external-link {
+  &:after {
+      display: inline-block;
+      content: '';
+      background-size: cover;
+      background-image: url('/img/global/icon-external-link.svg');
+      height: .85em;
+      width: .85em;
+      margin-left: 4px;  
+      opacity: 0;
+      transform: scale(0);
+      transition: all 150ms ease-in-out;
+    }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+
+    }
+  }
+}
+
+.mailto-link {
+  &:after {
+    display: inline-block;
+    content: '';
+    background-size: cover;
+    background-image: url('/img/global/icon-plane.svg');
+    height: 14px;
+    width: 14px;
+    margin-left: 4px;  
+    opacity: 0;
+    transform: scale(0);
+    transition: all 150ms ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+
+    }
+  }
+}
+
+.project-link {
+  text-decoration: underline;
+  text-decoration-color: rgba($orange, 0.3);
+  text-underline-offset: 0.4em;
+  text-decoration-thickness: 3px;
+  transition: all 150ms ease-in-out;
+
+  &:hover {     
+    text-decoration-color: rgba($orange, 0.8);
+  }
+}
+
+ul.social-links {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  @include for-size (tablet-portrait-up){
+    grid-template-columns: auto;
+  }
+
+  li {
+    margin-bottom: .5rem; 
+
+    a {
+      color: $beige;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
