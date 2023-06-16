@@ -186,6 +186,17 @@ span.lottie {
 	}
 }
 
+svg.button-icon {
+		height: .8em;
+		fill: $green;
+		margin-right: 8px;
+		
+		@media (prefers-color-scheme: dark) {
+			fill: $beige;
+		}
+	}
+
+
 .icon-right-arrow {
 		&:after {
 		display: inline-block;

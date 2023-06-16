@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Erica Leong
+title: Erica Leong • Visual Designer
 email: hello@ericaleong.com
 description: >- # this means to ignore newlines until "baseurl:"
   Erica Leong is a visual designer based in Vancouver, Canada.
@@ -41,7 +41,6 @@ collections:
   posts:
     permalink: /blog/:year/:month/:title
 
-title: Formspark | Jekyll
 formspark_form_id: ZfOeuDrT
 
 # Exclude from processing.
