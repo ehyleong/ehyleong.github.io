@@ -5,18 +5,6 @@
       <h5>Wanna chat?</h5>
         <h1 class="bottom-text-spacer">Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/global/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
-<!--    <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
-    <h5>Find me on</h5>
-      <ul class="social-links">
-        <li><a href="https://twitter.com/ehyleong" class="external-link" target="_blank"><img src="/img/global/icon-social-twitter.svg" class="icon">Twitter</a></li>
-        <li><a href="https://dribbble.com/ehyleong" class="external-link" target="_blank"><img src="/img/global/icon-social-dribbble.svg" class="icon">Dribbble</a></li>
-        <li><a href="https://instagram.com/ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-instagram.svg" class="icon">Instagram</a></li>
-        <li><a href="https://linkedin.com/in/ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-linkedin.svg" class="icon">LinkedIn</a></li>
-        <li><a href="http://mastodon.cloud/@ehyleong/" class="external-link" target="_blank"><img src="/img/global/icon-social-mastodon.svg" class="icon">Mastodon</a></li>
-      </li>
-    </ul>
-  </div>
--->
   {% endunless %}
 </div>
 <div class="wrap row top-text-spacer bottom-text-spacer">
@@ -33,13 +21,63 @@
     </ul>
   {% endfor %}
 
-  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong <!--• <a href="/colophon" class="inline-link beige">Colophon</a>--></small></p> 
+<div class="copyright">
+  <p><small>© {{ 'now' | date: "%Y" }} Erica Leong <!--• <a href="/colophon" class="inline-link beige">Colophon</a>--></small></p> <button class="dark-mode-toggle">Go dark</button>
+
+</div>
 
   </div>
 </div>
+
 </footer>
 
+
 <script>
+
+  // Toggle dark mode
+
+  let darkModeState = false;
+
+  const button = document.querySelector(".dark-mode-toggle");
+
+  // MediaQueryList object
+  const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Toggles the "dark-mode" class
+  function toggleDarkMode(state) {
+    document.documentElement.classList.toggle("dark-mode", state);
+    darkModeState = state;
+  }
+
+  // Sets localStorage state
+  function setDarkModeLocalStorage(state) {
+    localStorage.setItem("dark-mode", state);
+  }
+
+  // Initial setting
+  toggleDarkMode(localStorage.getItem("dark-mode") == "true");
+
+  // Listen for changes in the OS settings.
+  // Note: the arrow function shorthand works only in modern browsers,
+  // for older browsers define the function using the function keyword.
+  useDark.addListener((evt) => toggleDarkMode(evt.matches));
+
+  // Toggles the "dark-mode" class on click and sets localStorage state
+  button.addEventListener("click", () => {
+    darkModeState = !darkModeState;
+
+    toggleDarkMode(darkModeState);
+    setDarkModeLocalStorage(darkModeState);
+  });
+
+  window.addEventListener("DOMContentLoaded", load);
+
+</script>
+
+<script>
+
+  // Show mobile drawer navigation
+
   const menu = document.querySelector(".mobile-menu");
   const menuItems = document.querySelectorAll(".menuItem");
   const hamburger= document.querySelector(".hamburger");
@@ -65,8 +103,10 @@
 
 </script>
 
-
 <script>
+
+    // Tuck desktop nav on scroll
+
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -107,6 +147,9 @@
 </script>
 
 <script>
+
+  // ChatGPT Testimonial Carousel
+
     const carousel = document.querySelector(".testimonial-carousel");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");

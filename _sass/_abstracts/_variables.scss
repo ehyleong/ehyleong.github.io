@@ -1,7 +1,9 @@
+
 // Margin
 $spacer: 6rem;
 
 // Colours
+
 $green: #004C4C;
 $forestgreen: #012727;
 $deepgreen: #001818;
@@ -9,6 +11,10 @@ $black: #001D1D;
 $beige: #F2F0EA;
 $orange: #DB7704;
 $teal: #108888;
+
+$radius-small: 1rem;
+$radius-med: 2rem;
+$radius-large: 3rem;
 
 .forestgreen {
   color: $forestgreen;
@@ -34,10 +40,39 @@ $teal: #108888;
   color: $orange;
 }
 
-.on-dark {
-    @media (prefers-color-scheme: dark) {
-      color: $beige;
-  }
+
+// Variables
+
+:root {
+  --primary-color: #004C4C; /* green */
+  --primary-bg-color: #F2F0EA; /* beige */
+  --secondary-color: #F2F0EA; /* orange */
+  --secondary-bg-color: #012727; /* forest green */
+  --logo-color: #004C4C; /* green */
+  --callout-bg-color: 219, 119, 4; /* orange */
+  --label-text-color: #F2F0EA;
+  --nav-link-color: #004C4C; /* green */
+  --primary-button-color: 0, 76, 76;
+  --primary-button-text: #004C4C;
+  --secondary-button-color: 250, 248, 241;
+  --secondary-button-text: #F2F0EA;
+  --form-input-color: 0, 76, 76;
+}
+
+.dark-mode {
+  --primary-color: #ECE8DC; /* dark-beige */
+  --secondary-color: #ECE8DC; /* dark-beige */
+  --logo-color: #DB7704; /* orange */
+  --primary-bg-color: #001818; /* deep green */
+  --secondary-bg-color: #001D1D; /* black */
+  --callout-bg-color: 0, 76, 76; /* green */
+  --label-text-color: #012727;
+  --nav-link-color: #ECE8DC; /* dark-beige */
+  --primary-button-color: 236, 232, 220;
+  --primary-button-text: #ECE8DC;
+  --secondary-button-color: 236, 232, 220;
+  --secondary-button-text: #ECE8DC;
+  --form-input-color: 236, 232, 220;
 }
 
 // Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
@@ -147,3 +182,73 @@ $teal: #108888;
 .centered {
   text-align: center;
 }
+
+// Animations
+
+@keyframes wiggle {
+    0%,100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+
+    15% {
+      transform: translateX(-15px) rotate(-5deg);
+    }
+
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+      transform: translateX(-10px) rotate(-2.6deg);
+    }
+
+    60% {
+      transform: translateX(6px) rotate(1.4deg);
+    }
+
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+@keyframes slight-wiggle {
+  0%,100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+  25% {
+      transform: translateX(-15px) rotate(-5deg);
+    }
+
+  50% {
+      transform: translateX(15px) rotate(6deg);
+  }
+
+  75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+
+}
+
+@keyframes slide-in{
+  0% {
+    transform: translateY(-15%);
+    transform-origin: 0% 0%;
+  } 
+
+  100% {
+    transform: translateY(0%);
+
+  }
+} 
+
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+  } 
+
+  100% {
+    opacity: 1;
+    }
+  } 
