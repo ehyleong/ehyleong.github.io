@@ -133,6 +133,10 @@
     padding: 0 $gutter;
 }
 
+.col-gutter-r{
+    padding: 0 $gutter 0 0;
+}
+
 .col-no-gutter {
     padding: 0;
 }

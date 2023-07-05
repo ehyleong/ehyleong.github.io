@@ -27,19 +27,38 @@ permalink: /
 
 </main>
 <section class="wrap row home-intro spacer">
-</section>
-<section class="wrap row home-intro half-spacer">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-gutter-lr">
-      <h5>In a Nutshell</h5>
-    </div>
-    <div class="col-lg-6 col-md-9 col-sm-9 col-xs-12 col-gutter-lr">
-      <h3 class="beige">I make delightful product and brand experiences for kind folks who care about the details.</h3>
- <p class="beige">
-        Currently, I design nice mobile apps for all sorts of growing companies at <a href="#" class="inline-link external-link"><strong>Steamclock Software.</strong></a>
-      </p>
-      <p class="beige">My work is driven by good ol' curiosity and communication: I use the power of inquiry to find out what clients and users need, and iterate on solutions til we're ready to ship.<!--My work is informed by healthy curiosity and communication. I like to build a solid understanding of client and user needs, while also sweating the details to ensure things are designed and built well too.--></p>
-      <p class="beige bottom-text-spacer">In my free time, I enjoy playing boardgames with my partner, learning new skills, dabbling in code, and drawing silly & weird stuff for my upcoming shop – stay tuned!
- </p>
-       <a href="{% link about.html %}" class="button button-bio icon-right-arrow">Read All About Me</span></a>
+    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 col-gutter-lr">
+      <h3 class="beige">I make delightful product and brand experiences for kind folks who care about the details. Currently, I'm designing mobile apps at <a href="https://steamclock.com" class="inline-link external-link">Steamclock Software.</a></h3>
+
+      <div class="row top-text-spacer">
+        <div class="col-lg-6 col-gutter-r">
+          <p class="beige">My work is driven by good ol' curiosity and communication: I use the power of inquiry to find out what clients and users need, and iterate on solutions til we're ready to ship.<!--My work is informed by healthy curiosity and communication. I like to build a solid understanding of client and user needs, while also sweating the details to ensure things are designed and built well too.--></p>
+        </div>
+        <div class="col-lg-6 col-gutter-r">
+          <p class="beige bottom-text-spacer">In my free time, I enjoy playing boardgames with my partner, learning new skills, dabbling in code, and drawing silly & weird stuff for my upcoming shop – stay tuned!
+        </p>
+        </div>
+      </div>
+      <div class="row half-spacer bottom-half-spacer">
+        <div class="col-sm-8 col-xs-12">
+       <a href="{% link about.html %}" class="button button-on-dark button-bio icon-right-arrow">Read All About Me</span></a>
      </div>
+     </div>
+     </div>
+
+     <<div class="testimonial-carousel">
+      {% for testimonial in site.data.testimonials %}
+      {% assign count = forloop.length %}
+        <div class="testimonial">
+          <h3 class="beige bottom-text-spacer testimonial-quote">"{{ testimonial[1].quote }}"</h3>
+          <h5 class="testimonial-author">— {{ testimonial[1].name }}</h5>
+        </div>
+      {% endfor %}
+
+</div>
+  <button id="prev-btn">&#10094;</button>
+  <button id="next-btn">&#10095;</button>
+
 </section>
+
+{% include testimonials.html %}

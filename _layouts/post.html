@@ -2,7 +2,7 @@
 <html>
 	{% include header.html %}
 	<body>
-	{% include navigation.html %}
+	{% include nav.html %}
 	<header class="spacer">
 		<div class="row wrap">
 			<div class="col-lg-3 col-md-3 col-xs-12">
@@ -15,20 +15,15 @@
 			<h2 class="fade-up {% if page.image %} half-spacer{% endif %}">{{ page.title }}</h2>
 			<p class="blog-post-byline large bottom-text-spacer">{{ page.byline }}</p>
           	<h5 class="bottom-half-spacer"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+          	
 			{{ content }}
 
 			</div>
 		</div>
 	</header>
 
-	<section class="blog bottom-spacer">
-		<div class="row wrap">
-			<div class="col-lg-7 col-xs-12">	
-			</div>
-		</div>
-	</section>
-
-	{% include navigation_posts.html %}
+	{% include nav_posts.html %}
 	{% include footer.html %}
+
 	</body>
 </html>

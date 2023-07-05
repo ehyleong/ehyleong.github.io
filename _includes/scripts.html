@@ -1,0 +1,210 @@
+<script>
+  // Toggle dark mode
+
+  let darkModeState = false;
+
+  const button = document.querySelector(".dark-mode-toggle");
+
+  // MediaQueryList object
+  const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Toggles the "dark-mode" class
+  function toggleDarkMode(state) {
+    document.documentElement.classList.toggle("dark-mode", state);
+    darkModeState = state;
+  }
+
+  // Sets localStorage state
+  function setDarkModeLocalStorage(state) {
+    localStorage.setItem("dark-mode", state);
+  }
+
+  // Initial setting
+  toggleDarkMode(localStorage.getItem("dark-mode") == "true");
+
+  // Listen for changes in the OS settings.
+  // Note: the arrow function shorthand works only in modern browsers,
+  // for older browsers define the function using the function keyword.
+  useDark.addListener((evt) => toggleDarkMode(evt.matches));
+
+  // Toggles the "dark-mode" class on click and sets localStorage state
+  button.addEventListener("click", () => {
+    darkModeState = !darkModeState;
+
+    toggleDarkMode(darkModeState);
+    setDarkModeLocalStorage(darkModeState);
+  });
+
+  window.addEventListener("DOMContentLoaded", load);
+
+</script>
+
+<script>
+
+  // Show mobile drawer navigation
+
+  const menu = document.querySelector(".mobile-menu");
+  const menuItems = document.querySelectorAll(".menuItem");
+  const hamburger= document.querySelector(".hamburger");
+  const closeIcon= document.querySelector(".closeIcon");
+  const menuIcon = document.querySelector(".menuIcon");
+
+  function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+      menu.classList.remove("showMenu");
+    } else {
+      menu.classList.add("showMenu");
+      menuItems.classList.add("showMenu");
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
+
+</script>
+
+<script>
+
+    // Tuck desktop nav on scroll
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('nav').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 200);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('nav').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('nav').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        lastScrollTop = st;
+    }
+</script>
+
+
+<script>
+  
+// JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonials = document.querySelectorAll(".testimonial");
+  let currentTestimonial = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach(function (testimonial) {
+      testimonial.classList.remove("active");
+    });
+    testimonials[index].classList.add("active");
+  }
+
+  function nextTestimonial() {
+    currentTestimonial++;
+    if (currentTestimonial >= testimonials.length) {
+      currentTestimonial = 0;
+    }
+    showTestimonial(currentTestimonial);
+  }
+
+  function previousTestimonial() {
+    currentTestimonial--;
+    if (currentTestimonial < 0) {
+      currentTestimonial = testimonials.length - 1;
+    }
+    showTestimonial(currentTestimonial);
+  }
+
+  function handleGesture() {
+    if (touchEndX < touchStartX) {
+      nextTestimonial();
+    } else if (touchEndX > touchStartX) {
+      previousTestimonial();
+    }
+  }
+
+  const nextButton = document.getElementById("next-btn");
+  const prevButton = document.getElementById("prev-btn");
+  const carousel = document.querySelector(".testimonial-carousel");
+
+  nextButton.addEventListener("click", nextTestimonial);
+  prevButton.addEventListener("click", previousTestimonial);
+
+  carousel.addEventListener("touchstart", function (event) {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchend", function (event) {
+    touchEndX = event.changedTouches[0].clientX;
+    handleGesture();
+  });
+
+  showTestimonial(currentTestimonial);
+});
+
+  
+</script>
+<!--<script>
+
+  // ChatGPT Testimonial Carousel
+
+    const carousel = document.querySelector(".testimonial-carousel");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    let scrollPos = 0;
+    const scrollStep = carousel.offsetWidth;
+
+    prevBtn.addEventListener("click", () => {
+      scrollPos = Math.max(scrollPos - scrollStep, 0);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
+      carousel.scroll({ left: scrollPos, behavior: "smooth" });
+    });
+</script>-->
+
+
+
+
+<!--{% if page.slug == "about" %}
+<script>
+  $(document).ready(function(){
+    $('#about-illo').hover(
+        function(){$(this).attr("src","/img/global/about-illo-hover.png")},
+        function(){$(this).attr("src","/img/global/about-illo.png")}
+    );
+});
+</script>
+{% endif %}-->
