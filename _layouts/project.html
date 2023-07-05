@@ -2,10 +2,8 @@
 <html>
   {% include header.html %}
   <body>
-    {% include navigation.html %}
+    {% include nav.html %}
   <header class="work">
-
-
       <div class="row wrap half-spacer">
 
         {% if page.wip == true %}
@@ -45,7 +43,7 @@
     </div>
   </header>
   {{ content }}
-  {% include navigation_projects.html %}
+  {% include nav_projects.html %}
   {% include footer.html %}
   </body>
 </html>

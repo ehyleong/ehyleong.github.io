@@ -1233,6 +1233,28 @@ h2.intro {
 		animation: fade-up-delay 1.2s cubic-bezier(0.8, 0, 0.13, 1);
 }
 
+
+// Testimonial
+
+.testimonial-carousel {
+  width: 300px; /* Adjust the width to fit your design */
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.testimonial {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+
+.testimonial.active {
+  display: block;
+}
+
 // Testimonial CHATGPT 2
 /*
 .testimonial-carousel {

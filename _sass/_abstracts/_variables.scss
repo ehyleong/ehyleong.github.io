@@ -46,7 +46,7 @@ $radius-large: 3rem;
 :root {
   --primary-color: #004C4C; /* green */
   --primary-bg-color: #F2F0EA; /* beige */
-  --secondary-color: #F2F0EA; /* orange */
+  --secondary-color: #F2F0EA; /* beige */
   --secondary-bg-color: #012727; /* forest green */
   --logo-color: #004C4C; /* green */
   --callout-bg-color: 219, 119, 4; /* orange */
@@ -160,11 +160,8 @@ $radius-large: 3rem;
 // Debug
 
 .debug {
-  background: blue;
-}
-
-.debug2 {
-  background: red;
+  background: $orange;
+  color: $black;
 }
 
 // Padding Overrides
