@@ -20,8 +20,8 @@
 
 title: Erica Leong • Visual Designer
 email: hello@ericaleong.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Erica Leong is a visual designer based in Vancouver, Canada.
+description: >- 
+  Erica Leong is a visual product designer and illustrator based in Vancouver, Canada. She makes delightful interfaces, illustrations, icons, and brand identities.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ericaleong.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ehyleong
