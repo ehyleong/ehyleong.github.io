@@ -46,17 +46,15 @@
 
 <script>
   const menu = document.querySelector(".mobile-menu");
-  const menuItems = document.querySelectorAll(".menuItem");
+  const menuItems = document.querySelectorAll(".menu-item");
   const hamburger= document.querySelector(".hamburger");
-  const closeIcon= document.querySelector(".closeIcon");
-  const menuIcon = document.querySelector(".menuIcon");
 
   function toggleMenu() {
-    if (menu.classList.contains("showMenu")) {
-      menu.classList.remove("showMenu");
+    if (menu.classList.contains("show-menu")) {
+      menu.classList.remove("show-menu");
     } else {
-      menu.classList.add("showMenu");
-      menuItems.classList.add("showMenu");
+      menu.classList.add("show-menu");
+      menuItems.classList.add("show-menu");
     }
   }
 

@@ -5,9 +5,9 @@ nav:
       - title: "Work"
         href: "/#work"
         class: work
-      - title: "Play"
+      - title: "Blog"
         href: "/blog"
-        class: play
+        class: blog
       - title: "About"
         href: "/about"
         class: about
@@ -21,16 +21,16 @@ mobile-nav:
     items:
       - title: "Work"
         href: "/#work"
-        class: work menuItem   
-      - title: "Play"
+        class: work
+      - title: "Blog"
         href: "/blog"
-        class: play menuItem
+        class: blog
       - title: "About"
         href: "/about"
-        class: about menuItem
+        class: about
       - title: "Contact"
         href: "/contact"
-        class: contact menuItem
+        class: contact
 
 social-links:
   # Social Links
