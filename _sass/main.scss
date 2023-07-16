@@ -574,10 +574,10 @@ header.home {
 	-webkit-mask-image:	
 	linear-gradient(
 		90deg, 
-		rgba(0,0,0,0) 10%, 
-		rgba(0, 0, 0, 1) 20%, 
-		rgba(0, 0, 0, 1) 80%, 
-		rgba(0,0,0,0) 90%,
+		rgba(0,0,0,0) 5%, 
+		rgba(0, 0, 0, 1) 10%, 
+		rgba(0, 0, 0, 1) 90%, 
+		rgba(0,0,0,0) 95%,
 	);
 
 	@include for-size (phone-only) {	
@@ -592,7 +592,7 @@ header.home {
   justify-content: space-around;
   min-width: 100%;
   gap: var(--marquee-gap);
-  animation: scroll 50s linear infinite;
+  animation: scroll 60s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
     animation-play-state: paused !important;
@@ -604,7 +604,7 @@ header.home {
 }
 
 li.marquee-text {
-	font-size: clamp(1.6rem, calc(2.1vw + 1rem), 2rem);
+	font-size: clamp(1rem, calc(1.5vw + 1rem), 2rem);
 	font-weight: 250;
 	color: $beige;
 	margin-block-end: 0;
