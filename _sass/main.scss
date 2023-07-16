@@ -420,7 +420,7 @@ div.desktop-menu {
 
 				&:hover, &:active, &:focus {
 					transform: translatey(-2px);
-					opacity: .5;
+					opacity: .6;
 
 				}
 			}
@@ -592,7 +592,7 @@ header.home {
   justify-content: space-around;
   min-width: 100%;
   gap: var(--marquee-gap);
-  animation: scroll 60s linear infinite;
+  animation: scroll 80s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
     animation-play-state: paused !important;
@@ -1024,7 +1024,7 @@ footer.contact {
 		color: $orange;
 
 		&:hover {
-			opacity: 0.75;
+			opacity: .6;
 		}
 	}
 }
@@ -1044,7 +1044,7 @@ footer.copyright {
     }
 
 		p {
-			opacity: .5;
+			opacity: .4;
 			margin-block-end: 0;
 		}
 
@@ -1075,7 +1075,7 @@ footer.copyright {
 				transition: opacity 150ms ease, transform 150ms ease;
 
 				&:hover {
-					opacity: .5;
+					opacity: .6;
 					transform: translateY(-2px);
 				}
 			}
