@@ -1249,7 +1249,7 @@ form.contact {
 // Dark Mode
 
 
-header, section, section.home-hero-image, nav, section.work, section.blog, .project-nav, footer  {
+nav, header, section, section.home-hero-image, section.work, section.blog, .project-nav  {
 	@media (prefers-color-scheme: dark) {
   		background: $deepgreen;
   		color: $beige;
@@ -1260,7 +1260,7 @@ header, section, section.home-hero-image, nav, section.work, section.blog, .proj
 	}
 }
 
-body, section.home-intro, section.thumbnails, section.testimonials, footer {
+body, section.marquee-container, section.home-intro, section.thumbnails, section.testimonials, footer {
 	@media (prefers-color-scheme: dark) {
   		background: $black;
   	}
