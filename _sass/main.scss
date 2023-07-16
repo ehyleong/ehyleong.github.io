@@ -416,10 +416,12 @@ div.desktop-menu {
 
 			svg {
 				fill: $beige;
-				transition: all 150ms;
+				transition: all 150ms ease;
 
 				&:hover, &:active, &:focus {
-					fill: $orange;
+					transform: translatey(-2px);
+					opacity: .5;
+
 				}
 			}
 		}
@@ -537,6 +539,77 @@ header.home {
 	h1, h2 {
 		text-align: left;
 	}
+}
+
+// 2.2.1 Home Marquee
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--marquee-gap)));
+  }
+}
+
+.marquee-container {
+		border-bottom: rgba($green,0.3) 2px solid;
+}
+
+.marquee {
+  --marquee-gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--marquee-gap);
+  padding: $spacer/2 0;
+	mask-image: 
+	linear-gradient(
+		90deg, 
+		rgba(0,0,0,0) 10%, 
+		rgba(0, 0, 0, 1) 20%, 
+		rgba(0, 0, 0, 1) 80%, 
+		rgba(0,0,0,0) 90%, 
+);
+	-webkit-mask-image:	
+	linear-gradient(
+		90deg, 
+		rgba(0,0,0,0) 10%, 
+		rgba(0, 0, 0, 1) 20%, 
+		rgba(0, 0, 0, 1) 80%, 
+		rgba(0,0,0,0) 90%,
+	);
+
+	@include for-size (phone-only) {	
+		padding: 6% 0;
+	}
+}
+
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--marquee-gap);
+  animation: scroll 50s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-play-state: paused !important;
+	}
+}
+
+.marquee-pause:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+li.marquee-text {
+	font-size: clamp(1.6rem, calc(2.1vw + 1rem), 2rem);
+	font-weight: 250;
+	color: $beige;
+	margin-block-end: 0;
+	letter-spacing: -0.2px;
+	opacity: 0.4;
 }
 
 // 2.3.1 Work
@@ -935,10 +1008,13 @@ p.blog-post-byline {
 // 2.7 Footer
 
 footer {
-	background: $forestgreen;
-	padding-top: $spacer/2;
-	padding-bottom: $spacer/2;
-	color: $beige;
+		background: $forestgreen;
+		color: $beige;
+}
+
+footer.contact {
+	border-bottom: rgba($green,0.3) 2px solid;
+	padding: $spacer/2 0;
 
 	img.icon {
 			padding-right: .5em;
@@ -951,18 +1027,25 @@ footer {
 			opacity: 0.75;
 		}
 	}
+}
 
-	.copyright {
+footer.copyright {
+	.copyright-container {
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
   	gap: $spacer/4;
+  	padding: 4rem 0;
 
     @include for-size(phone-only){
     	flex-direction: column;
+    	text-align: center;
+    	align-items: center;
     }
 
 		p {
-			opacity: .3;
+			opacity: .5;
+			margin-block-end: 0;
 		}
 
 		a.inline-link {
@@ -975,31 +1058,34 @@ footer {
 		}
 	}
 	
-	ul.social-icons {
-		display: flex;
-		flex-direction: row;
-		gap: 1.25rem;
-		font-size: 1em;
+	.social-container {
 
-		svg {
-			fill: $beige;
-		}
+		ul.social-icons {
+			display: flex;
+			flex-direction: row;
+			gap: 1.25rem;
+			font-size: 1em;
 
-		li {
-			transition: opacity 150ms;
+			svg {
+				fill: $beige;
+			}
 
-			&:hover {
-				opacity: .5;
+			li {
+				margin-block-end: 0;
+				transition: opacity 150ms ease, transform 150ms ease;
+
+				&:hover {
+					opacity: .5;
+					transform: translateY(-2px);
+				}
+			}
+
+			img.icon {
+				padding-right: .5em;
 			}
 		}
-
-		img.icon {
-			padding-right: .5em;
-		}
-	
 	}
 }
-
 
 // 2.8 404
 
@@ -1417,6 +1503,12 @@ h2.intro {
 
 .fade-up-delay {
 		animation: fade-up-delay 1.2s cubic-bezier(0.8, 0, 0.13, 1);
+}
+
+h1.intro, h2.intro, .fade-up, .fade-up-delay {
+	@media (prefers-reduced-motion) {
+		animation: none;
+	}
 }
 
 // Testimonial CHATGPT 2
