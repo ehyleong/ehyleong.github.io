@@ -13,22 +13,64 @@ permalink: /contact
   			<p class="bottom-text-spacer fade-up-delay">If you'd like to chat for other reasons, feel free to send me an email at <a href="mailto:{{ site.email }}" class="inline-link external-link"><strong>hello@ericaleong.com.</strong></a></p>
   	</div>
   	<div class="col-lg-6 col-lg-offset-1 col-md-offset-1 col-md-7 col-sm-offset-1 col-sm-7 col-xs-12">
-		<form action="https://submit-form.com/{{ site.formspark_form_id }}" class="contact">
-			<input type="hidden" name="_redirect" value="https://ericaleong.com/thanks" />
-			<input type="hidden" name="_append" value="false" />
-			<label for="name">Name</label>
-			<input type="text" id="name" name="name" placeholder="Full Name" required="" />
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email" placeholder="Email" required="" />
-			<label for="message">Message</label>
+		<form 
+			id="form"
+			action="https://submit-form.com/{{ site.formspark_form_id }}" 
+		  data-botpoison-public-key="{{ site.botpoison_public_key }}"
+			class="contact"
+			>
+			<input 
+				type="hidden" 
+				name="_redirect" 
+				value="https://ericaleong.com/thanks" 
+			/>
+			<input 
+				type="hidden" 
+				name="_append" 
+				value="false" 
+			/>
+			<label for="name">Name*</label>
+			<input 
+				type="text" 
+				id="name" 
+				name="name" 
+				placeholder="Full Name" 
+				required="" 
+				/>
+			<label for="email">Email*</label>
+			<input 
+				type="email" 
+				id="email" 
+				name="email" 
+				placeholder="Email Address" 
+				required="" 
+				/>
+			<label for="message">Message*</label>
 			<textarea
 				id="message"
 				name="message"
 				placeholder="Describe your project in full, glorious detail – such as scope, budget, and timeline."
 				required=""
 			></textarea>
-			<button type="submit" class="button">Submit Inquiry</button>
+			<button 
+				id="button"
+				type="submit" 
+				class="button"
+			>Submit Inquiry</button>
 		</form>
+		<script>
+		  var formElement = document.getElementById("form");
+		  var buttonElement = document.getElementById("button");
+		  formElement.addEventListener("botpoison-challenge-start", function () {
+		    buttonElement.setAttribute("disabled", "disabled");
+		  });
+		  formElement.addEventListener("botpoison-challenge-success", function () {
+		    buttonElement.removeAttribute("disabled");
+		  });
+		  formElement.addEventListener("botpoison-challenge-error", function () {
+		    buttonElement.removeAttribute("disabled");
+		  });
+		</script>
 	</div>
 	<img src="/img/global/illo-contact.svg" class="contact-img">
 </div>
