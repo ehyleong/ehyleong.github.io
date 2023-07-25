@@ -1259,6 +1259,39 @@ form.contact {
 	}
 }
 
+// BotPoison
+
+/* CSS for the loading indicator */
+
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.spinner {
+  border: 3px solid rgba($green, .2); /* You can adjust the spinner color */
+  border-top: 3px solid $green; /* You can adjust the spinner color */
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
 // Dark Mode
 
 

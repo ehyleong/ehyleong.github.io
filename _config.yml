@@ -42,6 +42,7 @@ collections:
     permalink: /blog/:year/:month/:title
 
 formspark_form_id: ZfOeuDrT
+botpoison_public_key: pk_ea64f2e1-21d2-4f5f-8249-a4fe64d974de
 
 # Exclude from processing.
 # The following items will not be processed, by default.
