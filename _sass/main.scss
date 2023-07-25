@@ -646,7 +646,7 @@ header.home {
 }
 
 li.marquee-text {
-	font-size: clamp(1rem, calc(1.1vw + 1rem), 2rem);
+	font-size: clamp(1.1rem, calc(2vw + .5rem), 2rem);
 	font-weight: 250;
 	color: $beige;
 	margin-block-end: 0;
@@ -802,7 +802,7 @@ section.testimonials {
 
 		h3.testimonial-text {
 			max-width: 60ch;
-			font-size: clamp(1rem, calc(1.1vw + 1rem), 2rem);
+			font-size: clamp(1.1rem, calc(2vw + .5rem), 2rem);
 	  	font-weight: 250;
 		  line-height: 1.3em;
 		}
