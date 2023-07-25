@@ -56,21 +56,12 @@ permalink: /contact
 				id="button"
 				type="submit" 
 				class="button"
-			>Submit Inquiry</button>
+			><span id="submit">Submit Inquiry</span>			
+			<div id="loading-indicator" class="loading-indicator hidden">
+    		<div class="spinner"></div>
+  		</div></button>
+
 		</form>
-		<script>
-		  var formElement = document.getElementById("form");
-		  var buttonElement = document.getElementById("button");
-		  formElement.addEventListener("botpoison-challenge-start", function () {
-		    buttonElement.setAttribute("disabled", "disabled");
-		  });
-		  formElement.addEventListener("botpoison-challenge-success", function () {
-		    buttonElement.removeAttribute("disabled");
-		  });
-		  formElement.addEventListener("botpoison-challenge-error", function () {
-		    buttonElement.removeAttribute("disabled");
-		  });
-		</script>
 	</div>
 	<img src="/img/global/illo-contact.svg" class="contact-img">
 </div>
