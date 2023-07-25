@@ -68,7 +68,6 @@
 
 </script>
 
-
 <script>
     var didScroll;
     var lastScrollTop = 0;
@@ -107,31 +106,6 @@
         
         lastScrollTop = st;
     }
-</script>
-
-<script>
-    const carousel = document.querySelector(".testimonial-carousel");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-
-    let scrollPos = 0;
-    const scrollStep = carousel.offsetWidth;
-
-    prevBtn.addEventListener("click", () => {
-      scrollPos = Math.max(scrollPos - scrollStep, 0);
-      carousel.scroll({ left: scrollPos, behavior: "smooth" });
-    });
-
-    nextBtn.addEventListener("click", () => {
-      scrollPos = Math.min(scrollPos + scrollStep, carousel.scrollWidth - carousel.offsetWidth);
-      carousel.scroll({ left: scrollPos, behavior: "smooth" });
-    });
-</script>
-
-<script>
-  $(document).ready(function(){
-  $('.owl-carousel').owlCarousel();
-});
 </script>
 
 <!--{% if page.slug == "about" %}
