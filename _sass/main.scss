@@ -772,7 +772,7 @@ section.testimonials {
 		border-radius: 1rem;
 		min-height: 32rem;
 		text-align: left;
-		width: 80%;
+		width: 70%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -794,11 +794,15 @@ section.testimonials {
 		}
 
 		@include for-size(big-desktop-up) {
-			width: 50%;
+			width: 60%;
+			padding: 7rem;
+			align-items: center;
 		}
 
-		.testimonial-text {
-			max-width: 50ch;
+		h3.testimonial-text {
+			max-width: 60ch;
+		  font-size: clamp(1rem, calc(1vw + 1rem), 2rem);
+		  line-height: 1.3em;
 		}
 
 	}
