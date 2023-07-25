@@ -1275,11 +1275,11 @@ form.contact {
 }
 
 .spinner {
-  border: 4px solid rgba($green, .2); /* You can adjust the spinner color */
-  border-top: 4px solid $green; /* You can adjust the spinner color */
+  border: 3px solid rgba($green, .2); /* You can adjust the spinner color */
+  border-top: 3px solid $green; /* You can adjust the spinner color */
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 1.5rem;
+  height: 1.5rem;
   animation: spin 1s ease infinite;
 }
 
