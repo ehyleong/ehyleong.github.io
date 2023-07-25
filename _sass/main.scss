@@ -756,7 +756,8 @@ section.thumbnails {
 // 2.3.2 Testimonials
 
 section.testimonials {
-	margin: $spacer 0;
+	margin-top: $spacer/2;
+	margin-bottom: $spacer;
 	width: 100%;
 
 	button.button-testimonial {
