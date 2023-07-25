@@ -8,8 +8,8 @@
       {% for testimonial in site.data.testimonials %}
       {% assign count = forloop.length %}
     <div class="carousel-cell testimonial-card">
-      <h3 class="beige testimonial-quote">"{{ testimonial[1].quote }}"</h3>
-      <h5 class="testimonial-author">— {{ testimonial[1].name }}</h5>
+        <h3 class="beige testimonial-text">"{{ testimonial[1].quote }}"</h3>
+        <h5>— {{ testimonial[1].name }}</h5>
     </div>
       {% endfor %}
   </div>
