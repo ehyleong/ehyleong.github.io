@@ -132,6 +132,26 @@ span.category-label {
 	color: $orange; 
 }
 
+span.available-label {
+	background: rgba($orange,.15);
+	padding: .5em 1em;
+	border-radius: 24px;
+	display: inline-block;
+	transform-origin: bottom left;
+	transition: all 150ms ease;
+
+		&:hover {
+			transform: translateY(-3px);
+			opacity: .75;
+		}
+
+	svg {
+		fill: $orange;
+		margin-right: .75em;
+	}
+}
+
+
 span.lottie {
 	display: inline-block;
 	height: 1em;
@@ -139,7 +159,6 @@ span.lottie {
 	margin-left: 0.1em;
 	vertical-align: text-bottom;
 }
-
 
 .button {
 	font-family: "NaNJaune-Midi-Var", sans-serif;
@@ -445,7 +464,7 @@ nav {
 				transition: all 150ms ease;
 
 				&:hover, &:active, &:focus {
-					transform: translatey(-2px);
+					transform: translateY(-2px);
 					opacity: .6;
 
 				}
@@ -559,15 +578,15 @@ header.home {
 
 	@include for-size(phone-only) {    
 		padding-top: $spacer/2;
-		min-height: 33rem; 
+		min-height: 34rem; 
 	}
 
 	@include for-size(tablet-portrait-up) {
-		min-height: 43rem;
+		min-height: 44rem;
 	}
 	
 	@include for-size(desktop-up) {
-		min-height: 53rem;
+		min-height: 54rem;
 	}
 
 	.hero-img {

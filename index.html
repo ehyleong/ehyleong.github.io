@@ -3,10 +3,18 @@ layout: home
 title: Visual Designer
 slug: home
 permalink: /
+cta: Open for freelance
+available: true
+
 ---
 
-<header class="home spacer bottom-spacer">
+<header class="home {% if page.available == true %}half-spacer{% else %}spacer{% endif %} bottom-spacer">
   <div class="wrap row">
+    {% if page.available == true %}<div class="col-xs-12">
+      <h5><a href="/contact"><span class="available-label"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+      <rect y="0" width="8" height="8" rx="4"/>
+  </svg>{{ page.cta }}</span></a></h5>
+</div>{% endif %}
     <div class="col-xs-12">
       <h1 class="intro">Erica Leong makes delightful 
         <span class="orange">
