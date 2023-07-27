@@ -1050,34 +1050,23 @@ header.work {
 .button-project {
 		display: block;
 		vertical-align: middle;
-   	box-shadow: 0 0px 0 rgba($green, .2);
+   	box-shadow: 0 0px 0 rgba(var(--primary-button-color), .2);
     border-radius: 2rem;
     padding: 2.5em 3em 2em;
     min-height: 12rem;
 
     h5 {
-    	color: $green;
+    	color: var(--primary-button-text);
     }
 
     &:hover {
-	   	box-shadow: 0 6px 0 rgba($green, 1);
+	   	box-shadow: 0 6px 0 rgba(var(--primary-button-color), 1);
     }
 
     @include for-size(phone-only){
     	min-height: 10rem;
     }
 
-	@media (prefers-color-scheme: dark) {
-	   	box-shadow: 0 0px 0 rgba($beige, .2);
-
- 	    &:hover {
-	   		box-shadow: 0 6px 0 rgba($beige, .8);
-    	}
-
-    	h5 {
-    		color: $beige;
-    	}
-	}
     &:active{
     	box-shadow: none;
     	transform: translateY(6px);
