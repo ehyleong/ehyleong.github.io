@@ -228,12 +228,8 @@ span.lottie {
 
 svg.button-icon {
 		height: .8em;
-		fill: $green;
+		fill: var(--primary-color);
 		margin-right: 8px;
-		
-		@media (prefers-color-scheme: dark) {
-			fill: $beige;
-		}
 	}
 
 
@@ -306,10 +302,7 @@ nav {
 // Logo in Desktop Menu
 
 	svg {
-		fill: $green;
-			@media (prefers-color-scheme: dark) {
-				fill: $orange;
-		}
+		fill: var(--logo-color);
 	}
 
 	  path.erica, polygon.erica {
