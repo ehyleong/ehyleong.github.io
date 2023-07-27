@@ -851,10 +851,20 @@ section.testimonials {
 
 .flickity-prev-next-button.previous {
 	left: 20px;
+	transition: left 150ms ease;
+
+	&:hover {
+		left: 17px;
+	}
 }
 
 .flickity-prev-next-button.next {
 	right: 20px;
+	transition: right 150ms ease;
+
+	&:hover {
+		right: 17px;
+	}
 }
 
 /* icon color */
