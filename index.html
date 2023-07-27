@@ -3,10 +3,18 @@ layout: home
 title: Visual Designer
 slug: home
 permalink: /
+cta: Open for freelance
+available: true
+
 ---
 
-<header class="home spacer bottom-spacer">
+<header class="home {% if page.available == true %}half-spacer{% else %}spacer{% endif %} bottom-spacer">
   <div class="wrap row">
+    {% if page.available == true %}<div class="col-xs-12 fade-up">
+      <h5><a href="/contact"><span class="available-label"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+      <rect y="0" width="8" height="8" rx="4"/>
+  </svg>{{ page.cta }}</span></a></h5>
+</div>{% endif %}
     <div class="col-xs-12">
       <h1 class="intro">Erica Leong makes delightful 
         <span class="orange">
@@ -61,24 +69,25 @@ permalink: /
   </ul>
 </div>
 </section>
-<main class="wrap row">
+<main class="wrap row bottom-spacer">
   {% include thumbnails.html %}
-
 </main>
-<section class="wrap row home-intro spacer">
-</section>
 <section class="wrap row home-intro half-spacer">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-gutter-lr">
-      <h5>In a Nutshell</h5>
+  <div class="col-gutter-lr col-lg-3 col-md-3 col-sm-12">
+    <h5 class="bottom-text-spacer">In a Nutshell</h5>
+  </div>
+    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 col-gutter-lr">
+      <h3 class="darkbeige bottom-text-spacer">I make delightful product and brand experiences. Currently, I design nice mobile apps for all sorts of growing companies at <a href="#" class="inline-link">Steamclock Software.</a></h3>
     </div>
-    <div class="col-lg-6 col-md-9 col-sm-9 col-xs-12 col-gutter-lr">
-      <h3 class="beige">I make delightful product and brand experiences for kind folks who care about the details.</h3>
- <p class="beige">
-        Currently, I design nice mobile apps for all sorts of growing companies at <a href="#" class="inline-link external-link"><strong>Steamclock Software.</strong></a>
-      </p>
-      <p class="beige">My work is driven by good ol' curiosity and communication: I use the power of inquiry to find out what clients and users need, and iterate on solutions til we're ready to ship.<!--My work is informed by healthy curiosity and communication. I like to build a solid understanding of client and user needs, while also sweating the details to ensure things are designed and built well too.--></p>
-      <p class="beige bottom-text-spacer">In my free time, I enjoy playing boardgames with my partner, learning new skills, dabbling in code, and drawing silly & weird stuff for my upcoming shop – stay tuned!
- </p>
-       <a href="{% link about.html %}" class="button button-bio icon-right-arrow">Read All About Me</span></a>
-     </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-9 col-md-offset-3 col-gutter-lr">
+      <p class="darkbeige">My work is driven by good ol' curiosity and communication: I use the power of inquiry to find out what clients and users need, and iterate on solutions til we're ready to ship.</p>
+      <p class="darkbeige bottom-text-spacer">In my free time, I enjoy playing boardgames with my partner, learning new skills, dabbling in code, and drawing silly & weird stuff for my upcoming shop – stay tuned!</p>
+     <a href="{% link about.html %}" class="button button-bio icon-right-arrow">Read All About Me</span></a>
+    </div>
+  </div>
+ </div>
 </section>
+ {% include testimonials.html %}
+

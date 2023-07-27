@@ -1,11 +1,3 @@
-two-spies:
-  name: Two Spies
-  url: work/two-spies
-  client: Steamclock Software
-  role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
-  summary: A turn-based spy strategy game for iOS.
-  img: ../img/thumbnails/spies.webp
-
 sybama:
   name: Should You Build a Mobile App?
   url: work/sybama
@@ -29,3 +21,11 @@ steamclock-swag:
   role: Art Direction, Illustration, Print
   summary: A collection of custom illustrated company keepsakes.
   img: ../img/thumbnails/steamclockswag.webp
+
+two-spies:
+  name: Two Spies
+  url: work/two-spies
+  client: Steamclock Software
+  role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
+  summary: A turn-based spy strategy game for iOS.
+  img: ../img/thumbnails/spies.webp
