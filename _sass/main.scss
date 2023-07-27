@@ -559,7 +559,7 @@ header.home {
 
 	@include for-size(phone-only) {    
 		padding-top: $spacer/2;
-		min-height: 34rem; 
+		min-height: 35rem; 
 	}
 
 	@include for-size(tablet-portrait-up) {
