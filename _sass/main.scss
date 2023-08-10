@@ -758,8 +758,8 @@ section.thumbnails {
 // 2.3.2 Testimonials
 
 section.testimonials {
-	margin-top: $spacer/2;
-	margin-bottom: $spacer;
+	margin-top: $spacer/4;
+	margin-bottom: $spacer/2;
 	width: 100%;
 
 	.testimonial-card {
@@ -861,7 +861,7 @@ section.testimonials {
   fill: $beige;
 
   path {
-    d: path('M48 5H37.2597C37.2597 25.1225 23.5717 38.4344 6 44.9307V55.0693C23.5717 61.5656 37.2597 74.8775 37.2597 95H48C48 79.1801 38.7027 64.5916 26.2418 55H93V45H26.2418C38.7027 35.4084 48 20.8199 48 5Z');
+    d: path('M48 5H37.2597C37.2597 25.1225 23.5717 38.4344 6 44.9307V55.0693C23.5717 61.5656 37.2597 74.8775 37.2597 95H48C48 79.1801 38.7027 64.5916 26.2418 55H93V45H26.2418C38.7027 35.4084 48 20.8199 48 5Z'); 
   }
 }
 
@@ -890,33 +890,6 @@ section.testimonials {
 
 // 2.4 About
 
-
-@keyframes wiggle {
-		0%,100% {
-			transform: translateX(0%);
-			transform-origin: 50% 50%;
-		}
-
-		15% {
-			transform: translateX(-15px) rotate(-5deg);
-		}
-
-		30% {
-			transform: translateX(15px) rotate(6deg);
-		}
-
-		45% {
-			transform: translateX(-10px) rotate(-2.6deg);
-		}
-
-		60% {
-			transform: translateX(6px) rotate(1.4deg);
-		}
-
-		75% {
-			transform: translateX(-6px) rotate(-1.2deg);
-		}
-	}
 
 @keyframes slight-wiggle {
 	0%,100% {
@@ -965,9 +938,10 @@ header.about {
 		animation: 
 			fade-in .5s ease 0s 1,
 			slide-in .3s ease 0s 1,
-			wiggle 1.2s ease .3s 1 normal forwards;
+			slight-wiggle .8s ease .3s 1 normal forwards;
 
 		img {
+			max-height: 550px;
 
 			&:hover {
 					animation: slight-wiggle .8s ease;
@@ -1150,8 +1124,12 @@ p.blog-post-byline {
 
 footer.contact {
 	border-bottom: rgba($green,0.3) 2px solid;
-	padding: $spacer/2 0;
 	text-align: center;
+	padding: 8rem 0;
+
+	@include for-size(phone-only) {
+		padding: 5rem 0;
+	}
 
 	img.icon {
 			padding-right: .5em;
@@ -1412,7 +1390,7 @@ form.contact {
 
 img {
 	@media (prefers-color-scheme: dark) {
-		opacity: .85;
+		opacity: .95;
 	}
 }
 
