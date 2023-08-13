@@ -2,7 +2,7 @@
 
 <footer class="contact">
   <div class="wrap row">
-    <div class="col-lg-12 col-xs-12">
+    <div class="col-lg-12 col-xs-12 scrolled">
       <h5>Wanna chat?</h5>
         <h1>Say <a href="{% link contact.html %}">hello.</a><span class="lottie"><lottie-player src="/img/global/emoji_wave.json" speed="1" loop autoplay></lottie-player></span></h1>
   </div>
@@ -130,6 +130,30 @@
     buttonElement.removeAttribute("disabled");
     loadingIndicator.classList.add("hidden");
   });
+</script>
+
+<script type="text/javascript">
+    $(window).scroll(function(){
+        // Detect scroll
+        function elementScrolled(elem)
+        {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top;
+            return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+        }
+        
+        // Trigger animation
+        if(elementScrolled('.scrolled')) {
+            var els = $('.scrolled'),
+                i = 0,
+                f = function () {
+                    $(els[i++]).addClass('fade-up');
+                    if(i < els.length) setTimeout(f, 800);
+                };
+            f();
+        }
+    });
 </script>
 
 <!--{% if page.slug == "about" %}

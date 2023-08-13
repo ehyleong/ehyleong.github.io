@@ -12,9 +12,9 @@
 	        {% if page.image %}
         		<img src="{{ page.image }}" class="rounded">
         	{% endif %}	
-			<h2 class="fade-up {% if page.image %} half-spacer{% endif %}">{{ page.title }}</h2>
-			<p class="blog-post-byline large bottom-text-spacer">{{ page.byline }}</p>
-          	<h5 class="bottom-half-spacer"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
+			<h2 class="intro {% if page.image %} half-spacer{% endif %}">{{ page.title }}</h2>
+			<p class="fade-up blog-post-byline large bottom-text-spacer">{{ page.byline }}</p>
+          	<h5 class="fade-up-delay bottom-half-spacer"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
 			{{ content }}
 
 			</div>
