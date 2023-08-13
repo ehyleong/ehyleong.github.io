@@ -1404,10 +1404,6 @@ img {
 		opacity: 0
 	}
 
-	5% {
-		opacity: 0;
-	}
-
 	100% {
 		font-weight: 750;
 		opacity: 1;
@@ -1468,23 +1464,23 @@ img {
 
 
 h1.intro {
-	animation: fade-up .9s cubic-bezier(0.7, 0, 0.13, 1); 
+	animation: fade-up 1s cubic-bezier(0.7, 0, 0.13, 1); 
 }
 
 h2.intro {
-	animation: fade-up .9s cubic-bezier(0.7, 0, 0.13, 1); 
+	animation: fade-up 1s cubic-bezier(0.7, 0, 0.13, 1); 
 }
 
 .fade-down {
-	animation: fade-down 1s cubic-bezier(0.7, 0, 0.13, 1);
+	animation: fade-down 1.1s cubic-bezier(0.7, 0, 0.13, 1);
 }
 
 .fade-up {
-	animation: fade-up 1s cubic-bezier(0.7, 0, 0.13, 1);
+	animation: fade-up 1.1s cubic-bezier(0.7, 0, 0.13, 1);
 }
 
 .fade-up-delay {
-		animation: fade-up-delay 1.1s cubic-bezier(0.7, 0, 0.13, 1);
+		animation: fade-up-delay 1.2s cubic-bezier(0.7, 0, 0.13, 1);
 }
 
 h1.intro, h2.intro, .fade-up, .fade-up-delay {
