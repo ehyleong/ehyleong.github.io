@@ -20,7 +20,7 @@
   font-display: swap;
 }
 
-h1, h2, h3, h4, h5, li, label {
+h1, h2, h3, h4, h5, li.desktop-nav, li.marquee-text, label {
   font-family: "NaNJaune-Midi-Var", sans-serif;
   -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
@@ -80,9 +80,6 @@ li.marquee-text, h3.testimonial-text {
   font-weight: 250;
   line-height: 1.3em;
   letter-spacing: -0.02em;
-  -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
-  -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
-  font-feature-settings: 'ss03' on;     /* low-level (all new browsers) */
 }
 
 ul, li, p, small {
