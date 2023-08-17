@@ -9,23 +9,22 @@
 				<a href="{% link blog.html %}" class="button button-small blog-post-back icon-left-arrow">Back</a>
 			</div>
 			<div class="col-lg-6 col-md-7 col-xs-12">
+			<h2 class="intro ">{{ page.title }}</h2>
+			<p class="fade-up blog-post-byline large bottom-text-spacer">{{ page.byline }}</p>
+          	<h5 class="fade-up-delay{% if page.image %} bottom-half-spacer{% endif %}"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
 	        {% if page.image %}
         		<img src="{{ page.image }}" class="rounded">
         	{% endif %}	
-			<h2 class="intro {% if page.image %} half-spacer{% endif %}">{{ page.title }}</h2>
-			<p class="fade-up blog-post-byline large bottom-text-spacer">{{ page.byline }}</p>
-          	<h5 class="fade-up-delay bottom-half-spacer"><span class="category-label">{{ page.category }}</span>{{ page.date | date_to_string: "ordinal", "US" }}</h5>
-			{{ content }}
-
 			</div>
 		</div>
 	</header>
 
 	<section class="blog bottom-spacer">
-		<div class="row wrap">
-			<div class="col-lg-7 col-xs-12">	
-			</div>
+	<div class="row wrap">
+		<div class="col-lg-6 col-lg-offset-3 col-md-7 col-md-offset-3 col-xs-12">
+			{{ content }}
 		</div>
+	</div>
 	</section>
 
 	{% include navigation_posts.html %}

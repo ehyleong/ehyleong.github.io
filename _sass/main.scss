@@ -627,7 +627,6 @@ header.home {
 	}
 }
 
-
 .marquee-content {
   flex-shrink: 0;
   display: flex;
@@ -1075,9 +1074,32 @@ div.in-progress {
 // 2.6 Blog
 
 section.blog {
-	h4 {
-		font-weight: 500;
+
+	h1, h2, h3, h4, h5, p, blockquote {
+		margin-block-start: 1em;
+		color: var(--primary-color);
 	}
+
+	h4 {
+		font-weight: 450;
+	}
+
+	ul, li {
+	  font-family: "NaNHolo-Regular", sans-serif;
+    letter-spacing: 0;
+    margin-block: 0;
+	}
+
+	ul {
+		margin-left: 1.2rem;
+    list-style-type: disc;
+	}
+
+	ol {
+		margin-left: 1.2rem;
+		list-style-type: lower-roman;
+	}
+
 }
 
 .blog-post-back {

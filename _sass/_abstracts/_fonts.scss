@@ -53,7 +53,7 @@ h4 {
   font-weight: 340;
   font-size: clamp(1.2rem, calc(1.5vw + .5rem), 1.4rem);
   line-height: 1.4em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
 }
 
 h5, label {
@@ -66,15 +66,26 @@ h5, label {
   margin-top: .5rem;
 }
 
-li, .button {
+li.desktop-nav, .button {
+  font-family: "NaNJaune-Midi-Var", sans-serif;
   font-weight: 330;
   font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
   line-height: 1.4em;
   letter-spacing: 0.5px;
 }
 
+li.marquee-text, h3.testimonial-text {
+  font-family: "NaNJaune-Midi-Var", sans-serif;
+  font-size: clamp(1.25rem, calc(0.99rem + 1.30vw), 2.00rem);
+  font-weight: 250;
+  line-height: 1.3em;
+  letter-spacing: -0.02em;
+  -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
+  -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
+  font-feature-settings: 'ss03' on;     /* low-level (all new browsers) */
+}
 
-p, small {
+ul, li, p, small {
   font-family: "NaNHolo-Regular", sans-serif;
   -moz-font-feature-settings: 'ss02';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss02';   /* low-level (old Webkit)       */
@@ -82,10 +93,13 @@ p, small {
 }
 
 p {
+  max-width: 55ch;
+}
+
+li, p {
   font-size: clamp(1.1rem, calc(1.1vw + .2rem), 1.3rem);
   line-height: 1.4em;
   margin-block-end: 1rem;
-
 }
 
 p.large{
@@ -102,11 +116,14 @@ strong {
   font-family: "NaNHolo-Bold", sans-serif;  
 }
 
-li.marquee-text, h3.testimonial-text {
-  font-size: clamp(1.25rem, calc(0.99rem + 1.30vw), 2.00rem);
-  font-weight: 250;
-  line-height: 1.3em;
-  letter-spacing: -0.02em;
+blockquote {
+    border-left: 6px solid rgba($orange,.2);
+    padding: 0 1rem;
+
+    &:before {
+      color: $orange;
+      content: "";
+    }
 }
 
 // Links

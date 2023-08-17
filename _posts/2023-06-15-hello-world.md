@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello, World.
-byline: After a million years, I've finally made a portfolio.
+byline: And on this day, this website was born.
 category: Personal
 ---
 
@@ -11,4 +11,4 @@ This digital baby is <strong>still a work-in-progress</strong> (as with 99% of d
 
 It still remains to be seen what I end up doing with this blog section, but I hope to use it as a space to share things like: candid thoughts, neat finds, peeks into my process, and work that's more rough around the edges or not large enough to be its own full-blown case study. That's the dream anyway. 
 
-If there's anything in particular you'd like to see, or you'd like to offer some notes of feedback, feel free to slide into my DMs on our favourite hellsite <a href="https://twitter.com/ehyleong" class="inline-link" target="blank">Twitter</a>, <a href="https://https://mastodon.cloud/@ehyleong/" class="inline-link" target="blank">Mastodon</a>, or <a href="mailto:{{ site.email }}" class="inline-link">e-mail</a>. In the meantime: stay tuned! Toodles.
+If there's anything in particular you'd like to see, or you'd like to offer some notes of feedback, feel free to slide into my DMs on our favourite hellsite <a href="https://twitter.com/ehyleong" class="inline-link" target="blank">Twitter</a>, our less controversial elephant <a href="https://https://mastodon.cloud/@ehyleong/" class="inline-link" target="blank">Mastodon</a>, or regular <a href="mailto:{{ site.email }}" class="inline-link">e-mail</a>. In the meantime: stay tuned! And thanks again for reading.
