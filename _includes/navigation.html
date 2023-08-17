@@ -34,7 +34,7 @@
   {% for category in site.data.nav.nav limit:1 %}
     <ul>
       {% for item in category.items %}
-      <li class="desktop-nav"><a href="{{ item.href }}"{% if page.url contains item.href %} class="current{% if item.class %} {{ item.class }}{%endif %}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</a></li> 
+      <li class="nav"><a href="{{ item.href }}"{% if page.url contains item.href %} class="current{% if item.class %} {{ item.class }}{%endif %}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</a></li> 
       {% endfor %}
     </ul>
   {% endfor %}
@@ -67,7 +67,7 @@
   {% for category in site.data.nav.mobile-nav limit:1 %}
     <ul class="mobile-menu-links">
       {% for item in category.items %}
-      <li><a href="{{ item.href }}"{% if item.class %} class="{{ item.class }} menu-item mobile-menu-link"{% endif %}>{{ item.title }}</a></li> 
+      <li class="nav"><a href="{{ item.href }}"{% if item.class %} class="{{ item.class }} menu-item mobile-menu-link"{% endif %}>{{ item.title }}</a></li> 
       {% endfor %}
     </ul>
   {% endfor %}

@@ -20,7 +20,7 @@
   font-display: swap;
 }
 
-h1, h2, h3, h4, h5, li.desktop-nav, li.marquee-text, label {
+h1, h2, h3, h4, h5, li.nav, li.marquee-text, label {
   font-family: "NaNJaune-Midi-Var", sans-serif;
   -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
@@ -66,7 +66,7 @@ h5, label {
   margin-top: .5rem;
 }
 
-li.desktop-nav, .button {
+li.nav, .button {
   font-family: "NaNJaune-Midi-Var", sans-serif;
   font-weight: 330;
   font-size: clamp(1rem, calc(1vw + .5rem), 1.2rem);
