@@ -64,7 +64,11 @@ body {
 	@include for-size(phone-only) {
 		border: 0;
 	}
+}
 
+::selection {
+	background: rgba($orange, .1);
+	color: rgba($orange, 1);
 }
 
 header.home, header.about, header.contact, header.fourohfour, header.blog, .project-nav, header.holding, header.home-alt {
@@ -1414,7 +1418,7 @@ img {
 // TypeIt Cursor
 
 :root {
-	--ti-cursor-font-size:   font-size: clamp(2.4rem, 6vw, 8rem);
+	--ti-cursor-font-size: font-size: clamp(2.4rem, 6vw, 8rem);
 	--ti-cursor-line-height: 1em;
 }
 
