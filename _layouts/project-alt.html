@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  {% include header.html %}
+  <body>
+    {% include navigation.html %}
+  <header class="work">
+      <div class="row wrap half-spacer">
+        <div class="col-xs-12">
+          {% if page.wip == true %}
+          <div class="bottom-half-spacer">
+            <div class="in-progress fade-down"><span class="callout-label">heads up</span><h5>This case study is still in progress. Stay tuned!</h5>
+            </div>
+          </div>
+          {% endif %}
+          <h5 class="fade-down">{{ page.client }}</h5>
+        </div>
+      </div>
+
+      <div class="row wrap bottom-half-spacer">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h2 class="intro">{{ page.title }}</h2>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-12">
+          <h3 class="orange bottom-text-spacer fade-up">{{ page.intro }}</h3>
+         {% if page.link %}
+            {% for link in page.link %}
+            <h4 class="fade-up"><a href="{{ link.href }}" class="project-link external-link" target="_blank">{{ link.text }}</a></h4>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+       {% if page.hero %}
+        {% for hero in page.hero %}
+        <div class="row wrap">
+          <div class="col-xs-12 fade-up-delay">
+            <picture>
+              <source srcset="{{ hero.desktop }}" media="(min-width: 64rem)" loading="eager"/>
+              <img src="{{ hero.mobile }}" loading="eager"/>
+            </picture>
+          </div>
+         </div>
+         {% endfor %}
+        {% endif %}
+
+        <div class="row wrap half-spacer bottom-half-spacer">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5 class="bottom-text-spacer">Summary</h5>
+            <p>{{ page.byline }}</p>
+          </div>
+          <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+            <h5 class="bottom-text-spacer">Role</h5>
+            <p>{{ page.role }}</p>
+          </div>
+          <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+            <h5 class="bottom-text-spacer">Role</h5>
+            <p>{{ page.role }}</p>
+          </div>
+        </div>
+
+  </header>
+  {{ content }}
+  {% include navigation_projects.html %}
+  {% include footer.html %}
+  </body>
+</html>
