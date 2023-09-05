@@ -11,4 +11,4 @@ window.addEventListener('scroll', () => {
     } else {
         navigation.style.bottom = '-80px';
     }
-});
+}, { passive: true }); // Adding { passive: true } to the event listener options
