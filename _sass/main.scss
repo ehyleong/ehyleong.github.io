@@ -29,6 +29,7 @@
 	  --secondary-button-color: 250, 248, 241;
 	  --secondary-button-text: #F2F0EA;
 	  --form-input-color: 0, 76, 76;
+	  --toast-bg-color: #FCFAF3;
 	}
 }
 
@@ -47,6 +48,7 @@
 	  --secondary-button-color: 236, 232, 220;
 	  --secondary-button-text: #ECE8DC;
 	  --form-input-color: 236, 232, 220;
+	  --toast-bg-color: #012727;
 	}
 }
 
@@ -1111,10 +1113,10 @@ div.in-progress {
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    background-color: var(--primary-bg-color);
+    background-color: var(--toast-bg-color);
     border-radius: 3rem;
     box-shadow: 0px 4px 16px 0px rgba(var(--callout-bg-color), .2);
-    border: 1px solid rgba(var(--callout-bg-color), 0.2);
+    border: 1px solid rgba(var(--callout-bg-color), .3);
     transition: bottom 300ms cubic-bezier(0.5, 0, 0.13, 1);
     z-index: 20;
     padding: 4px;
@@ -1124,7 +1126,7 @@ div.in-progress {
 	    display: flex;
 	    justify-content: space-around;
 	    gap: 2px;
-	    padding: 12px 4px;
+	    padding: .7rem .25rem;
 	    margin: 0;
     }
 
@@ -1134,12 +1136,12 @@ div.in-progress {
     }
 
     a {
-    	padding: 12px;
+    	padding: .7rem;
 	    color: $orange;
     }
 
     a:active, a:hover {
-    	color: $beige;
+    	color: var(--primary-bg-color);
     	background-color: $orange;
     	border-radius: 3rem;
     }
