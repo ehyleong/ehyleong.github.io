@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   {% include header.html %}
-  <body>
+  <body id="main-content">
     {% include navigation.html %}
   <header class="work">
       <div class="row wrap half-spacer">
@@ -15,12 +15,11 @@
           <h5 class="fade-down">{{ page.client }}</h5>
         </div>
       </div>
-
       <div class="row wrap bottom-half-spacer">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <h2 class="intro">{{ page.title }}</h2>
         </div>
-        <div class="col-lg-5 col-lg-offset-1 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-12">
+        <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-6 col-xs-12">
           <h3 class="orange bottom-text-spacer fade-up">{{ page.intro }}</h3>
          {% if page.link %}
             {% for link in page.link %}
@@ -35,7 +34,7 @@
         <div class="row wrap">
           <div class="col-xs-12 fade-up-delay">
             <picture>
-              <source srcset="{{ hero.desktop }}" media="(min-width: 64rem)" loading="eager"/>
+              <source srcset="{{ hero.desktop }}" media="(min-width: 48rem)" loading="eager"/>
               <img src="{{ hero.mobile }}" loading="eager"/>
             </picture>
           </div>
@@ -48,19 +47,23 @@
             <h5 class="bottom-text-spacer">Summary</h5>
             <p>{{ page.byline }}</p>
           </div>
-          <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+          <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-6 col-xs-4">
             <h5 class="bottom-text-spacer">Role</h5>
-            <p>{{ page.role }}</p>
+            <ul class="meta">{{ page.role }}</ul>
           </div>
-          <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
-            <h5 class="bottom-text-spacer">Role</h5>
-            <p>{{ page.role }}</p>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <h5 class="bottom-text-spacer">Year</h5>
+            <ul class="meta bottom-text-spacer"><li>{{ page.year }}</li></ul>
+            {% if page.credit %}
+            <h5 class="bottom-text-spacer">Credits</h5>
+            <ul class="meta">{{ page.credit }}</ul>
+            {% endif %}
           </div>
-        </div>
-
+      </div>
   </header>
   {{ content }}
   {% include navigation_projects.html %}
   {% include footer.html %}
+  <script type='text/javascript' src="/js/bottomnav.js"></script>
   </body>
 </html>

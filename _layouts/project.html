@@ -30,12 +30,11 @@
             <h5>My Role</h5>
             <h4>{{ page.role }}</h4>
           </div>
-         {% if page.link %}
+        {% if page.link %}
         {% for link in page.link %}
           <div>
             <h4><a href="{{ link.href }}" class="project-link external-link" target="_blank">{{ link.text }}</a></h4>
           </div>
-
         {% endfor %}
         {% endif %}
     </div>

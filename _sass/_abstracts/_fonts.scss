@@ -20,7 +20,7 @@
   font-display: swap;
 }
 
-h1, h2, h3, h4, h5, li.nav, li.marquee-text, label {
+h1, h2, h3, h4, h5, li.nav, li.marquee-text, label, #bottom-navigation li {
   font-family: "NaNJaune-Midi-Var", sans-serif;
   -moz-font-feature-settings: 'ss03';      /* low-level (old Firefox)      */
   -webkit-font-feature-settings: 'ss03';   /* low-level (old Webkit)       */
@@ -56,7 +56,7 @@ h4 {
   letter-spacing: 0;
 }
 
-h5, label {
+h5, label, #bottom-navigation li {
   font-weight: 700;
   font-size: clamp(.65rem, calc(1vw + .2rem), .75rem);
   line-height: 1.4em;
