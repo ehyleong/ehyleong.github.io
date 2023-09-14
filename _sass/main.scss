@@ -1140,7 +1140,7 @@ div.in-progress {
 	    color: $orange;
     }
 
-    a:active, a:hover {
+    a:active, a:hover, a:target, a:focus {
     	color: var(--primary-bg-color);
     	background-color: $orange;
     	border-radius: 3rem;
