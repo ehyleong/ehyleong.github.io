@@ -29,6 +29,7 @@
 	  --secondary-button-color: 250, 248, 241;
 	  --secondary-button-text: #F2F0EA;
 	  --form-input-color: 0, 76, 76;
+	  --toast-bg-color: #FCFAF3;
 	}
 }
 
@@ -47,6 +48,7 @@
 	  --secondary-button-color: 236, 232, 220;
 	  --secondary-button-text: #ECE8DC;
 	  --form-input-color: 236, 232, 220;
+	  --toast-bg-color: #012727;
 	}
 }
 
@@ -424,7 +426,7 @@ nav {
 			margin-block-start: 3rem;
 			margin-block-end: 1rem;
 			display: grid;
-			grid-template-columns: auto auto;
+			grid-template-columns: auto;
 		}
 
 		h5 {
@@ -458,7 +460,7 @@ nav {
 
   a.mobile-menu-link {
   	color: $beige;
-  	font-size: 1.8rem;
+  	font-size: 2rem;
 
 	  	&:hover, &:focus, &:active {
 	  		color: $orange;
@@ -469,10 +471,10 @@ nav {
 	button.hamburger {
 		transform: scale(0);
 		position: fixed;
-		top: 1.85rem;
-		right: 1.45rem;
-		height: 40px;
-		width: 40px;
+		top: 1.5rem;
+		right: 1.5rem;
+		height: 50px;
+		width: 50px;
 	}
 
 	.logo {
@@ -519,6 +521,8 @@ button.hamburger {
 	display: none;
 
 	@include for-size(phone-only) {  
+		height: 50px;
+		width: 50px;
 		display: block;
 	  cursor: pointer;
 	  border: none;
@@ -654,7 +658,7 @@ li.marquee-text {
   opacity: 0.4;
 }
 
-// 2.3.1 Work
+// 2.3.1 Thumbnails
 
 
 section.thumbnails {
@@ -807,7 +811,7 @@ section.testimonials {
 }
 
 .carousel-cell {
-	opacity: .4;
+	opacity: .2;
 	background: rgba(0, 0, 0, .3);
 	background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23108888' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 	transition: opacity 100ms ease;
@@ -954,9 +958,35 @@ header.about {
 	}
 
 
-// 2.5 Projects
+// 2.5 Work
 
 header.work {
+
+	h1, h2, h3, h4, h5 {
+		margin-block-end: 0;
+	}
+
+	h5 {
+		color: var(--primary-color);
+	}
+
+	picture img {
+		border-radius: 2rem;
+		box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 9px 19px 0px rgba(0, 0, 0, 0.05), 0px 35px 35px 0px rgba(0, 0, 0, 0.04), 0px 79px 47px 0px rgba(0, 0, 0, 0.03), 0px 140px 56px 0px rgba(0, 0, 0, 0.01), 0px 218px 61px 0px rgba(0, 0, 0, 0.00);
+	
+		@include for-size(phone-only) {
+			border-radius: 1.5rem;
+		}
+	}
+
+	ul.meta {
+
+		li {
+			font-size: 1rem;
+			margin-block-end: 0;	
+		}
+	}
+
 	.project-meta{
 		display: grid;
 		gap: 1rem;
@@ -1073,6 +1103,48 @@ div.in-progress {
 				color: $forestgreen;		
 		}
 	}
+}
+
+// Custom Bottom Nav
+
+#bottom-navigation {
+    position: fixed;
+    bottom: 80px; /* Adjust this value as needed to hide the navigation */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: var(--toast-bg-color);
+    border-radius: 3rem;
+    box-shadow: 0px 4px 16px 0px rgba(var(--callout-bg-color), .2);
+    border: 1px solid rgba(var(--callout-bg-color), .3);
+    transition: bottom 300ms cubic-bezier(0.5, 0, 0.13, 1);
+    z-index: 20;
+    padding: 4px;
+
+    ul {
+	    list-style: none;
+	    display: flex;
+	    justify-content: space-around;
+	    gap: 2px;
+	    padding: .7rem .25rem;
+	    margin: 0;
+    }
+
+    li {
+	    margin-block-end: 0;
+    	margin-top: 0;
+    }
+
+    a {
+    	padding: .7rem;
+	    color: $orange;
+    }
+
+    a:active, a:hover, a:target, a:focus {
+    	color: var(--primary-bg-color);
+    	background-color: $orange;
+    	border-radius: 3rem;
+    }
 }
 
 // 2.6 Blog
@@ -1427,7 +1499,7 @@ img {
 @keyframes h1-intro {
 	0% {
 		font-weight: 200;
-		opacity: 0
+		opacity: 0;
 	}
 
 	100% {
@@ -1439,7 +1511,7 @@ img {
 @keyframes h2-intro {
 	0% {
 		font-weight: 100;
-		opacity: 0
+		opacity: 0;
 	}
 
 	100% {
@@ -1452,7 +1524,11 @@ img {
 	0% {
 		transform: translateY(2rem);
 		transform-origin: 0% 0%;
-		opacity: 0
+		opacity: 0;
+	}
+
+	5% {
+		opacity: 0;
 	}
 
 	100% {
@@ -1461,12 +1537,11 @@ img {
 	}
 }
 
-
 @keyframes fade-down {
 	0% {
 		transform: translateY(-1rem);
 		transform-origin: 0% 0%;
-		opacity: 0
+		opacity: 0;
 	}
 
 	100% {
@@ -1479,7 +1554,7 @@ img {
 	0%, 15% {
 		transform: translateY(2rem);
 		transform-origin: 0% 0%;
-		opacity: 0
+		opacity: 0;
 	}
 
 	100% {
@@ -1490,23 +1565,23 @@ img {
 
 
 h1.intro {
-	animation: fade-up 1s cubic-bezier(0.7, 0, 0.13, 1); 
+	animation: fade-up 1s cubic-bezier(0.8, 0, 0.13, 1); 
 }
 
 h2.intro {
-	animation: fade-up 1s cubic-bezier(0.7, 0, 0.13, 1); 
+	animation: fade-up 1s cubic-bezier(0.8, 0, 0.13, 1); 
 }
 
 .fade-down {
-	animation: fade-down 1.1s cubic-bezier(0.7, 0, 0.13, 1);
+	animation: fade-down 1.1s cubic-bezier(0.8, 0, 0.13, 1);
 }
 
 .fade-up {
-	animation: fade-up 1.1s cubic-bezier(0.7, 0, 0.13, 1);
+	animation: fade-up 1.2s cubic-bezier(0.8, 0, 0.13, 1);
 }
 
 .fade-up-delay {
-		animation: fade-up-delay 1.2s cubic-bezier(0.7, 0, 0.13, 1);
+		animation: fade-up-delay 1.3s cubic-bezier(0.8, 0, 0.13, 1);
 }
 
 h1.intro, h2.intro, .fade-up, .fade-up-delay {
