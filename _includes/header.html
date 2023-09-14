@@ -1,19 +1,33 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erica Leong • {{ page.title }}</title>
+
   <link rel="preload" href="/fonts/NaNJaune-Midi-Var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/NaNHolo-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/NaNHolo-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/style.css" as="style" />
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/flickity.min.css" media="screen">
+
   <link rel="icon" type="image/favicon" href="/img/favicon-light.png" media="(prefers-color-scheme: light)"> 
   <link rel="icon" type="image/favicon" href="/img/favicon-dark.png" media="(prefers-color-scheme: dark)">   
 
-  <meta charset="utf-8">
-  <meta name="title" property="og:title" content="{{ site.title }}">  
+  <meta name="theme-color" content="#012727">
+  <meta name="title" property="og:title" content="{{ site.title }}">
   <meta name="description" property="og:description" content="{{ site.description }}">
+  <meta name="image" property="og:image" content="{{ site.url }}/img/global/opengraph.png">
+  <meta name="og:site_name" content="{{ site.title }}">
+  <meta name="og:url" content="{{ site.url }}">
+  <meta name="og:type" content="website">
+  <meta name="og:email" content="{{ site.email }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ehyleong">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/img/global/opengraph.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
