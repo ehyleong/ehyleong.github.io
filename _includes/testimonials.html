@@ -1,8 +1,8 @@
 <section class="testimonials">
-  <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround":true }'>
+  <div data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround":true }'>
       {% for testimonial in site.data.testimonials %}
       {% assign count = forloop.length %}
-    <div class="carousel-cell testimonial-card">
+    <div class="carousel-cell testimonial-carousel-card">
         <h3 class="darkbeige testimonial-text">"{{ testimonial[1].quote }}"</h3>
         <h5>— {{ testimonial[1].name }}</h5>
     </div>

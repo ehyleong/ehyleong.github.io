@@ -106,7 +106,7 @@ div.callout {
 	background: rgba(0, 0, 0, .3);
 	background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23108888' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 	padding: 1rem 1.4rem 1.2rem;
-	border-radius: 1rem;
+	border-radius: $sm-radius;
 	max-width: fit-content;
 
 	& > * {
@@ -174,7 +174,7 @@ span.lottie {
  	box-shadow: 0 0px 0 rgba(var(--primary-button-color), .2);
  	color: var(--primary-button-text);
   transition: 100ms ease-in-out;
-  border-radius: 1rem;
+  border-radius: $sm-radius;
 
   &:hover {
   	color: var(--primary-button-text);
@@ -581,6 +581,7 @@ header.home {
 	.hero-img {
 		img{
 			position: absolute;
+			left: 0;
 			bottom: 0;
 			max-height: 46%;
 		}
@@ -687,11 +688,11 @@ section.thumbnails {
 			display: block;
 			width: 100%;
 			height: 100%;
-			border-radius: 1rem;
+			border-radius: $sm-radius;
 		}
 
 		.thumbnail-overlay {
-			border-radius: 1rem;
+			border-radius: $sm-radius;
 			padding: 3rem;
 			position: absolute;
 			top: 0;
@@ -769,12 +770,12 @@ section.testimonials {
 	margin-bottom: $spacer/2;
 	width: 100%;
 
-	.testimonial-card {
-		border-radius: 1rem;
+	.testimonial-carousel-card {
+		border-radius: $sm-radius;
 		min-height: 32rem;
 		max-width: 100rem;
-		text-align: left;
 		width: 70%;
+		text-align: left;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -810,8 +811,11 @@ section.testimonials {
 	}
 }
 
+// Carousel
+
+
 .carousel-cell {
-	opacity: .2;
+	opacity: .25;
 	background: rgba(0, 0, 0, .3);
 	background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23108888' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 	transition: opacity 100ms ease;
@@ -824,10 +828,10 @@ section.testimonials {
 /* no circle */
 
 .flickity-button {
-  background: rgba($green,0);
+  background: rgba($green,.2);
 	transition: all 150ms ease;
 	border: 3px solid rgba($green,0);
-	border-radius: 1rem;
+	border-radius: $sm-radius;
 
   &:hover {
   	background: rgba($green,.6);
@@ -877,21 +881,23 @@ section.testimonials {
   display: none;
 }
 
-
-/* position dots in carousel */
-.flickity-page-dots {
-  bottom: -3rem;
-}
-/* white circles */
-.flickity-page-dots .dot {
-  width: 10px;
-  height: 10px;
-  background: rgba($orange,.5);
-}
-
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
   background: $orange;
+}
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -32px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 6px;
+  width: 40px;
+  margin: 0;
+  border-radius: $sm-radius;
+  margin: 0 4px;
+	background: rgba($orange,.5);
 }
 
 
@@ -992,7 +998,7 @@ header.work {
 		gap: 1rem;
 		background-color: rgba($orange, 0.05);
 		padding: 2rem;
-		border-radius: 1rem;
+		border-radius: $sm-radius;
 		background: rgba($orange, .05);	
 		background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23DB7704' fill-opacity='.08' fill-rule='evenodd'/%3E%3C/svg%3E");
 
@@ -1079,7 +1085,7 @@ header.work {
 }
 
 div.in-progress {
-	border-radius: 1rem;
+	border-radius: $sm-radius;
 	text-align: center;
 	padding: 2em;
 	display: flex;
@@ -1104,6 +1110,41 @@ div.in-progress {
 		}
 	}
 }
+
+div.project-carousel {
+	width: 100%;
+	border-radius: $sm-radius;
+
+	.project-carousel-card {
+		background: transparent;
+		border-radius: $sm-radius;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+
+	}
+
+	.carousel-cell {
+		opacity: 1;
+
+	}
+
+	.carousel-cell.size-medium {
+		width: 50%;
+	}
+
+	.carousel-cell.size-large {
+		width: 80%;
+	}
+}
+
 
 // Custom Bottom Nav
 
@@ -1218,9 +1259,19 @@ footer.contact {
 	border-bottom: rgba($green,0.3) 2px solid;
 	text-align: center;
 	padding: 8rem 0;
+	position: relative;
 
-	@include for-size(phone-only) {
+	@include for-size(phone-only) {    
 		padding: 5rem 0;
+		min-height: 28rem; 
+	}
+
+	@include for-size(tablet-portrait-up) {
+		min-height: 38rem;
+	}
+	
+	@include for-size(desktop-up) {
+		min-height: 44rem;
 	}
 
 	img.icon {
@@ -1236,6 +1287,15 @@ footer.contact {
 			&:hover {
 				opacity: .6;
 			}
+		}
+	}
+
+.hero-img {
+		img{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			max-height: 40%;
 		}
 	}
 }
@@ -1319,6 +1379,7 @@ header.fourohfour, header.thanks, header.holding {
 	.hero-img {
 		img{
 			position: absolute;
+			left: 0;
 			bottom: 0;
 			max-height: 46%;
 
@@ -1565,7 +1626,7 @@ img {
 
 
 h1.intro {
-	animation: h1-intro 1s cubic-bezier(0.8, 0, 0.13, 1); 
+	animation: fade-up 1s cubic-bezier(0.8, 0, 0.13, 1); 
 }
 
 h2.intro {

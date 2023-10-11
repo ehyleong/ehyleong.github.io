@@ -1,6 +1,10 @@
 // Margin
 $spacer: 7rem;
 
+// Border Radius
+
+$sm-radius: 1rem;
+
 // Colours
 $green: #004C4C;
 $forestgreen: #012727;
@@ -40,6 +44,8 @@ $darkbeige: #ECE8DC;
       color: $beige;
   }
 }
+
+
 
 // Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
 
