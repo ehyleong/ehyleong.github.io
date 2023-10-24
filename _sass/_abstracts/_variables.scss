@@ -130,6 +130,13 @@ $darkbeige: #ECE8DC;
   border-radius: 1rem;
 }
 
+.rounded-left {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.rounded-right {
+  border-radius: 0 1rem 1rem 0;
+}
 // Debug
 
 .debug {
