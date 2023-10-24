@@ -1,6 +1,11 @@
 // Margin
 $spacer: 7rem;
 
+// Border Radius
+
+$sm-radius: 1rem;
+$lg-radius: 2rem;
+
 // Colours
 $green: #004C4C;
 $forestgreen: #012727;
@@ -40,6 +45,8 @@ $darkbeige: #ECE8DC;
       color: $beige;
   }
 }
+
+
 
 // Breakpoint Mixins (to add: @include for-size ($breakpoint) {})
 
@@ -123,6 +130,13 @@ $darkbeige: #ECE8DC;
   border-radius: 1rem;
 }
 
+.rounded-left {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.rounded-right {
+  border-radius: 0 1rem 1rem 0;
+}
 // Debug
 
 .debug {
