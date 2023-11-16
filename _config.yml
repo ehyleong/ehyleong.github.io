@@ -35,6 +35,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-loading-lazy
+  - jekyll-sitemap
 
 collections:
   work:
