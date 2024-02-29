@@ -693,7 +693,7 @@ section.thumbnails {
 
 		.thumbnail-overlay {
 			border-radius: $lg-radius;
-			padding: 3rem;
+			padding: 3rem 3rem 2rem 3rem;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -732,6 +732,21 @@ section.thumbnails {
 				p.summary {
 					margin-bottom: 0;
 				}
+
+			.thumbnail-subtitle {
+
+				* {
+						color: $darkbeige;
+					}
+
+				h5 {
+					opacity: 0.5;
+				}
+
+				p.summary {
+					margin-bottom: 1rem;
+				}
+			}
 
 
 
@@ -983,7 +998,7 @@ header.work {
 
 	picture img {
 		border-radius: $lg-radius;
-		box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 9px 19px 0px rgba(0, 0, 0, 0.05), 0px 35px 35px 0px rgba(0, 0, 0, 0.04), 0px 79px 47px 0px rgba(0, 0, 0, 0.03), 0px 140px 56px 0px rgba(0, 0, 0, 0.01), 0px 218px 61px 0px rgba(0, 0, 0, 0.00);
+		//box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 9px 19px 0px rgba(0, 0, 0, 0.05), 0px 35px 35px 0px rgba(0, 0, 0, 0.04), 0px 79px 47px 0px rgba(0, 0, 0, 0.03), 0px 140px 56px 0px rgba(0, 0, 0, 0.01), 0px 218px 61px 0px rgba(0, 0, 0, 0.00);
 	
 		@include for-size(phone-only) {
 			border-radius: 1.5rem;
