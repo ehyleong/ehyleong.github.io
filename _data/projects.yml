@@ -2,7 +2,7 @@ sybama:
   name: Should You Build a Mobile App?
   url: work/should-you-build-a-mobile-app
   client: Steamclock Software
-  role: Website Design, Illustration, Animation
+  role: Website, Illustration, Animation
   summary: A tongue-in-cheek microsite for curious clients.
   img: ../img/thumbnails/sybama.webp
 
@@ -26,6 +26,6 @@ two-spies:
   name: Two Spies
   url: work/two-spies
   client: Steamclock Software
-  role: Art Direction & Branding, UI/UX, Website Design, Illustration, Marketing
+  role: Branding, Product, UI/UX, Website, Illustration, Marketing
   summary: A turn-based spy strategy game for iOS.
   img: ../img/thumbnails/spies.webp
