@@ -5,9 +5,9 @@ nav:
       - title: "Work"
         href: "/#work"
         class: work
-      - title: "Blog"
-        href: "/blog"
-        class: blog
+#      - title: "Blog"
+#        href: "/blog"
+#        class: blog
       - title: "About"
         href: "/about"
         class: about
@@ -22,9 +22,9 @@ mobile-nav:
       - title: "Work"
         href: "/#work"
         class: work
-      - title: "Blog"
-        href: "/blog"
-        class: blog
+#      - title: "Blog"
+#        href: "/blog"
+#        class: blog
       - title: "About"
         href: "/about"
         class: about
