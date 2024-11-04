@@ -5,7 +5,8 @@ sybama:
   role: Website, Illustration, Animation
   summary: A tongue-in-cheek microsite for curious clients.
   img: ../img/thumbnails/sybama.webp
-
+  category: web
+  
 figma-keypads:
   name: Figma Keypads
   url: work/figma-keypads
@@ -13,6 +14,7 @@ figma-keypads:
   role: Illustration
   summary: A side project for experimenting with Figma.
   img: ../img/thumbnails/keypads.webp
+  category: illustration
 
 steamclock-swag:
   name: Steamclock Swag
@@ -21,6 +23,7 @@ steamclock-swag:
   role: Art Direction, Illustration, Print
   summary: A collection of custom illustrated company keepsakes.
   img: ../img/thumbnails/steamclockswag.webp
+  category: illustration
 
 two-spies:
   name: Two Spies
@@ -29,3 +32,4 @@ two-spies:
   role: Branding, Product, UI/UX, Website, Illustration, Marketing
   summary: A turn-based spy strategy game for iOS.
   img: ../img/thumbnails/spies.webp
+  category: product, brand

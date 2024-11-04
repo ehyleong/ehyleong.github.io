@@ -1,31 +1,75 @@
 <section class="thumbnails bottom-text-spacer">
     <div class="row spacer" id="work">
       <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12 fade-up">
-        <h5>Select Work</h5>
-        <h2 class="darkbeige">Visual design,<br> <span class="orange">made with care.</span></h2>
+        <h2 class="darkbeige">Designed, <span class="orange">lovingly.</span></h2>
+        <p class="large darkbeige">Designer handyman for hire – building well-crafted product & brand experiences that deliver delight.</p>
       </div>
       <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-1 col-sm-12 col-xs-12 col-gutter-lr half-spacer fade-up-delay">
           <div class="callout"><span class="callout-label">Hey!</span><p class="beige"><small> I'm open to small and fun freelance requests. <a href="/contact" class="inline-link"><strong>Reach&nbsp;out&nbsp;here.</strong></a></small></p></div>
       </div>
-    <div class="row thumbnail-grid spacer">
+    <div class="row filter-container">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h5>Select Work</h5>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="brand">Brand</button>
+          <button class="filter-btn" data-filter="illustration">Illustration</button>
+          <button class="filter-btn" data-filter="product">Product</button>
+        </div>
+      </div>
+    </div>
+    <div class="row thumbnail-grid">
     {% for project in site.data.projects %}
     {% assign count = forloop.length %}
-    <a href="../{{ project[1].url }}"><div class="thumbnail" onclick="" aria-label="{{ project[1].name }}">
-        <img src="{{ project[1].img }}" alt="{{ project[1].name | strip_html }}" class="thumbnail-image">    
-        <div class="thumbnail-overlay">
-          <div class="thumbnail-title">
-            <h5>{{ project[1].role }}</h5> 
-            <h3 class="top-text-spacer-half">{{ project[1].name }}</h3>
-
-          </div>
-          <div class="thumbnail-subtitle">
-            <p class="summary large">{{ project[1].summary }}</p>
-            <!--<h5>{{ project[1].role }}</h5>-->
+    <a href="../{{ project[1].url }}" class="thumbnail-wrapper" data-category="{{ project[1].category }}">
+      <div class="thumbnail" onclick="" aria-label="{{ project[1].name }}">
+        <div class="thumbnail-image-container">
+          <img src="{{ project[1].img }}" alt="{{ project[1].name | strip_html }}" class="thumbnail-image">    
+          <div class="thumbnail-overlay">
+            <h3>View Project</h3>
+            <!--<img src="/img/global/icon-eye.svg" alt="View Project" class="thumbnail-overlay-icon" height="56" width="56">-->
           </div>
         </div>
-    </div>
-  </a>
-  {% endfor %}
+      </a>        
+        <div class="thumbnail-title">
+            <h4 class="beige">{{ project[1].name }}</h4>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const thumbnails = document.querySelectorAll('.thumbnail-wrapper');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      button.classList.add('active');
+      
+      const filter = button.getAttribute('data-filter');
+      
+      thumbnails.forEach(thumbnail => {
+        if (filter === 'all') {
+          thumbnail.classList.remove('hidden');
+        } else {
+          // Get categories as an array by splitting on comma and trimming whitespace
+          const categories = thumbnail.getAttribute('data-category').split(',').map(cat => cat.trim());
+          
+          if (categories.includes(filter)) {
+            thumbnail.classList.remove('hidden');
+          } else {
+            thumbnail.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+});
+</script>
