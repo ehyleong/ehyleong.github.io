@@ -796,6 +796,11 @@ section.thumbnails {
 	&:hover {
 		-webkit-transform: translateZ(0);
 	}
+
+	.thumbnail-overlay-icon {
+		width: 56px;
+		height: 56px;
+	}
 }
 
 // Filter Controls
