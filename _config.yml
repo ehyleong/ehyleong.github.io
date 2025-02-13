@@ -18,13 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Erica Leong • Visual Designer
+title: Erica Leong • Visual Product Designer
 email: hello@ericaleong.com
 description: >- 
   Erica Leong is a visual product designer and illustrator based in Vancouver, Canada. She makes delightful interfaces, illustrations, icons, and brand identities.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ericaleong.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ehyleong
 github_username:  ehyleong
 email: hello@ericaleong.com
 
