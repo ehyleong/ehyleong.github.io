@@ -1676,10 +1676,6 @@ h1.intro, h2.intro, .fade-up, .fade-up-delay {
 	}
 }
 
-.divider {
-	border-bottom: 1px solid rgba($green, 0.1);
-}
-
 //Links
 
 header.links-page {
@@ -1687,7 +1683,7 @@ header.links-page {
 	.button-container {
 		margin: 1rem 0;
 		padding: 1rem 0;
-		border-bottom: 1px solid rgba($green, 0.1);
+		border-bottom: 2px dashed rgba(var(--primary-button-color), 0.1);
 
 		&:last-child {
 			border-bottom: none;
@@ -1718,7 +1714,7 @@ header.links-page {
 
 		padding: 1.5rem 0;
 		margin-bottom: 1.5rem;
-		border-bottom: 1px solid rgba($green, 0.1);
+		border-bottom: 2px dashed rgba(var(--primary-button-color), 0.1);
 
 		&:last-child {
 			border-bottom: none;
