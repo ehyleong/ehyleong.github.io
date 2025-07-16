@@ -1,0 +1,102 @@
+---
+layout: page
+title: Visual Designer – Links
+slug: links
+permalink: /links
+
+---
+
+<header class="spacer bottom-spacer links-page">
+    <div class="wrap row">
+      <div class="col-lg-12 col-xs-12 bottom-half-spacer">
+        <h1>Hi, friend! I’m Erica. <span class="orange">I make weird things.</span></h1>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom-half-spacer">
+        {% assign has_markets = false %}
+        {% for market in site.data.markets %}
+          {% if market.show %}
+            {% assign has_markets = true %}
+          {% endif %}
+        {% endfor %}
+
+           <h2>Art <span class="orange">Markets</span></h2>
+           {% if has_markets %}<p>Pick up some <strong>Eerie Cat</strong> merch in one of these lovely local markets:</p>{% endif %}
+
+        {% for market in site.data.markets %}
+          {% if market.show %}
+            <div class="col-lg-6 col-xs-12 col-no-gutter market-entry">
+              <ul>
+                  <li><a href="{{ market.link }}" target="_blank" class="inline-link external-link"><strong>{{ market.name }}</strong></a></li>
+                  <li>{{ market.date }}</li>
+                  <li>{{ market.location }}</li>
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+       
+       {% unless has_markets %}
+         <div class="col-lg-12 col-no-gutter col-xs-12">
+           <p><strong>No markets scheduled at the moment. </strong> Check back soon!</p>
+         </div>
+       {% endunless %}  
+</div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 bottom-half-spacer">
+          <h2>Handy <span class="orange">Links</span></h2>
+          {% for category in site.data.nav.link-page %}
+            {% if category.category == "Handy Links" %}
+              {% for link in category.items %}
+                <div class="button-container">
+                  <a href="{{ link.href }}" target="_blank" class="button button-small">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="{{ link.title }}">
+                          <path d="{{ link.path }}" fill="currentColor"/>
+                        </svg>
+                      {{ link.title }}         
+                    </a>
+                   <p><strong>{{ link.subtitle }}</strong> — {{ link.description }}</p>
+                 </div>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+         <div class="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12"> 
+         <h2>Other <span class="orange">Socials</span></h2>
+         {% for category in site.data.nav.link-page %}
+           {% if category.category == "Other Socials" %}
+             {% for link in category.items %}
+               <div class="button-container">
+                 <a href="{{ link.href }}" target="_blank" class="button button-small">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="{{ link.title }}">
+                         <path d="{{ link.path }}" fill="currentColor"/>
+                       </svg>
+                   {{ link.title }}         
+                 </a>
+                  <p><strong>{{ link.title }}</strong> — {{ link.description }}</p>
+                </div>
+             {% endfor %}
+           {% endif %}
+         {% endfor %}
+       </div>
+
+
+    </div>
+
+
+  </header>
+  
+  <!--  
+          <div class="button-container divider">
+          <a href="https://ericaleong.com" target="_blank" class="button button-small">ericaleong.com</a>
+          <p><strong>Portfolio Site</strong> — More about me, my work, and my projects</p>
+        </div>  
+        <div class="button-container divider">
+          <a href="https://www.instagram.com/eeriecatco/" target="_blank" class="button button-small">@eeriecatco</a>
+          <p><strong>Eerie Cat Co</strong> —  Silly weird art goods, art market updates, shop updates</p>
+        </div>
+        <div class="button-container divider">
+          <a href="https://www.instagram.com/ehyleong/" target="_blank" class="button button-small">@ehyleong</a>
+          <p><strong>Instagram</strong> — Main design account</p>
+        </div>
+        -->
