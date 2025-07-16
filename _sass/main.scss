@@ -1726,7 +1726,7 @@ header.links-page {
 		}
 
 		a {
-			color: $green;
+			color: var(--primary-color);
 			font-family: "NanHolo-Bold", sans-serif;
 			
 			&:hover {
