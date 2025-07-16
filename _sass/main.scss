@@ -1685,8 +1685,14 @@ h1.intro, h2.intro, .fade-up, .fade-up-delay {
 header.links-page {
 
 	.button-container {
-		margin: 2rem 0;
+		margin: 1rem 0;
 		padding: 1rem 0;
+		border-bottom: 1px solid rgba($green, 0.1);
+
+		&:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
 	}
 
 	.button {
@@ -1694,6 +1700,10 @@ header.links-page {
 		justify-content: center;
 		padding: 1rem 2rem;
 		margin-bottom: 1rem;
+
+		svg {
+			margin-right: 0.25rem;
+		}
 	}
 
 	.market-entry {
@@ -1705,7 +1715,6 @@ header.links-page {
 				margin-bottom: 0.5rem;
 			}
 		}
-
 
 		padding: 1.5rem 0;
 		margin-bottom: 1.5rem;
