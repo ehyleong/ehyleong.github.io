@@ -1676,3 +1676,53 @@ h1.intro, h2.intro, .fade-up, .fade-up-delay {
 	}
 }
 
+.divider {
+	border-bottom: 1px solid rgba($green, 0.1);
+}
+
+//Links
+
+header.links-page {
+
+	.button-container {
+		margin: 2rem 0;
+		padding: 1rem 0;
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		padding: 1rem 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.market-entry {
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+		border-bottom: 1px solid rgba($green, 0.1);
+
+		&:last-child {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		a {
+			color: $green;
+			font-family: "NanHolo-Bold", sans-serif;
+			
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
