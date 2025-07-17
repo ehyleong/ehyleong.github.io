@@ -9,7 +9,7 @@ permalink: /links
 <header class="spacer bottom-spacer links-page">
     <div class="wrap row">
       <div class="col-lg-12 col-xs-12 bottom-half-spacer">
-        <h1>Hi, friend! I’m Erica. <span class="orange">I make weird things.</span></h1>
+        <h2>Hi, I’m <span class="orange">Erica Leong.</span> I make art stuff under <span class="orange">Eerie Cat.</span> Thanks for stopping by.</h2>
       </div>
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom-half-spacer">
@@ -20,7 +20,7 @@ permalink: /links
           {% endif %}
         {% endfor %}
 
-           <h2>Art <span class="orange">Markets</span></h2>
+           <h3>Art <span class="orange">Markets</span></h3>
            {% if has_markets %}<p>Pick up some <strong>Eerie Cat</strong> merch in one of these lovely local markets:</p>{% endif %}
 
         {% for market in site.data.markets %}
@@ -43,7 +43,7 @@ permalink: /links
 </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 bottom-half-spacer">
-          <h2>Handy <span class="orange">Links</span></h2>
+          <h3>Handy <span class="orange">Links</span></h3>
           {% for category in site.data.nav.link-page %}
             {% if category.category == "Handy Links" %}
               {% for link in category.items %}
@@ -62,7 +62,7 @@ permalink: /links
         </div>
 
          <div class="col-lg-5 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12"> 
-         <h2>Other <span class="orange">Socials</span></h2>
+         <h3>Other <span class="orange">Socials</span></h3>
          {% for category in site.data.nav.link-page %}
            {% if category.category == "Other Socials" %}
              {% for link in category.items %}
@@ -79,24 +79,5 @@ permalink: /links
            {% endif %}
          {% endfor %}
        </div>
-
-
     </div>
-
-
   </header>
-  
-  <!--  
-          <div class="button-container divider">
-          <a href="https://ericaleong.com" target="_blank" class="button button-small">ericaleong.com</a>
-          <p><strong>Portfolio Site</strong> — More about me, my work, and my projects</p>
-        </div>  
-        <div class="button-container divider">
-          <a href="https://www.instagram.com/eeriecatco/" target="_blank" class="button button-small">@eeriecatco</a>
-          <p><strong>Eerie Cat Co</strong> —  Silly weird art goods, art market updates, shop updates</p>
-        </div>
-        <div class="button-container divider">
-          <a href="https://www.instagram.com/ehyleong/" target="_blank" class="button button-small">@ehyleong</a>
-          <p><strong>Instagram</strong> — Main design account</p>
-        </div>
-        -->
