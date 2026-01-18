@@ -1,3 +1,19 @@
+figma-billboard:
+  name: An Ode to Creative Tools
+  url: work/figma-billboard
+  client: Figma
+  role: Art Direction, Illustration
+  summary: A billboard to beautify downtown San Francisco.
+  img: ../img/thumbnails/figma-billboard.webp
+
+font-awesome-icon-specimens:
+  name: Icon Specimens
+  url: work/font-awesome-icon-specimens
+  client: Font Awesome
+  role: Art Direction, Illustration
+  summary: Specimens to show off new icons in FA7+.
+  img: ../img/thumbnails/font-awesome.webp  
+
 sybama:
   name: Should You Build a Mobile App?
   url: work/should-you-build-a-mobile-app
